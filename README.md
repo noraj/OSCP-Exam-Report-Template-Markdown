@@ -1,5 +1,9 @@
 # OSCP Exam Report Template in **Markdown**
 
+I created an **OSCP Exam Report Template in Markdown** so LaTeX, Microsoft Office Word, LibreOffice Writter are no longer needed during your OSCP exam!
+
+Now you can be efficient and faster during your exam report redaction! 
+
 **whoisflynn improved template v3.2**
 
 ![](https://i.imgur.com/Z344YCQ.png)
