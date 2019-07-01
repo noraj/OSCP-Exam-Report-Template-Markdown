@@ -12,7 +12,7 @@ Now you can be efficient and faster during your exam report redaction!
 **Official Offensive Security Template v1**
 
 ![](https://i.imgur.com/9zoWFfr.png)
-![](https://i.imgur.com/cv5qW8Z.png)
+![](https://i.imgur.com/MWSgxfh.png)
 
 ## Requirements
 
@@ -27,8 +27,18 @@ Write your report in **markdown**.
 Generate the report PDF from the markdown template:
 
 ```
-pandoc OSCP-exam-report-template_whoisflynn_v3.2.md -o OSCP-OS-XXXXX-Lab-Report.pdf --from markdown+yaml_metadata_block+raw_html --template eisvogel --table-of-contents --toc-depth 6 --number-sections --listing --top-level-division=chapter
+pandoc OSCP-exam-report-template_whoisflynn_v3.2.md \
+-o OSCP-OS-XXXXX-Lab-Report.pdf \
+--from markdown+yaml_metadata_block+raw_html \
+--template eisvogel \
+--table-of-contents \
+--toc-depth 6 \
+--number-sections \
+--top-level-division=chapter \
+--highlight-style breezedark
 ```
+
+You can change the code syntax highlight theme with [`--highlight-style`](https://pandoc.org/MANUAL.html#option--highlight-style).
 
 ## Color sets
 
