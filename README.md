@@ -1,5 +1,7 @@
 # OSCP Exam Report Template in **Markdown**
 
+[![Rawsec's CyberSecurity Inventory](https://inventory.rawsec.ml/img/badges/Rawsec-inventoried-FF5050_for-the-badge.svg)](https://inventory.rawsec.ml/tools.html#OSCP%20Exam%20Report%20Template%20in%20Markdown)
+
 I created an **OSCP Exam Report Template in Markdown** so LaTeX, Microsoft Office Word, LibreOffice Writter are no longer needed during your OSCP exam!
 
 Now you can be efficient and faster during your exam report redaction! 
