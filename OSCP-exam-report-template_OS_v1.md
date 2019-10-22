@@ -13,7 +13,8 @@ titlepage-rule-color: "FFFFFF"
 titlepage-rule-height: 2
 book: true
 classoption: oneside
-...
+code-block-font-size: \scriptsize
+---
 # Offensive-Security Lab and Exam Penetration Test Report
 
 ## Introduction
