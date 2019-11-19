@@ -37,7 +37,8 @@ pandoc OSCP-exam-report-template_whoisflynn_v3.2.md \
 --toc-depth 6 \
 --number-sections \
 --top-level-division=chapter \
---highlight-style breezedark
+--highlight-style breezedark \
+-H deeplists.tex
 ```
 
 You can change the code syntax highlight theme with [`--highlight-style`](https://pandoc.org/MANUAL.html#option--highlight-style).
