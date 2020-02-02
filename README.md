@@ -25,16 +25,32 @@ Now you can be efficient and faster during your exam report redaction!
 - [Pandoc](https://pandoc.org/installing.html)
 - LaTeX (eg. [TeX Live](http://www.tug.org/texlive/)) in order to get `pdflatex` or `xelatex`
 - [Eisvogel Pandoc LaTeX PDF Template](https://github.com/Wandmalfarbe/pandoc-latex-template#installation)
+- [p7zip](http://p7zip.sourceforge.net/) (if you want to use the script, for generating the archive)
 
 ## Usage
 
 Write your report in **markdown**.
 
+### Automatic
+
+There is a script that will:
+
+1. Let you choose the template
+2. Let you choose the syntax highlight style
+3. Generate the PDF
+4. Generate the 7z archive
+
+```
+ruby generate.rb
+```
+
+### Manual
+
 Generate the report PDF from the markdown template:
 
 ```
-pandoc OSCP-exam-report-template_whoisflynn_v3.2.md \
--o OSCP-OS-XXXXX-Lab-Report.pdf \
+pandoc src/OSCP-exam-report-template_whoisflynn_v3.2.md \
+-o output/OSCP-OS-XXXXX-Exam-Report.pdf \
 --from markdown+yaml_metadata_block+raw_html \
 --template eisvogel \
 --table-of-contents \

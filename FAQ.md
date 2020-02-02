@@ -36,3 +36,13 @@ Create `deeplists.tex` file for example for 9 heading levels:
 ```
 
 And add `-H deeplists.tex` option to pandoc CLI when generating the PDF.
+
+## How to put images in my report?
+
+Example:
+
+```
+![ImgPlaceholder](src/placeholder-image-300x225.png)
+```
+
+The path is relative from the generating script not from the markdown template!

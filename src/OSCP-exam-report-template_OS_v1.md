@@ -188,7 +188,7 @@ except:
 print "\nDone."
 ```
 
-![ImgPlaceholder](https://imgplaceholder.com/420x320/cccccc/121010/fa-image)
+![ImgPlaceholder](src/placeholder-image-300x225.png)
 
 \newpage
 
