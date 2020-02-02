@@ -1,7 +1,6 @@
 # OSCP Exam Report Template in **Markdown**
 
 [![Rawsec's CyberSecurity Inventory](https://inventory.rawsec.ml/img/badges/Rawsec-inventoried-FF5050_flat-square.svg)](https://inventory.rawsec.ml/tools.html#OSCP%20Exam%20Report%20Template%20in%20Markdown)
-[![GitSpo Mentions](https://gitspo.com/badges/mentions/noraj/OSCP-Exam-Report-Template-Markdown?style=flat-square)](https://gitspo.com/mentions/noraj/OSCP-Exam-Report-Template-Markdown)
 [![GitHub stars](https://img.shields.io/github/stars/noraj/OSCP-Exam-Report-Template-Markdown?style=flat-square)](https://github.com/noraj/OSCP-Exam-Report-Template-Markdown/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/noraj/OSCP-Exam-Report-Template-Markdown?style=flat-square)](https://github.com/noraj/OSCP-Exam-Report-Template-Markdown/network)
 [![GitHub license](https://img.shields.io/github/license/noraj/OSCP-Exam-Report-Template-Markdown?style=flat-square)](https://github.com/noraj/OSCP-Exam-Report-Template-Markdown/blob/master/LICENSE)
@@ -76,6 +75,14 @@ titlepage-color          | titlepage-text-color | titlepage-rule-color
 `FFEFD5` (PapayaWhip)    | `000000` (Black)     | `000000` (Black)
 `FF8C00` (DarkOrange)    | `000000` (Black)     | `000000` (Black)
 `FFEF96` (no name)       | `50394C` (no name)   | `50394C` (no name)
+
+## Mentions
+
+- Mentions on social medias: [![GitSpo Mentions](https://gitspo.com/badges/mentions/noraj/OSCP-Exam-Report-Template-Markdown?style=flat-square)](https://gitspo.com/mentions/noraj/OSCP-Exam-Report-Template-Markdown)
+
+- John Hammond - OSCP - Taking Notes & Resources (video)
+  [![OSCP - Taking Notes & Resources](http://img.youtube.com/vi/MQGozZzHUwQ/0.jpg)](https://www.youtube.com/watch?v=MQGozZzHUwQ)
+- 15th [Top Offensive Security Open Source Projects](https://awesomeopensource.com/projects/offensive-security) (2 January 2020)
 
 ## Credits
 
