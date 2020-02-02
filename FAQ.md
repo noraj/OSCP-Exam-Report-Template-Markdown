@@ -46,3 +46,17 @@ Example:
 ```
 
 The path is relative from the generating script not from the markdown template!
+
+## Syntax highlight style ignored when no language provided
+
+https://github.com/jgm/pandoc/issues/6104
+
+Puts `default` as a language for all code blocks which don't have a language set.
+
+Eg.
+
+~~~
+```default
+raw code
+```
+~~~
