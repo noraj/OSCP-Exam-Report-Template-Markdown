@@ -84,6 +84,10 @@ titlepage-color          | titlepage-text-color | titlepage-rule-color
   [![OSCP - Taking Notes & Resources](http://img.youtube.com/vi/MQGozZzHUwQ/0.jpg)](https://www.youtube.com/watch?v=MQGozZzHUwQ)
 - 12th [Top Offensive Security Open Source Projects](https://awesomeopensource.com/projects/offensive-security) (19 Feb. 2020)
 
+## Stargazers over time
+
+[![Stargazers over time](https://starchart.cc/noraj/OSCP-Exam-Report-Template-Markdown.svg)](https://starchart.cc/noraj/OSCP-Exam-Report-Template-Markdown)
+
 ## Credits
 
 Report Templates:
