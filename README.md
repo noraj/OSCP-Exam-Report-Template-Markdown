@@ -82,7 +82,7 @@ titlepage-color          | titlepage-text-color | titlepage-rule-color
 
 - John Hammond - OSCP - Taking Notes & Resources (video)
   [![OSCP - Taking Notes & Resources](http://img.youtube.com/vi/MQGozZzHUwQ/0.jpg)](https://www.youtube.com/watch?v=MQGozZzHUwQ)
-- 12th [Top Offensive Security Open Source Projects](https://awesomeopensource.com/projects/offensive-security) (19 Feb. 2020)
+- 8th [Top Offensive Security Open Source Projects](https://awesomeopensource.com/projects/offensive-security) (08 Apr. 2020)
 
 ## Stargazers over time
 
