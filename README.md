@@ -7,7 +7,7 @@
 
 ## Fork & update/overhaaul of noraj's original script to provide more flexibility & ease in report generation.
 
-- included options for custom-made template & added TJNull's OSCP exam report from [TJ-JPT jex file](https://github.com/tjnull/TJ-JPT)
+- included options for user-defined/custom-made template & added TJNull's OSCP exam report from [TJ-JPT jex file](https://github.com/tjnull/TJ-JPT)
 - added a variety of selections in menu to create more options without custom report mods
 - created setup.sh file to install & stage requirements w/o manual placement of dependencies
 
@@ -32,7 +32,7 @@
 
 ### Automatic
 
-There is a script that will:
+running ```ruby generate.rb``` will:
 
 1. Let you choose the template
 2. Let you choose the syntax highlight style
