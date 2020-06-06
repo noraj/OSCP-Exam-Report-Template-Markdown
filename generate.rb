@@ -1,5 +1,9 @@
 #!/usr/bin/env ruby
 
+# original ruby script by noraj - https://github.com/noraj
+# updates/overhaul by initinfosec - https://github.com/initinfosec - 05 JUN 2020
+
+
 #array for template choices
 templates = [
 

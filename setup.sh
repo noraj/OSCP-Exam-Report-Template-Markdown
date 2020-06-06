@@ -1,5 +1,6 @@
 #!/bin/bash
 
+#written by @initinfosec - 05 JUN 2020
 #simple bash script to install/configure necessary setup for noraj PWK/OSCP report md to PDF conversion tool
 
 #only tested on kali 2020.x - error checking/input validation is not thorough
