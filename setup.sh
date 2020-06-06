@@ -61,6 +61,7 @@ else
 	tar xzf Eisvogel-*.tar.gz 2> /dev/null
 	mkdir -p ~/.pandoc/templates
 	cp eisvogel.tex ~/.pandoc/templates/eisvogel.latex
+	cp eisvogel.tex /usr/share/pandoc/data/templates/eisvogel.latex
 	echo -e "eisvogel template installed.\n"
 	cd $cwd
 fi
