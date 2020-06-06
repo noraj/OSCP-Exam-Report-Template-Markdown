@@ -1,22 +1,33 @@
 ---
 title: "Penetration Test Report"
-author: ["student@youremailaddress.com", "OSID: XXXX"]
-date: "2017-02-20"
+author: ['etser', 'OS-67644']
+date: '2020-06-05'
 subject: "Markdown"
 keywords: [Markdown, Example]
-subtitle: "PWK Lab & OSCP Exam"
+subtitle: OSCP Exam
 lang: "en"
 titlepage: true
-titlepage-color: "1E90FF"
-titlepage-text-color: "FFFAFA"
-titlepage-rule-color: "FFFAFA"
+titlepage-color: "50394C"
+titlepage-text-color: "006400"
+titlepage-rule-color: "FFFFFF"
 titlepage-rule-height: 2
 book: true
 classoption: oneside
 code-block-font-size: \scriptsize
 ---
 
+![OffSec Logo Report Image](./src/_resources/OffSec_logo_OSCP_report.png)
+
 # Offensive Security Exam Penetration Test Report
+
+# Table of Contents
+[Introduction](#Introduction)
+[High-Level Summary](#High-LevelSummary)
+[Methodolgies](#Methodolgies)
+[Additional Items](#AdditionalItems) 
+
+
+
 
 ## Introduction
 
@@ -104,7 +115,7 @@ In some cases, some ports may not be listed.
 
 Server IP Address | Ports Open
 ------------------|----------------------------------------
-192.168.x.x       | **TCP**: 1433,3389\
+192.168.x.x       | **TCP**: 80,443
 **UDP**: 1434,161
 
 **Nmap Scan Results:**
@@ -149,7 +160,7 @@ Server IP Address | Ports Open
 
 Server IP Address | Ports Open
 ------------------|----------------------------------------
-192.168.x.x       | **TCP**: 1433,3389\
+192.168.x.x       | **TCP**: 80,443
 **UDP**: 1434,161
 
 **Nmap Scan Results:**
@@ -194,7 +205,7 @@ Server IP Address | Ports Open
 
 Server IP Address | Ports Open
 ------------------|----------------------------------------
-192.168.x.x       | **TCP**: 1433,3389\
+192.168.x.x       | **TCP**: 80,443
 **UDP**: 1434,161
 
 **Nmap Scan Results:**
@@ -239,7 +250,7 @@ Server IP Address | Ports Open
 
 Server IP Address | Ports Open
 ------------------|----------------------------------------
-192.168.x.x       | **TCP**: 1433,3389\
+192.168.x.x       | **TCP**: 80,443
 **UDP**: 1434,161
 
 **Nmap Scan Results:**
@@ -323,8 +334,3 @@ IP (Hostname) | Local.txt Contents | Proof.txt Contents
 
 For the exam, I used my Metasploit/Meterpreter allowance on the following machine: `192.168.x.x`
 
-## Appendix - Completed Buffer Overflow Code
-
-```
-code here
-```

@@ -15,7 +15,8 @@ book: true
 classoption: oneside
 code-block-font-size: \scriptsize
 ---
-# Offensive-Security Lab and Exam Penetration Test Report
+
+# Offensive Security Lab and Exam Penetration Test Report
 
 ## Introduction
 
