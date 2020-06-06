@@ -115,6 +115,10 @@ titlepage-color          | titlepage-text-color | titlepage-rule-color
 
 ## Credits
 
+Original script:
+
+- noraj OSCP Exam Template Markdown - https://github.com/noraj/OSCP-Exam-Report-Template-Markdown
+
 Report Templates:
 
 - Official Offensive Security Template v1 (UNLICENSED): https://support.offensive-security.com/oscp-exam-guide/#suggested-documentation-templates
