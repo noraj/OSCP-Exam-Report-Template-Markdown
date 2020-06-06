@@ -60,7 +60,6 @@ else
 	tar xzf Eisvogel-*.tar.gz 2> /dev/null
 	mkdir -p ~/.pandoc/templates
 	cp eisvogel.tex ~/.pandoc/templates/eisvogel.latex
-	chown -R $USER:$USER ~/.pandoc/templates
 	echo -e "eisvogel template installed.\n"
 	cd $cwd
 fi
