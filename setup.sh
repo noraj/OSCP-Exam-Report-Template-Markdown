@@ -47,7 +47,7 @@ fi
 if dpkg -s texlive-full &> /dev/null ; then
 	echo -e "LaTeX full detected installed, moving on.\n"
 else
-	echo -e "LaTeX full not detected, installing.\n"
+	echo -e "LaTeX full not detected, installing. This may take a moment, please be patient...\n"
 	yes | $SUDO apt install texlive-full &> /dev/null && echo -e "texlive-full installed.\n"
 fi
 
