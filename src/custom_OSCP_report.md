@@ -1,14 +1,14 @@
 ---
 title: "Penetration Test Report"
-author: ['cthurman@nationalcsoc.com', 'OS-67644']
-date: '2020-06-05'
+author: ['test@test.org', 'OS-67644']
+date: '2020-06-08'
 subject: "Markdown"
 keywords: [Markdown, Example]
 subtitle: OSCP Exam
 lang: "en"
 titlepage: true
-titlepage-color: "DC143C"
-titlepage-text-color: "FFFFFF"
+titlepage-color: 701D1E
+titlepage-text-color: FEDCC8
 titlepage-rule-color: "FFFAFA"
 titlepage-rule-height: 2
 book: true

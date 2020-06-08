@@ -264,6 +264,10 @@ pageColour = [
    {
      name: 'Drover (yellow cream)',
      value: %Q("FFEF96")
+    },
+   {
+     name: 'custom color (user-defined hex value)',
+     value: 'custom'
     }
 ]
 
@@ -275,10 +279,22 @@ puts "Title Page Background Color Options:"
 pageColour.each_with_index do |c,i|
   puts "#{i}. #{c[:name]}"
 end
+
 print "Title Page Background Color # (current selection: #{sel}):  "
 choice = gets.chomp
 sel = pageColour[choice.to_i][:name] unless choice.empty?
-titlepageColor = pageColour[choice.to_i][:value] unless choice.empty?
+val = pageColour[choice.to_i][:value] unless choice.empty?
+
+if val == "custom"
+  puts "Enter the 6 character hex value for the color you want to use, without the # symbol"
+  print "Hex color code: #"
+  choice = gets.chomp
+  sel = 'user defined color ' + choice unless choice.empty?
+  titlepageColor = choice unless choice.empty?
+else
+  titlepageColor = pageColour[choice.to_i][:value] unless choice.empty?
+end
+
 puts "Using #{sel} for Title Page Background Color"
 puts ""
 
@@ -318,7 +334,11 @@ textColour = [
    {
      name: 'PurpleTaupe',
      value: %Q("50394C")
-   }
+   },
+   {
+     name: 'custom color (user-defined hex value)',
+     value: 'custom'
+    }
 ]
 
 # Choose title page text colour
@@ -330,8 +350,18 @@ textColour.each_with_index do |c,i|
 end
 print "Title Page Text Color # (current selection: #{sel}):  "
 choice = gets.chomp
-titlepageTextColor = textColour[choice.to_i][:value] unless choice.empty?
 sel = textColour[choice.to_i][:name] unless choice.empty?
+val = textColour[choice.to_i][:value] unless choice.empty?
+if val == "custom"
+  puts "Enter the 6 character hex value for the color you want to use, without the # symbol"
+  print "Hex color code: #"
+  choice = gets.chomp
+  sel = 'user defineid color ' + choice unless choice.empty?
+  titlepageTextColor = choice unless choice.empty?
+else
+  titlepageTextColor = textColour[choice.to_i][:value] unless choice.empty?
+end
+
 puts "Using #{sel} for Title Page Text Color."
 puts ""
 
