@@ -52,7 +52,7 @@ else
 fi
 
 # search for eisvogel template installed
-if locate eisvogel &> /dev/null ; then
+if locate eisvogel.latex &> /dev/null ; then
 	echo -e "eisvogel detected, moving on.\n"
 else
 	echo -e "eisvogel template not found, installing.\n"
@@ -67,4 +67,4 @@ else
 fi
 
 # finish up
-echo -e "\n--------------------------------------------------\n\nSetup script finished. You can now use generate.rb \n\n\nCopy your markdown notes to the template you want to use in ./src/\nLeave the header from the template as-is - the script will interactively prompt for and change header values.\n\n"
+echo -e "\n--------------------------------------------------\n\nSetup script finished. You can now use generate.rb \n\n\nCopy your markdown report to the template you want to use in ./src/\nLeave the header from the template as-is, as well as the title just below - the script will interactively prompt for and change header values & the main title.\n\n"
