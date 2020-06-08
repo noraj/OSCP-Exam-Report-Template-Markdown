@@ -45,7 +45,7 @@ running ```ruby generate.rb``` will:
 ### notices / caveats
 
 - no fancy input verification - make sure your OS-ID & email are correct. Make sure your selections from menu options are numbers only
-- no option to choose colours not on menu - TBD - if you want a different colour, manual usage is recommended
+- can now choose custom colour from menu option - choice must be 6 character hex representation only
 - no need to modify header info before running ruby script - will edit needed info as you go
 - make sure image paths are correct (either full/explicit or reletive paths) before generation so pandoc includes them in the PDF.
 
