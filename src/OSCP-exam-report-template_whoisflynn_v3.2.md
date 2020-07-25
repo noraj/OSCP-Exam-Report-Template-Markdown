@@ -1,10 +1,10 @@
 ---
-title: "Penetration Test Report"
+title: "Offensive Security Certified Professional Exam Report"
 author: ["student@youremailaddress.com", "OSID: XXXX"]
 date: "2017-02-20"
 subject: "Markdown"
 keywords: [Markdown, Example]
-subtitle: "OSCP Exam"
+subtitle: "OSCP Exam Report"
 lang: "en"
 titlepage: true
 titlepage-color: "1E90FF"
