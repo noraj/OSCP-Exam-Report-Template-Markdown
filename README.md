@@ -9,6 +9,12 @@ I created an **Offensive Security Exam Report Template in Markdown** so LaTeX, M
 
 Now you can be efficient and faster during your exam report redaction!
 
+- :rocket: **Speed up writing**, don't loose time during the 24 hours of exam report redaction
+- :star: **No formatting hassle with WYSIWYG editors**, byebye unwanted whitespaces and linefeeds from Microsoft Office Word and LibreOffice Writer
+- :memo: **Re-use your Markdown notes**, you'll be so glad not having to reformat the bold and italic from your Markdown notes into the report
+- :lock: **Version control ready**, save your markdown template into a PRIVATE git repository, you know have an incremental backup, version control works with Markdown (.md) as it's text but not with binaries (.doc, .odt)
+- :pen: **Use your favorite editor or note taking app**, with Markdown you'll be able to use your favorite editor (VSCode, Atom, etc.) or note taking app (Vnote, QOwnNotes, Boostnote, etc.) to write your exam report, you won't have to switch to Windows to use MS Word.
+
 ![](https://i.imgur.com/XiXIZg3.png)
 
 Examples:
