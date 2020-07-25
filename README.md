@@ -1,20 +1,22 @@
-# OSCP Exam Report Template in **Markdown**
+# OSCP/OSWE Exam Report Template in **Markdown**
 
 [![Rawsec's CyberSecurity Inventory](https://inventory.rawsec.ml/img/badges/Rawsec-inventoried-FF5050_flat-square.svg)](https://inventory.rawsec.ml/tools.html#OSCP%20Exam%20Report%20Template%20in%20Markdown)
 [![GitHub stars](https://img.shields.io/github/stars/noraj/OSCP-Exam-Report-Template-Markdown?style=flat-square)](https://github.com/noraj/OSCP-Exam-Report-Template-Markdown/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/noraj/OSCP-Exam-Report-Template-Markdown?style=flat-square)](https://github.com/noraj/OSCP-Exam-Report-Template-Markdown/network)
 [![GitHub license](https://img.shields.io/github/license/noraj/OSCP-Exam-Report-Template-Markdown?style=flat-square)](https://github.com/noraj/OSCP-Exam-Report-Template-Markdown/blob/master/LICENSE)
 
-I created an **OSCP Exam Report Template in Markdown** so LaTeX, Microsoft Office Word, LibreOffice Writter are no longer needed during your OSCP exam!
+I created an **OSCP/OSWE Exam Report Template in Markdown** so LaTeX, Microsoft Office Word, LibreOffice Writter are no longer needed during your OSCP exam!
 
 Now you can be efficient and faster during your exam report redaction! 
 
-**whoisflynn improved template v3.2**
+Examples:
+
+**OSCP whoisflynn improved template v3.2**
 
 ![](https://i.imgur.com/Z344YCQ.png)
 ![](https://i.imgur.com/wegbNYr.png)
 
-**Official Offensive Security Template v1**
+**OSCP Official Offensive Security Template v1**
 
 ![](https://i.imgur.com/9zoWFfr.png)
 ![](https://i.imgur.com/MWSgxfh.png)
@@ -76,9 +78,19 @@ titlepage-color          | titlepage-text-color | titlepage-rule-color
 `FF8C00` (DarkOrange)    | `000000` (Black)     | `000000` (Black)
 `FFEF96` (no name)       | `50394C` (no name)   | `50394C` (no name)
 
+## Available templates
+
+Report Templates:
+
+- **OSCP**
+  - Official Offensive Security Template v1
+  - whoisflynn improved template v3.2
+- **OSWE**
+  - Official Offensive Security Template v1
+
 ## Mentions
 
-- Mentions on social medias: [![GitSpo Mentions](https://gitspo.com/badges/mentions/noraj/OSCP-Exam-Report-Template-Markdown?style=flat-square)](https://gitspo.com/mentions/noraj/OSCP-Exam-Report-Template-Markdown)
+- Recent mentions on social medias: [![GitSpo Mentions](https://gitspo.com/badges/mentions/noraj/OSCP-Exam-Report-Template-Markdown?style=flat-square)](https://gitspo.com/mentions/noraj/OSCP-Exam-Report-Template-Markdown)
 
 - John Hammond - OSCP - Taking Notes & Resources (video)
   [![OSCP - Taking Notes & Resources](http://img.youtube.com/vi/MQGozZzHUwQ/0.jpg)](https://www.youtube.com/watch?v=MQGozZzHUwQ)
@@ -92,8 +104,11 @@ titlepage-color          | titlepage-text-color | titlepage-rule-color
 
 Report Templates:
 
-- Official Offensive Security Template v1 (UNLICENSED): https://support.offensive-security.com/oscp-exam-guide/#suggested-documentation-templates
-- whoisflynn improved template v3.2 (UNLICENSED): https://github.com/whoisflynn/OSCP-Exam-Report-Template
+- **OSCP**
+  - Official Offensive Security Template v1 (UNLICENSED): https://support.offensive-security.com/oscp-exam-guide/#suggested-documentation-templates
+  - whoisflynn improved template v3.2 (UNLICENSED): https://github.com/whoisflynn/OSCP-Exam-Report-Template
+- **OSWE**
+  - Official Offensive Security Template v1 (UNLICENSED): https://support.offensive-security.com/oswe-exam-guide/#suggested-documentation-templates
 
 Pandoc Template:
 
