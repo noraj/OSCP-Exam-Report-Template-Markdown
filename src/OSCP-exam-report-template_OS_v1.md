@@ -1,10 +1,10 @@
 ---
-title: "Penetration Test Report"
+title: "OSCP Exam Report"
 author: ["student@youremailaddress.com", "OSID: XXXX"]
 date: "2017-02-20"
 subject: "Markdown"
 keywords: [Markdown, Example]
-subtitle: "PWK Lab & OSCP Exam"
+subtitle: "OSCP Exam"
 lang: "en"
 titlepage: true
 titlepage-color: "DC143C"
@@ -15,7 +15,7 @@ book: true
 classoption: oneside
 code-block-font-size: \scriptsize
 ---
-# Offensive-Security Lab and Exam Penetration Test Report
+# Offensive-Security OSCP Exam Report
 
 ## Introduction
 

@@ -4,7 +4,7 @@ author: ["student@youremailaddress.com", "OSID: XXXX"]
 date: "2017-02-20"
 subject: "Markdown"
 keywords: [Markdown, Example]
-subtitle: "PWK Lab & OSCP Exam"
+subtitle: "OSCP Exam"
 lang: "en"
 titlepage: true
 titlepage-color: "1E90FF"
@@ -15,7 +15,7 @@ book: true
 classoption: oneside
 code-block-font-size: \scriptsize
 ---
-# Offensive Security Exam Penetration Test Report
+# Offensive Security OSCP Exam Report
 
 ## Introduction
 
@@ -44,7 +44,7 @@ The student will be required to fill out this penetration testing report fully a
 
 I was tasked with performing an internal penetration test towards Offensive Security Exam.
 An internal penetration test is a dedicated attack against internally connected systems.
-The focus of this test is to perform attacks, similar to those of a hacker and attempt to infiltrate Offensive Security's internal exam systems – the THINC.local domain.
+The focus of this test is to perform attacks, similar to those of a hacker and attempt to infiltrate Offensive Security's internal exam systems - the THINC.local domain.
 My overall objective was to evaluate the network, identify systems, and exploit flaws while reporting the findings back to Offensive Security.
 
 When performing the internal penetration test, there were several alarming vulnerabilities that were identified on Offensive Security's network.
