@@ -1,4 +1,4 @@
-# Offensive Security Exam Report Template in **Markdown**
+# Offensive Security Exam Report Template in Markdown
 
 [![Rawsec's CyberSecurity Inventory](https://inventory.rawsec.ml/img/badges/Rawsec-inventoried-FF5050_flat-square.svg)](https://inventory.rawsec.ml/tools.html#OSCP%20Exam%20Report%20Template%20in%20Markdown)
 [![GitHub stars](https://img.shields.io/github/stars/noraj/OSCP-Exam-Report-Template-Markdown?style=flat-square)](https://github.com/noraj/OSCP-Exam-Report-Template-Markdown/stargazers)
@@ -8,6 +8,8 @@
 I created an **Offensive Security Exam Report Template in Markdown** so LaTeX, Microsoft Office Word, LibreOffice Writer are no longer needed during your Offensive Security exam!
 
 Now you can be efficient and faster during your exam report redaction!
+
+![](https://i.imgur.com/XiXIZg3.png)
 
 Examples:
 
@@ -83,12 +85,16 @@ titlepage-color          | titlepage-text-color | titlepage-rule-color
 Report Templates:
 
 - **OSCP**
-  - Official Offensive Security Template v1
-  - whoisflynn improved template v3.2
+  - [Official Offensive Security Template v1](output/OSCP-exam-report-template_OS_v1.pdf)
+  - [whoisflynn improved template v3.2](output/OSCP-exam-report-template_whoisflynn_v3.2.pdf)
 - **OSWE**
-  - Official Offensive Security Template v1
+  - [Official Offensive Security Template v1](output/OSWE-exam-report-template_OS_v1.pdf)
 - **OSCE**
-  - Official Offensive Security Template v1
+  - [Official Offensive Security Template v1](output/OSCE-exam-report-template_OS_v1.pdf)
+- **OSEE**
+  - [Official Offensive Security Template v1](output/OSEE-exam-report-template_OS_v1.pdf)
+- **OSWP**
+  - [Official Offensive Security Template v1](output/OSWP-exam-report-template_OS_v1.pdf)
 
 ## Mentions
 
@@ -107,12 +113,16 @@ Report Templates:
 Report Templates:
 
 - **OSCP**
-  - Official Offensive Security Template v1 (UNLICENSED): https://support.offensive-security.com/oscp-exam-guide/#suggested-documentation-templates
-  - whoisflynn improved template v3.2 (UNLICENSED): https://github.com/whoisflynn/OSCP-Exam-Report-Template
+  - [Official Offensive Security Template v1](https://support.offensive-security.com/oscp-exam-guide/#suggested-documentation-templates) (UNLICENSED)
+  - [whoisflynn improved template v3.2](https://github.com/whoisflynn/OSCP-Exam-Report-Template) (UNLICENSED)
 - **OSWE**
-  - Official Offensive Security Template v1 (UNLICENSED): https://support.offensive-security.com/oswe-exam-guide/#suggested-documentation-templates
+  - [Official Offensive Security Template v1](https://support.offensive-security.com/oswe-exam-guide/#suggested-documentation-templates) (UNLICENSED)
 - **OSCE**
-  - Official Offensive Security Template v1 (UNLICENSED): https://support.offensive-security.com/osce-exam-guide/#suggested-documentation-templates
+  - [Official Offensive Security Template v1](https://support.offensive-security.com/osce-exam-guide/#suggested-documentation-templates) (UNLICENSED)
+- **OSEE**
+  - [Official Offensive Security Template v1](https://support.offensive-security.com/osee-exam-guide/#documentation-requirements) (UNLICENSED)
+- **OSWP**
+  - [Official Offensive Security Template v1](https://support.offensive-security.com/oswp-exam-guide/#suggested-documentation-templates) (UNLICENSED)
 
 Pandoc Template:
 
