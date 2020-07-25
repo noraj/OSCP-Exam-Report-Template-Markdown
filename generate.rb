@@ -58,3 +58,16 @@ puts 'Generating archive...'
   -p#{osid} \
   #{File.expand_path(pdf)}
 )
+
+# Optional lab report
+puts 'Do you want to add an external lab report? [y/N]'
+choice = gets.chomp
+if choice.downcase == 'y'
+  puts 'Write the path of your lab PDF'
+  lab = gets.chomp
+  puts 'Updating archive...'
+  %x(7z a output/#{exam}-#{osid}-Exam-Report.7z \
+    -p#{osid} \
+    #{File.expand_path(lab)}
+  )
+end
