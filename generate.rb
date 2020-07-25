@@ -15,6 +15,11 @@ templates = [
     exam: 'OSWE',
     name: 'official Offensive Security template v1',
     path: 'src/OSWE-exam-report-template_OS_v1.md'
+  },
+  {
+    exam: 'OSCE',
+    name: 'official Offensive Security template v1',
+    path: 'src/OSCE-exam-report-template_OS_v1.md'
   }
 ]
 

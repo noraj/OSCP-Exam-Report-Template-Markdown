@@ -1,13 +1,13 @@
-# OSCP/OSWE Exam Report Template in **Markdown**
+# Offensive Security Exam Report Template in **Markdown**
 
 [![Rawsec's CyberSecurity Inventory](https://inventory.rawsec.ml/img/badges/Rawsec-inventoried-FF5050_flat-square.svg)](https://inventory.rawsec.ml/tools.html#OSCP%20Exam%20Report%20Template%20in%20Markdown)
 [![GitHub stars](https://img.shields.io/github/stars/noraj/OSCP-Exam-Report-Template-Markdown?style=flat-square)](https://github.com/noraj/OSCP-Exam-Report-Template-Markdown/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/noraj/OSCP-Exam-Report-Template-Markdown?style=flat-square)](https://github.com/noraj/OSCP-Exam-Report-Template-Markdown/network)
 [![GitHub license](https://img.shields.io/github/license/noraj/OSCP-Exam-Report-Template-Markdown?style=flat-square)](https://github.com/noraj/OSCP-Exam-Report-Template-Markdown/blob/master/LICENSE)
 
-I created an **OSCP/OSWE Exam Report Template in Markdown** so LaTeX, Microsoft Office Word, LibreOffice Writter are no longer needed during your OSCP exam!
+I created an **Offensive Security Exam Report Template in Markdown** so LaTeX, Microsoft Office Word, LibreOffice Writer are no longer needed during your Offensive Security exam!
 
-Now you can be efficient and faster during your exam report redaction! 
+Now you can be efficient and faster during your exam report redaction!
 
 Examples:
 
@@ -87,6 +87,8 @@ Report Templates:
   - whoisflynn improved template v3.2
 - **OSWE**
   - Official Offensive Security Template v1
+- **OSCE**
+  - Official Offensive Security Template v1
 
 ## Mentions
 
@@ -109,6 +111,8 @@ Report Templates:
   - whoisflynn improved template v3.2 (UNLICENSED): https://github.com/whoisflynn/OSCP-Exam-Report-Template
 - **OSWE**
   - Official Offensive Security Template v1 (UNLICENSED): https://support.offensive-security.com/oswe-exam-guide/#suggested-documentation-templates
+- **OSCE**
+  - Official Offensive Security Template v1 (UNLICENSED): https://support.offensive-security.com/osce-exam-guide/#suggested-documentation-templates
 
 Pandoc Template:
 
