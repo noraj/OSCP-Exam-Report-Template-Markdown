@@ -41,36 +41,36 @@ The student will be required to fill out this penetration testing report and inc
 - Each finding with included screenshots, walkthrough, sample code, and proof.txt if applicable.
 - Any additional items that were not included
 
-# Sample Report – High-Level Summary
+# Sample Report - High-Level Summary
 
 John Doe was tasked with performing an internal penetration test towards Offensive Security Labs.
 An internal penetration test is a dedicated attack against internally connected systems.
-The focus of this test is to perform attacks, similar to those of a hacker and attempt to infiltrate Offensive Security’s internal lab systems – the **THINC.local** domain.
-John’s overall objective was to evaluate the network, identify systems, and exploit flaws while reporting the findings back to Offensive Security.
+The focus of this test is to perform attacks, similar to those of a hacker and attempt to infiltrate Offensive Security's internal lab systems - the **THINC.local** domain.
+John's overall objective was to evaluate the network, identify systems, and exploit flaws while reporting the findings back to Offensive Security.
 
-When performing the internal penetration test, there were several alarming vulnerabilities that were identified on Offensive Security’s network.
+When performing the internal penetration test, there were several alarming vulnerabilities that were identified on Offensive Security's network.
 When performing the attacks, John was able to gain access to multiple machines, primarily due to outdated patches and poor security configurations.
 During the testing, John had administrative level access to multiple systems.
 All systems were successfully exploited and access granted.
 These systems as well as a brief description on how access was obtained are listed below:
 
-- Lab Trophy 1 – Got in through X
-- Lab Trophy 2 – Got in through X
-- Lab Trophy 3 – Got in through X
-- Exam Trophy 1 – Got in through X
-- Exam Trophy 2 – Got in through X
+- Lab Trophy 1 - Got in through X
+- Lab Trophy 2 - Got in through X
+- Lab Trophy 3 - Got in through X
+- Exam Trophy 1 - Got in through X
+- Exam Trophy 2 - Got in through X
 
 ## Sample Report - Recommendations
 
 John recommends patching the vulnerabilities identified during the testing to ensure that an attacker cannot exploit these systems in the future.
 One thing to remember is that these systems require frequent patching and once patched, should remain on a regular patch program to protect additional vulnerabilities that are discovered at a later date.
 
-# Sample Report – Methodologies
+# Sample Report - Methodologies
 
 John utilized a widely adopted approach to performing penetration testing that is effective in testing how well the Offensive Security Labs and Exam environments are secure.
 Below is a breakout of how John was able to identify and exploit the variety of systems and includes all individual vulnerabilities found.
 
-## Sample Report – Information Gathering
+## Sample Report - Information Gathering
 
 The information gathering portion of a penetration test focuses on identifying the scope of the penetration test.
 During this penetration test, John was tasked with exploiting the lab and exam network.
@@ -84,7 +84,7 @@ The specific IP addresses were:
 
 172.16.203.133, 172.16.203.134, 172.16.203.135, 172.16.203.136
 
-## Sample Report – Service Enumeration
+## Sample Report - Service Enumeration
 
 The service enumeration portion of a penetration test focuses on gathering information about what services are alive on a system or systems.
 This is valuable for an attacker as it provides detailed information on potential attack vectors into a system.
@@ -98,7 +98,7 @@ Server IP Address | Ports Open
 192.168.1.3       | **TCP**: 1433,3389\
 **UDP**: 1434,161
 
-## Sample Report – Penetration
+## Sample Report - Penetration
 
 The penetration testing portions of the assessment focus heavily on gaining access to a variety of systems.
 During this penetration test, John was able to successfully gain access to 10 out of the 50 systems.
@@ -210,7 +210,7 @@ Custom error messages are highly recommended, as it becomes more challenging for
 **Proof of Concept Code Here:**
 `SELECT * FROM login WHERE id = 1 or 1=1 AND user LIKE "%root%"`
 
-## Sample Report – Maintaining Access
+## Sample Report - Maintaining Access
 
 Maintaining access to a system is important to us as attackers, ensuring that we can get back into a system after it has been exploited is invaluable.
 The maintaining access phase of the penetration test focuses on ensuring that once the focused attack has occurred (i.e. a buffer overflow), we have administrative access over the system again.
@@ -219,7 +219,7 @@ Many exploits may only be exploitable once and we may never be able to get back 
 John added administrator and root level accounts on all systems compromised.
 In addition to the administrative/root access, a Metasploit meterpreter service was installed on the machine to ensure that additional access could be established.
 
-## Sample Report – House Cleaning
+## Sample Report - House Cleaning
 
 The house cleaning portions of the assessment ensures that remnants of the penetration test are removed.
 Often fragments of tools or user accounts are left on an organizations computer which can cause security issues down the road.

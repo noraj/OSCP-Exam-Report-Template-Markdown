@@ -40,16 +40,14 @@ The student will be required to fill out this penetration testing report fully a
 - Each finding with included screenshots, walkthrough, sample code, and proof.txt if applicable
 - Any additional items that were not included
 
-
-
 # High-Level Summary
 
 I was tasked with performing an internal penetration test towards Offensive Security Exam.
 An internal penetration test is a dedicated attack against internally connected systems.
-The focus of this test is to perform attacks, similar to those of a hacker and attempt to infiltrate Offensive Security’s internal exam systems – the THINC.local domain.
+The focus of this test is to perform attacks, similar to those of a hacker and attempt to infiltrate Offensive Security's internal exam systems – the THINC.local domain.
 My overall objective was to evaluate the network, identify systems, and exploit flaws while reporting the findings back to Offensive Security.
 
-When performing the internal penetration test, there were several alarming vulnerabilities that were identified on Offensive Security’s network.
+When performing the internal penetration test, there were several alarming vulnerabilities that were identified on Offensive Security's network.
 When performing the attacks, I was able to gain access to multiple machines, primarily due to outdated patches and poor security configurations.
 During the testing, I had administrative level access to multiple systems.
 All systems were successfully exploited and access granted.
@@ -65,8 +63,6 @@ These systems as well as a brief description on how access was obtained are list
 
 I recommend patching the vulnerabilities identified during the testing to ensure that an attacker cannot exploit these systems in the future.
 One thing to remember is that these systems require frequent patching and once patched, should remain on a regular patch program to protect additional vulnerabilities that are discovered at a later date.
-
-
 
 # Methodologies
 
@@ -303,8 +299,6 @@ Ensuring that we are meticulous and no remnants of our penetration test are left
 
 After collecting trophies from the exam network was completed, Alec removed all user accounts and passwords as well as the Meterpreter services installed on the system.
 Offensive Security should not have to remove any user accounts or services from the system.
-
-
 
 # Additional Items
 
