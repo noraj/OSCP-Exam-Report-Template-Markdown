@@ -106,7 +106,7 @@ Report Templates:
 
 ## Mentions
 
-- Recent mentions on social medias: [![GitSpo Mentions](https://gitspo.com/badges/mentions/noraj/OSCP-Exam-Report-Template-Markdown?style=flat-square)](https://gitspo.com/mentions/noraj/OSCP-Exam-Report-Template-Markdown)
+- Recent mentions on social medias: [![GitSpo Mentions](https://gitspo.com/badges/mentions/noraj/OSCP-Exam-Report-Template-Markdown?style=flat-square)](https://gitspo.com/noraj/OSCP-Exam-Report-Template-Markdown/mentions)
 
 - John Hammond - OSCP - Taking Notes & Resources (video)
   [![OSCP - Taking Notes & Resources](http://img.youtube.com/vi/MQGozZzHUwQ/0.jpg)](https://www.youtube.com/watch?v=MQGozZzHUwQ)
