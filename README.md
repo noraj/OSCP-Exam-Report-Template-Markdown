@@ -14,6 +14,8 @@ Now you can be efficient and faster during your exam report redaction!
 - :memo: **Re-use your Markdown notes**, you'll be so glad not having to reformat the bold and italic from your Markdown notes into the report
 - :lock: **Version control ready**, save your markdown template into a PRIVATE git repository, you know have an incremental backup, version control works with Markdown (.md) as it's text but not with binaries (.doc, .odt)
 - :pen: **Use your favorite editor or note taking app**, with Markdown you'll be able to use your favorite editor (VSCode, Atom, etc.) or note taking app (Vnote, QOwnNotes, Boostnote, etc.) to write your exam report, you won't have to switch to Windows to use MS Word.
+- :tophat: **Clean & professional style**, a professional looking report for your professional certification
+- :ok_hand: **Error free**, use the generation script to generate the report and archive, you won't do any [submission format and name](https://support.offensive-security.com/oscp-exam-guide/#submission-format-and-name) mistake that way
 
 ![](https://i.imgur.com/XiXIZg3.png)
 
