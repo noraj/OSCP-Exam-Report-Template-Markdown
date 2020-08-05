@@ -67,7 +67,7 @@ One thing to remember is that these systems require frequent patching and once p
 The penetration testing portions of the assessment focus heavily on gaining access to a variety of systems.
 During this penetration test, I was able to successfully gain access to **X** out of the **2** systems.
 
-# 192.168.XX.XX - app_name [language]
+## 192.168.XX.XX - app_name [language]
 
 ### Local.txt & Proof.txt
 
@@ -87,24 +87,24 @@ proof.txt: `xxx`
 
 Provide your debug setup.
 
-## Vulnerability 1 - vulnerability_name
+### Vulnerability 1 - vulnerability_name
 
 Provide the method and code used to find the vulnerability 1.
 
-## Vulnerability 2 - vulnerability_name
+### Vulnerability 2 - vulnerability_name
 
 Provide the method and code used to find the vulnerability 2.
 
-## Vulnerability X - vulnerability_name
+### Vulnerability X - vulnerability_name
 
 Provide the method and code used to find the vulnerability X.
 
-## Steps of exploit writing
+### Steps of exploit writing
 
 Provide a detailed account of your methodology in creating the exploits. The steps taken
 should be able to be easily followed and reproducible if necessary.
 
-## PoC Code
+### PoC Code
 
 To install the dependencies required for PoC execution:
 
@@ -120,7 +120,7 @@ Provide the final proof of concept code used to gain access to the server.
 puts 'My best PoC'
 ```
 
-# 192.168.XX.XX - app_name [language]
+## 192.168.XX.XX - app_name [language]
 
 ### Local.txt & Proof.txt
 
@@ -140,24 +140,24 @@ proof.txt: `xxx`
 
 Provide your debug setup.
 
-## Vulnerability 1 - vulnerability_name
+### Vulnerability 1 - vulnerability_name
 
 Provide the method and code used to find the vulnerability 1.
 
-## Vulnerability 2 - vulnerability_name
+### Vulnerability 2 - vulnerability_name
 
 Provide the method and code used to find the vulnerability 2.
 
-## Vulnerability X - vulnerability_name
+### Vulnerability X - vulnerability_name
 
 Provide the method and code used to find the vulnerability X.
 
-## Steps of exploit writing
+### Steps of exploit writing
 
 Provide a detailed account of your methodology in creating the exploits. The steps taken
 should be able to be easily followed and reproducible if necessary.
 
-## PoC Code
+### PoC Code
 
 Provide the final proof of concept code used to gain access to the server.
 
