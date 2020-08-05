@@ -97,6 +97,7 @@ Report Templates:
   - [whoisflynn improved template v3.2](output/OSCP-exam-report-template_whoisflynn_v3.2.pdf)
 - **OSWE**
   - [Official Offensive Security Template v1](output/OSWE-exam-report-template_OS_v1.pdf)
+  - [noraj improved template v1](output/OSWE-exam-report-template_noraj_v1.pdf)
 - **OSCE**
   - [Official Offensive Security Template v1](output/OSCE-exam-report-template_OS_v1.pdf)
 - **OSEE**
@@ -110,7 +111,7 @@ Report Templates:
 
 - John Hammond - OSCP - Taking Notes & Resources (video)
   [![OSCP - Taking Notes & Resources](http://img.youtube.com/vi/MQGozZzHUwQ/0.jpg)](https://www.youtube.com/watch?v=MQGozZzHUwQ)
-- 8th [Top Offensive Security Open Source Projects](https://awesomeopensource.com/projects/offensive-security) (08 Apr. 2020)
+- 6th [Top Offensive Security Open Source Projects](https://awesomeopensource.com/projects/offensive-security) (05 Aug. 2020)
 
 ## Stargazers over time
 
@@ -125,6 +126,7 @@ Report Templates:
   - [whoisflynn improved template v3.2](https://github.com/whoisflynn/OSCP-Exam-Report-Template) (UNLICENSED)
 - **OSWE**
   - [Official Offensive Security Template v1](https://support.offensive-security.com/oswe-exam-guide/#suggested-documentation-templates) (UNLICENSED)
+  - [noraj improved template v1](src/OSWE-exam-report-template_noraj_v1.md) (UNLICENSED)
 - **OSCE**
   - [Official Offensive Security Template v1](https://support.offensive-security.com/osce-exam-guide/#suggested-documentation-templates) (UNLICENSED)
 - **OSEE**
