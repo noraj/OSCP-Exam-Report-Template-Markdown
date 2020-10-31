@@ -122,17 +122,17 @@ Report Templates:
 Report Templates:
 
 - **OSCP**
-  - [Official Offensive Security Template v1](https://support.offensive-security.com/oscp-exam-guide/#suggested-documentation-templates) (UNLICENSED)
+  - [Official Offensive Security Template v1](https://help.offensive-security.com/hc/en-us/articles/360040165632#suggested-documentation-templates) (UNLICENSED)
   - [whoisflynn improved template v3.2](https://github.com/whoisflynn/OSCP-Exam-Report-Template) (UNLICENSED)
 - **OSWE**
-  - [Official Offensive Security Template v1](https://support.offensive-security.com/oswe-exam-guide/#suggested-documentation-templates) (UNLICENSED)
+  - [Official Offensive Security Template v1](https://help.offensive-security.com/hc/en-us/articles/360046869951-OSWE-Exam-Guide#suggested-documentation-templates) (UNLICENSED)
   - [noraj improved template v1](src/OSWE-exam-report-template_noraj_v1.md) (UNLICENSED)
 - **OSCE**
-  - [Official Offensive Security Template v1](https://support.offensive-security.com/osce-exam-guide/#suggested-documentation-templates) (UNLICENSED)
+  - [Official Offensive Security Template v1](https://help.offensive-security.com/hc/en-us/articles/360046801331-OSCE-Exam-Guide#suggested-documentation-templates) (UNLICENSED)
 - **OSEE**
-  - [Official Offensive Security Template v1](https://support.offensive-security.com/osee-exam-guide/#documentation-requirements) (UNLICENSED)
+  - [Official Offensive Security Template v1](https://help.offensive-security.com/hc/en-us/articles/360046458732-OSEE-Exam-Guide#Documentation%20Requirements) (UNLICENSED)
 - **OSWP**
-  - [Official Offensive Security Template v1](https://support.offensive-security.com/oswp-exam-guide/#suggested-documentation-templates) (UNLICENSED)
+  - [Official Offensive Security Template v1](https://help.offensive-security.com/hc/en-us/articles/360046904731-OSWP-Exam-Guide#suggested-documentation-templates) (UNLICENSED)
 
 Pandoc Template:
 
