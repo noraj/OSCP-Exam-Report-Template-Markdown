@@ -75,7 +75,6 @@ pdf = "output/#{exam}-#{osid}-Exam-Report.pdf"
 # Generating archive
 puts 'Generating archive...'
 %x(7z a output/#{exam}-#{osid}-Exam-Report.7z \
-  -p#{osid} \
   #{File.expand_path(pdf)}
 )
 
