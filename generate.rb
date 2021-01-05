@@ -86,7 +86,6 @@ if choice.downcase == 'y'
   lab = gets.chomp
   puts 'Updating archive...'
   %x(7z a output/#{exam}-#{osid}-Exam-Report.7z \
-    -p#{osid} \
     #{File.expand_path(lab)}
   )
 end
