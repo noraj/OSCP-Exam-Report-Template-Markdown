@@ -107,11 +107,14 @@ Report Templates:
 
 ## Mentions
 
-- Recent mentions on social medias: [![GitSpo Mentions](https://gitspo.com/badges/mentions/noraj/OSCP-Exam-Report-Template-Markdown?style=flat-square)](https://gitspo.com/noraj/OSCP-Exam-Report-Template-Markdown/mentions)
-
-- John Hammond - OSCP - Taking Notes & Resources (video)
+- John Hammond - OSCP - Taking Notes & Resources (video) (2019-10-06)
   [![OSCP - Taking Notes & Resources](http://img.youtube.com/vi/MQGozZzHUwQ/0.jpg)](https://www.youtube.com/watch?v=MQGozZzHUwQ)
-- 6th [Top Offensive Security Open Source Projects](https://awesomeopensource.com/projects/offensive-security) (05 Aug. 2020)
+- 5th [Top Offensive Security Open Source Projects](https://awesomeopensource.com/projects/offensive-security) (2021-01-13)
+- Recent mentions on social medias: [Social-searcher](https://www.social-searcher.com/social-buzz/?q5=https%3A%2F%2Fgithub.com%2Fnoraj%2FOSCP-Exam-Report-Template-Markdown)
+- Articles:
+  - [Stress-free OSCP report making](https://craigunder.me/stress-free-oscp-report-making/) by Craig Underhill (2020-04-06)
+  - [Unofficial OSCP Approved Tools](https://falconspy.medium.com/unofficial-oscp-approved-tools-b2b4e889e707) by FalconSpy (2019-06-05)
+  - [Journey from nothing to OSCP](https://cjhackerz.net/posts/journey-from-nothing-to-oscp/) by  CJHackerz (2020-06-30)
 
 ## Stargazers over time
 
