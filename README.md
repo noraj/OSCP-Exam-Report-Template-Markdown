@@ -34,9 +34,20 @@ Examples:
 ## Requirements
 
 - [Pandoc](https://pandoc.org/installing.html)
+  - Ubuntu:
+    - `sudo apt install pandoc`
 - LaTeX (eg. [TeX Live](http://www.tug.org/texlive/)) in order to get `pdflatex` or `xelatex`
+  - Ubuntu:
+    - `sudo apt install texlive texlive-xetex`
+    - `tlmgr option repository ftp://tug.org/historic/systems/texlive/2019/tlnet-final`
+    - `tlmgr init-usertree`
+    - `tlmgr install adjustbox babel-german background bidi collectbox csquotes everypage filehook footmisc footnotebackref framed fvextra letltxmacro ly1 mdframed mweights needspace pagecolor sourcecodepro sourcesanspro titling ucharcat ulem unicode-math upquote xecjk xurl zref --verify-repo=none`
+    - `updmap -user`
+    
 - [Eisvogel Pandoc LaTeX PDF Template](https://github.com/Wandmalfarbe/pandoc-latex-template#installation)
+  - Ubuntu: Download the latest release, unzip, copy `eisvogel.latex` to `/usr/share/pandoc/data/templates/` directory.
 - [p7zip](http://p7zip.sourceforge.net/) (if you want to use the script, for generating the archive)
+  - Ubuntu: `sudo apt install pzip-full`
 
 ## Usage
 
