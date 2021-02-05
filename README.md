@@ -38,6 +38,8 @@ Examples:
 - [Eisvogel Pandoc LaTeX PDF Template](https://github.com/Wandmalfarbe/pandoc-latex-template#installation)
 - [p7zip](http://p7zip.sourceforge.net/) (if you want to use the script, for generating the archive)
 
+Examples for common distros:
+
 - ArchLinux: `pacman -S texlive-most pandoc p7zip`
 - openSUSE: `zypper in texlive-scheme-medium pandoc p7zip-full`
 - Ubuntu: `apt install texlive-full pandoc p7zip-full`
