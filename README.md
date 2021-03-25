@@ -110,6 +110,8 @@ Report Templates:
   - [Official Offensive Security Template v1](output/OSEE-exam-report-template_OS_v1.pdf)
 - **OSWP**
   - [Official Offensive Security Template v1](output/OSWP-exam-report-template_OS_v1.pdf)
+- **OSED**
+  - [epi improved template v1](output/OSED-exam-report-template_epi_v1.pdf)
 
 ## Mentions
 
@@ -142,6 +144,9 @@ Report Templates:
   - [Official Offensive Security Template v1](https://help.offensive-security.com/hc/en-us/articles/360046458732-OSEE-Exam-Guide#Documentation%20Requirements) (UNLICENSED)
 - **OSWP**
   - [Official Offensive Security Template v1](https://help.offensive-security.com/hc/en-us/articles/360046904731-OSWP-Exam-Guide#suggested-documentation-templates) (UNLICENSED)
+- **OSED**
+  - [Official Offensive Security Template v1](https://help.offensive-security.com/hc/en-us/articles/360052977212-OSED-Exam-Guide#suggested-documentation-templates) (UNLICENSED)
+  - [whoisflynn improved template v3.2](src/OSED-exam-report-template_epi_v1.md) (UNLICENSED)
 
 Pandoc Template:
 
