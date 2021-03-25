@@ -7,7 +7,7 @@ keywords: [reversing, exploit-dev, shellcode]
 subtitle: "OSED Exam Report"
 lang: "en"
 titlepage: true
-titlepage-color: "483D8B"
+titlepage-color: "1E90FF"
 titlepage-text-color: "FFFAFA"
 titlepage-rule-color: "FFFAFA"
 titlepage-rule-height: 2
