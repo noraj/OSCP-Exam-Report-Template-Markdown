@@ -102,7 +102,8 @@ Penetration Testing:
 
 - **OSCP**
   - [Official Offensive Security Template v1](output/OSCP-exam-report-template_OS_v1.pdf)
-  - [whoisflynn improved template v3.2](output/OSCP-exam-report-template_whoisflynn_v3.2.pdf)
+  - [Official Offensive Security Template v2](output/OSCP-exam-report-template_OS_v2.pdf)
+  - [whoisflynn][whoisflynn] improved [template](output/OSCP-exam-report-template_whoisflynn_v3.2.pdf) v3.2
 - **OSWP**
   - [Official Offensive Security Template v1](output/OSWP-exam-report-template_OS_v1.pdf)
 - **OSEP**
@@ -112,7 +113,7 @@ Web Application:
 
 - **OSWE**
   - [Official Offensive Security Template v1](output/OSWE-exam-report-template_OS_v1.pdf)
-  - [noraj improved template v1](output/OSWE-exam-report-template_noraj_v1.pdf)
+  - [noraj][noraj] improved [template](output/OSWE-exam-report-template_noraj_v1.pdf) v1
 
 Exploit Development:
 
@@ -124,7 +125,11 @@ Exploit Development:
 - **OSCE** (**deprecated**)
   - [Official Offensive Security Template v1](output/OSCE-exam-report-template_OS_v1.pdf)
 
+[whoisflynn]:https://github.com/whoisflynn
+[noraj]:https://github.com/noraj
 [epi]:https://github.com/epi052
+
+Offensive Security course table:
 
 Exam acronym | Exam name                                         | Lab acronym | Lab name                                  | Course designation
 -------------|---------------------------------------------------|-------------|-------------------------------------------|-------------------
@@ -156,22 +161,22 @@ Exam acronym | Exam name                                         | Lab acronym |
 Report Templates:
 
 - **OSCP**
-  - [Official Offensive Security Template v1](https://help.offensive-security.com/hc/en-us/articles/360040165632#suggested-documentation-templates) (UNLICENSED)
-  - [whoisflynn improved template v3.2](https://github.com/whoisflynn/OSCP-Exam-Report-Template) (UNLICENSED)
+  - [Official Offensive Security Template](https://help.offensive-security.com/hc/en-us/articles/360040165632#suggested-documentation-templates) (UNLICENSED)
+  - [whoisflynn improved template](https://github.com/whoisflynn/OSCP-Exam-Report-Template) (UNLICENSED)
 - **OSWE**
-  - [Official Offensive Security Template v1](https://help.offensive-security.com/hc/en-us/articles/360046869951-OSWE-Exam-Guide#suggested-documentation-templates) (UNLICENSED)
-  - [noraj improved template v1](src/OSWE-exam-report-template_noraj_v1.md) (UNLICENSED)
+  - [Official Offensive Security Template](https://help.offensive-security.com/hc/en-us/articles/360046869951-OSWE-Exam-Guide#suggested-documentation-templates) (UNLICENSED)
+  - [noraj improved template](src/OSWE-exam-report-template_noraj_v1.md) (UNLICENSED)
 - **OSCE**
-  - [Official Offensive Security Template v1](https://help.offensive-security.com/hc/en-us/articles/360046801331-OSCE-Exam-Guide#suggested-documentation-templates) (UNLICENSED)
+  - [Official Offensive Security Template](https://help.offensive-security.com/hc/en-us/articles/360046801331-OSCE-Exam-Guide#suggested-documentation-templates) (UNLICENSED)
 - **OSEE**
-  - [Official Offensive Security Template v1](https://help.offensive-security.com/hc/en-us/articles/360046458732-OSEE-Exam-Guide#Documentation%20Requirements) (UNLICENSED)
+  - [Official Offensive Security Template](https://help.offensive-security.com/hc/en-us/articles/360046458732-OSEE-Exam-Guide#Documentation%20Requirements) (UNLICENSED)
 - **OSWP**
-  - [Official Offensive Security Template v1](https://help.offensive-security.com/hc/en-us/articles/360046904731-OSWP-Exam-Guide#suggested-documentation-templates) (UNLICENSED)
+  - [Official Offensive Security Template](https://help.offensive-security.com/hc/en-us/articles/360046904731-OSWP-Exam-Guide#suggested-documentation-templates) (UNLICENSED)
 - **OSED**
-  - [Official Offensive Security Template v1](https://help.offensive-security.com/hc/en-us/articles/360052977212-OSED-Exam-Guide#suggested-documentation-templates) (UNLICENSED)
-  - [epi improved template v1](src/OSED-exam-report-template_epi_v1.md) (UNLICENSED)
+  - [Official Offensive Security Template](https://help.offensive-security.com/hc/en-us/articles/360052977212-OSED-Exam-Guide#suggested-documentation-templates) (UNLICENSED)
+  - [epi improved template](src/OSED-exam-report-template_epi_v1.md) (UNLICENSED)
 - **OSEP**
-  - [Official Offensive Security Template v1](https://help.offensive-security.com/hc/en-us/articles/360050293792-OSEP-Exam-Guide#suggested-documentation-templates) (UNLICENSED)
+  - [Official Offensive Security Template](https://help.offensive-security.com/hc/en-us/articles/360050293792-OSEP-Exam-Guide#suggested-documentation-templates) (UNLICENSED)
 
 Pandoc Template:
 
