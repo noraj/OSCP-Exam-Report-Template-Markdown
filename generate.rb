@@ -12,6 +12,11 @@ templates = [
     path: 'src/OSCP-exam-report-template_OS_v1.md'
   },
   {
+    exam: 'OSCP',
+    name: 'official Offensive Security template v2',
+    path: 'src/OSCP-exam-report-template_OS_v2.md'
+  },
+  {
     exam: 'OSWE',
     name: 'official Offensive Security template v1',
     path: 'src/OSWE-exam-report-template_OS_v1.md'
@@ -38,8 +43,18 @@ templates = [
   },
   {
     exam: 'OSED',
+    name: 'official Offensive Security template v1',
+    path: 'src/OSED-exam-report-template_OS_v1.md'
+  },
+  {
+    exam: 'OSED',
     name: 'epi improved template v1',
     path: 'src/OSED-exam-report-template_epi_v1.md'
+  },
+  {
+    exam: 'OSEP',
+    name: 'official Offensive Security template v1',
+    path: 'src/OSEP-exam-report-template_OS_v1.md'
   }
 ]
 
