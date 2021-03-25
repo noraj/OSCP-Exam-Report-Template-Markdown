@@ -146,7 +146,7 @@ Report Templates:
   - [Official Offensive Security Template v1](https://help.offensive-security.com/hc/en-us/articles/360046904731-OSWP-Exam-Guide#suggested-documentation-templates) (UNLICENSED)
 - **OSED**
   - [Official Offensive Security Template v1](https://help.offensive-security.com/hc/en-us/articles/360052977212-OSED-Exam-Guide#suggested-documentation-templates) (UNLICENSED)
-  - [whoisflynn improved template v3.2](src/OSED-exam-report-template_epi_v1.md) (UNLICENSED)
+  - [epi improved template v1](src/OSED-exam-report-template_epi_v1.md) (UNLICENSED)
 
 Pandoc Template:
 
