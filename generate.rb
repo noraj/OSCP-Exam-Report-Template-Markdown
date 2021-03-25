@@ -35,6 +35,11 @@ templates = [
     exam: 'OSWP',
     name: 'official Offensive Security template v1',
     path: 'src/OSWP-exam-report-template_OS_v1.md'
+  },
+  {
+    exam: 'OSED',
+    name: 'epi improved template v1',
+    path: 'src/OSED-exam-report-template_epi_v1.md'
   }
 ]
 
