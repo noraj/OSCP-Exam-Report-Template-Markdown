@@ -5,7 +5,7 @@
 [![GitHub forks](https://img.shields.io/github/forks/noraj/OSCP-Exam-Report-Template-Markdown?style=flat-square)](https://github.com/noraj/OSCP-Exam-Report-Template-Markdown/network)
 [![GitHub license](https://img.shields.io/github/license/noraj/OSCP-Exam-Report-Template-Markdown?style=flat-square)](https://github.com/noraj/OSCP-Exam-Report-Template-Markdown/blob/master/LICENSE)
 
-I created an **Offensive Security Exam Report Template in Markdown** so LaTeX, Microsoft Office Word, LibreOffice Writer are no longer needed during your Offensive Security OSCP, OSWE, OSCE, OSEE, OSWP exam!
+I created an **Offensive Security Exam Report Template in Markdown** so LaTeX, Microsoft Office Word, LibreOffice Writer are no longer needed during your Offensive Security OSCP, OSWE, OSCE, OSEE, OSWP, OSEP, OSED exam!
 
 Now you can be efficient and faster during your exam report redaction!
 
@@ -98,20 +98,43 @@ titlepage-color          | titlepage-text-color | titlepage-rule-color
 
 Report Templates:
 
+Penetration Testing:
+
 - **OSCP**
   - [Official Offensive Security Template v1](output/OSCP-exam-report-template_OS_v1.pdf)
   - [whoisflynn improved template v3.2](output/OSCP-exam-report-template_whoisflynn_v3.2.pdf)
+- **OSWP**
+  - [Official Offensive Security Template v1](output/OSWP-exam-report-template_OS_v1.pdf)
+- **OSEP**
+  - [Official Offensive Security Template v1](output/OSEP-exam-report-template_OS_v1.pdf)
+
+Web Application:
+
 - **OSWE**
   - [Official Offensive Security Template v1](output/OSWE-exam-report-template_OS_v1.pdf)
   - [noraj improved template v1](output/OSWE-exam-report-template_noraj_v1.pdf)
-- **OSCE**
-  - [Official Offensive Security Template v1](output/OSCE-exam-report-template_OS_v1.pdf)
+
+Exploit Development:
+
+- **OSED**
+  - [Official Offensive Security Template v1](output/OSED-exam-report-template_OS_v1.pdf)
+  - [epi][epi] improved [template](output/OSED-exam-report-template_epi_v1.pdf) v1
 - **OSEE**
   - [Official Offensive Security Template v1](output/OSEE-exam-report-template_OS_v1.pdf)
-- **OSWP**
-  - [Official Offensive Security Template v1](output/OSWP-exam-report-template_OS_v1.pdf)
-- **OSED**
-  - [epi improved template v1](output/OSED-exam-report-template_epi_v1.pdf)
+- **OSCE** (**deprecated**)
+  - [Official Offensive Security Template v1](output/OSCE-exam-report-template_OS_v1.pdf)
+
+[epi]:https://github.com/epi052
+
+Exam acronym | Exam name                                         | Lab acronym | Lab name                                  | Course designation
+-------------|---------------------------------------------------|-------------|-------------------------------------------|-------------------
+**OSCP**     | Offensive Security Certified Professional         | PWK         | Penetration Testing with Kali Linux       | PEN-200
+**OSWP**     | Offensive Security Wireless Professional          | OSWA        | Offensive Security Wireless Attacks       | PEN-210
+**OSEP**     | Offensive Security Experienced Penetration Tester | ETBD        | Evasion Techniques and Breaching Defenses | PEN-300
+**OSWE**     | Offensive Security Web Expert                     | AWAE        | Advanced Web Attacks and Exploitation     | WEB-300
+**OSED**     | Offensive Security Exploit Developer              | WUMED       | Windows User Mode Exploit Development     | EXP-301
+**OSEE**     | Offensive Security Exploitation Expert            | AWE         | Advanced Windows Exploitation             | EXP-401
+**OSCE**     | Offensive Security Certified Expert               | CTP         | Cracking the Perimeter                    | N/A
 
 ## Mentions
 
@@ -147,6 +170,8 @@ Report Templates:
 - **OSED**
   - [Official Offensive Security Template v1](https://help.offensive-security.com/hc/en-us/articles/360052977212-OSED-Exam-Guide#suggested-documentation-templates) (UNLICENSED)
   - [epi improved template v1](src/OSED-exam-report-template_epi_v1.md) (UNLICENSED)
+- **OSEP**
+  - [Official Offensive Security Template v1](https://help.offensive-security.com/hc/en-us/articles/360050293792-OSEP-Exam-Guide#suggested-documentation-templates) (UNLICENSED)
 
 Pandoc Template:
 
