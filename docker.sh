@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 #
-# 2021 @noraj
+# 2020 @leonjza
 #
-# Part of the OSCP-Exam-Report-Template-Markdown project
-#  https://github.com/noraj/OSCP-Exam-Report-Template-Markdown
+# Adjusted and repurposed from the frida-boot workshop
+#  https://github.com/leonjza/frida-boot
 
 if ! hash docker 2>/dev/null; then
     echo "Docker is required. Please install it first!"
@@ -16,7 +16,7 @@ if ! [[ "$1" =~ ^(pull|build|run|shell)$ ]]; then
     exit 1
 fi
 
-case $1 in 
+case $1 in
 
 pull)
     echo "reserved for public. you can build it rather"
