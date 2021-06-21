@@ -99,6 +99,7 @@ docker run --rm -it --name report-generator -v $(pwd)/output:/root/report-genera
 The above command will launch an Ubuntu-based container that has all the dependencies installed for the report generator to work correctly. 
 
 **IMPORTANT: Replace the FULL_PATH_TO_LOCAL_SRC_FOLDER section with the local directory you want to store your markdown files and images in. ie: /home/noraj/src**
+
 **IMPORTANT: Replace the FULL_PATH_TO_LOCAL_OUTPUT_FOLDER section with the local directory you want to store your PDF and/or 7z archive in. ie: /home/noraj/output"**
 
 From within the spawned shell, you can use either the automated or the manual commands to generate the report PDF.
