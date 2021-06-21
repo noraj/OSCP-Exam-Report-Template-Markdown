@@ -79,6 +79,30 @@ pandoc src/OSCP-exam-report-template_whoisflynn_v3.2.md \
 
 You can change the code syntax highlight theme with [`--highlight-style`](https://pandoc.org/MANUAL.html#option--highlight-style).
 
+### Docker
+
+Instead of installing Pandoc and the other dependencies on your local machine, you can use a local Docker container to generate the report PDF from the markdown template.
+
+Build the local Docker image:
+
+```
+docker build -t report-generator .
+
+```
+
+Create a Docker container from the local image:
+
+```
+docker run --rm -it --name report-generator -v $(pwd)/output:/root/report-generator/output -v $(pwd)/src:/root/report-generator/src report-generator
+```
+
+The above command will launch an Ubuntu-based container that has all the dependencies installed for the report generator to work correctly. 
+
+**IMPORTANT: Replace the FULL_PATH_TO_LOCAL_SRC_FOLDER section with the local directory you want to store your markdown files and images in. ie: /home/noraj/src**
+**IMPORTANT: Replace the FULL_PATH_TO_LOCAL_OUTPUT_FOLDER section with the local directory you want to store your PDF and/or 7z archive in. ie: /home/noraj/output"**
+
+From within the spawned shell, you can use either the automated or the manual commands to generate the report PDF.
+
 ## Color sets
 
 Well rendering color sets you can use in the template YAML frontmatter:
