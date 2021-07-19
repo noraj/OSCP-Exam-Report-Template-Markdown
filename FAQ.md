@@ -60,3 +60,7 @@ Eg.
 raw code
 ```
 ~~~
+
+## How do I know what markdown formatting is supported (there are so many different version)?
+
+In `generate.rb`, `markdown` [is used](https://github.com/noraj/OSCP-Exam-Report-Template-Markdown/blob/50aeada2b6171c3a4fe96d91a10f632d752063f2/generate.rb#L82-L93) as `--to` formatter for `pandoc` which means it will use [Pandoc markdown](https://pandoc.org/MANUAL.html#pandocs-markdown) (similar to GFM [[1](https://docs.gitlab.com/ee/user/markdown.html)] [[2](https://github.github.com/gfm/)].) Else other syntaxes (commonmark, GFM, MultiMarkdown, PHP Markdown Extra) are supported too, see [pandoc options](https://pandoc.org/MANUAL.html#option--to). If you want to use another syntax you can generate your report using the [manual command](https://github.com/noraj/OSCP-Exam-Report-Template-Markdown#manual).
