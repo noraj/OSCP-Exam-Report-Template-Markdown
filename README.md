@@ -141,11 +141,18 @@ Exam acronym | Exam name                                         | Lab acronym |
 **OSEE**     | Offensive Security Exploitation Expert            | AWE         | Advanced Windows Exploitation             | EXP-401
 **OSCE**     | Offensive Security Certified Expert               | CTP         | Cracking the Perimeter                    | N/A
 
+## Community projects
+
+Docker containers:
+
+- [ret2src docker](https://github.com/ret2src/OSCP-Exam-Report-Template-Markdown#docker)
+- [Tripex48 docker](https://github.com/Tripex48/OSCP-Exam-Report-Template-Markdown#docker)
+
 ## Mentions
 
 - John Hammond - OSCP - Taking Notes & Resources (video) (2019-10-06)
   [![OSCP - Taking Notes & Resources](http://img.youtube.com/vi/MQGozZzHUwQ/0.jpg)](https://www.youtube.com/watch?v=MQGozZzHUwQ)
-- 5th [Top Offensive Security Open Source Projects](https://awesomeopensource.com/projects/offensive-security) (2021-01-13)
+- 3rd [Top Offensive Security Open Source Projects](https://awesomeopensource.com/projects/offensive-security) (2021-07-19)
 - Recent mentions on social medias: [Social-searcher](https://www.social-searcher.com/social-buzz/?q5=https%3A%2F%2Fgithub.com%2Fnoraj%2FOSCP-Exam-Report-Template-Markdown)
 - Articles:
   - [Stress-free OSCP report making](https://craigunder.me/stress-free-oscp-report-making/) by Craig Underhill (2020-04-06)
