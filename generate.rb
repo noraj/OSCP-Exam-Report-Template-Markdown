@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
 
+puts "---[ OffSec Exam Report Generator ]---"
+
 templates = [
   {
     exam: 'OSCP',
@@ -59,28 +61,27 @@ templates = [
 ]
 
 # Choose template
-puts 'Choose a template:'
 templates.each_with_index do |t,i|
   puts "#{i}. [#{t[:exam]}] #{t[:name]}"
 end
+print 'Choose a template: '
 choice = gets.chomp
 src = templates[choice.to_i][:path]
 exam = templates[choice.to_i][:exam]
 
 # Enter your OS id
-puts 'Enter your OS id'
-print 'OS-'
+print 'Enter your OS id: OS-'
 osid = 'OS-' + gets.chomp
 
 # Choose syntax highlight style
 style = 'breezedark'
-puts "Choose syntax highlight style [#{style}]"
+print "Choose syntax highlight style [#{style}] "
 choice = gets.chomp
 style = choice unless choice.empty?
 puts style
 
 # Generating report
-puts 'Generating report...'
+print 'Generating report...'
 pdf = "output/#{exam}-#{osid}-Exam-Report.pdf"
 %x(pandoc #{src} -o #{pdf} \
   --from markdown+yaml_metadata_block+raw_html \
@@ -91,21 +92,37 @@ pdf = "output/#{exam}-#{osid}-Exam-Report.pdf"
   --top-level-division=chapter \
   --highlight-style #{style}
 )
+puts "done"
 
 # Generating archive
-puts 'Generating archive...'
-%x(7z a output/#{exam}-#{osid}-Exam-Report.7z \
+print 'Generating archive...'
+archive = "output/#{exam}-#{osid}-Exam-Report.7z"
+%x(7z a #{archive} \
   #{File.expand_path(pdf)}
 )
+puts "done"
 
 # Optional lab report
-puts 'Do you want to add an external lab report? [y/N]'
+print 'Do you want to add an external lab report? [y/N] '
 choice = gets.chomp
 if choice.downcase == 'y'
   puts 'Write the path of your lab PDF'
   lab = gets.chomp
-  puts 'Updating archive...'
-  %x(7z a output/#{exam}-#{osid}-Exam-Report.7z \
+  print 'Updating archive...'
+  %x(7z a #{archive} \
     #{File.expand_path(lab)}
   )
+  puts "done"
 end
+
+# Calculate MD5
+print 'Calculating MD5...'
+md5 = %x(md5sum \
+  #{File.expand_path(pdf)} \
+  | cut -d ' ' -f 1
+)
+puts "done"
+
+puts
+puts "Generated archive #{archive}"
+puts "with MD5 #{md5}"
