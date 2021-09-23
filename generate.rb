@@ -61,6 +61,7 @@ templates = [
 ]
 
 # Choose template
+puts "Available templates:"
 templates.each_with_index do |t,i|
   puts "#{i}. [#{t[:exam]}] #{t[:name]}"
 end
@@ -75,10 +76,14 @@ osid = 'OS-' + gets.chomp
 
 # Choose syntax highlight style
 style = 'breezedark'
+styles = %x(pandoc --list-highlight-styles).split("\n")
+puts "Available highlight styles:"
+styles.each_with_index do |s,i|
+  puts "#{i}. #{s}"
+end
 print "Choose syntax highlight style [#{style}] "
 choice = gets.chomp
-style = choice unless choice.empty?
-puts style
+style = styles[choice.to_i] unless choice.empty?
 
 # Generating report
 print 'Generating report...'
