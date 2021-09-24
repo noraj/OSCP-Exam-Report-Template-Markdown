@@ -154,7 +154,8 @@ print 'Generating report...'
   --toc-depth 6 \
   --number-sections \
   --top-level-division=chapter \
-  --highlight-style #{style}
+  --highlight-style #{style} \
+  --metadata date='#{Time.now.strftime("%Y-%m-%d")}'
 )
 puts "done"
 
