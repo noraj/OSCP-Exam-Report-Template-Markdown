@@ -1,24 +1,21 @@
 #!/usr/bin/env ruby
 
-puts "---[ OffSec Exam Report Generator ]---"
-
 # Default options
 # Uncommment and set your own default options to not get prompted each time
 options = {
   # template: 0,
   # osid: 'OS-####',
-  # style: '6',
+  # style: 'breezedark',
   # extra_file: false
 }
 
 require 'optparse'
 OptionParser.new do |opts|
   opts.banner = "Usage: generate.rb [options]"
-  opts.on("-v", "--verbose", "Run verbosely") { |o| options[:verbose] = o }
   opts.on("-t", "--template ID", "Template ID") { |o| options[:template] = o }
   opts.on("-i", "--os-id ID", "OS-ID") { |o| options[:osid] = o }
   opts.on("-s", "--style STYLE", "Code highlight style (or 'd' for default)") { |o| options[:style] = o != 'd' ? o : false  }
-  opts.on("-e", "--extra FILE", "Extra file to include in archive (or 'n' to skip)") { |o| options[:extra_file] = o != 'n' ? o : false }
+  opts.on("-e", "--extra FILE", "Extra file to include in archive (or 'n' for none)") { |o| options[:extra_file] = o != 'n' ? o : false }
 end.parse!
 
 templates = [
@@ -78,6 +75,8 @@ templates = [
     path: 'src/OSEP-exam-report-template_OS_v1.md'
   }
 ]
+
+puts "---[ OffSec Exam Report Generator ]---"
 
 # Choose template
 if options.key?(:template) and options[:template].to_i.between?(0, templates.length())
@@ -172,7 +171,6 @@ print 'Generating archive...'
 puts "done"
 
 # Updating archive
-puts "EXTRA: #{extra_file}"
 if extra_file
   print 'Updating archive...'
   %x(7z a #{archive} \

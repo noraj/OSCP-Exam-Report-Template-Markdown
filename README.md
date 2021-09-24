@@ -12,7 +12,7 @@ Now you can be efficient and faster during your exam report redaction!
 - :rocket: **Speed up writing**, don't lose time during the 24 hours of exam report redaction
 - :star: **No formatting hassle with WYSIWYG editors**, byebye unwanted whitespaces and linefeeds from Microsoft Office Word and LibreOffice Writer
 - :memo: **Re-use your Markdown notes**, you'll be so glad not having to reformat the bold and italic from your Markdown notes into the report
-- :lock: **Version control ready**, save your markdown template into a PRIVATE git repository, you know have an incremental backup, version control works with Markdown (.md) as it's text but not with binaries (.doc, .odt)
+- :lock: **Version control ready**, save your markdown template into a PRIVATE git repository, you now have an incremental backup, version control works with Markdown (.md) as it's text but not with binaries (.doc, .odt)
 - :pen: **Use your favorite editor or note taking app**, with Markdown you'll be able to use your favorite editor (VSCode, Atom, etc.) or note taking app (Vnote, QOwnNotes, Boostnote, etc.) to write your exam report, you won't have to switch to Windows to use MS Word.
 - :tophat: **Clean & professional style**, a professional looking report for your professional certification
 - :ok_hand: **Error free**, use the generation script to generate the report and archive, you won't do any [submission format and name](https://support.offensive-security.com/oscp-exam-guide/#submission-format-and-name) mistake that way
@@ -56,9 +56,34 @@ There is a script that will:
 2. Let you choose the syntax highlight style
 3. Generate the PDF
 4. Generate the 7z archive
+5. Output MD5 hash for verification after uploading
 
 ```
 ruby generate.rb
+```
+
+#### With arguments
+
+To speed up generation, all settings can ge set with arguments to the script.
+
+```
+ruby generate.rb -h
+Usage: generate.rb [options]
+    -t, --template ID                Template ID
+    -i, --os-id ID                   OS-ID
+    -s, --style STYLE                Code highlight style (or 'd' for default)
+    -e, --extra FILE                 Extra file to include in archive (or 'n' for none)
+```
+
+Or you can hard-code default settings on the first few rows in the scripts by uncomment the JSON necessary rows;
+
+```
+options = {
+  template: 0,
+  osid: 'OS-####',
+  style: 'breezedark',
+  extra_file: false
+}
 ```
 
 ### Manual
