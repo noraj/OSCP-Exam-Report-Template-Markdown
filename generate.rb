@@ -2,6 +2,25 @@
 
 puts "---[ OffSec Exam Report Generator ]---"
 
+# Default options
+# Uncommment and set your own default options to not get prompted each time
+options = {
+  # template: 0,
+  # osid: 'OS-####',
+  # style: '6',
+  # extra_file: false
+}
+
+require 'optparse'
+OptionParser.new do |opts|
+  opts.banner = "Usage: generate.rb [options]"
+  opts.on("-v", "--verbose", "Run verbosely") { |o| options[:verbose] = o }
+  opts.on("-t", "--template ID", "Template ID") { |o| options[:template] = o }
+  opts.on("-i", "--os-id ID", "OS-ID") { |o| options[:osid] = o }
+  opts.on("-s", "--style STYLE", "Code highlight style (or 'd' for default)") { |o| options[:style] = o != 'd' ? o : false  }
+  opts.on("-e", "--extra FILE", "Extra file to include in archive (or 'n' to skip)") { |o| options[:extra_file] = o != 'n' ? o : false }
+end.parse!
+
 templates = [
   {
     exam: 'OSCP',
@@ -61,33 +80,74 @@ templates = [
 ]
 
 # Choose template
-puts "Available templates:"
-templates.each_with_index do |t,i|
-  puts "#{i}. [#{t[:exam]}] #{t[:name]}"
+if options.key?(:template) and options[:template].to_i.between?(0, templates.length())
+  puts "Chosen template: #{templates[options[:template].to_i][:name]}"
+  src = templates[options[:template].to_i][:path]
+  exam = templates[options[:template].to_i][:exam]
+else
+  puts "Available templates;"
+  templates.each_with_index do |t,i|
+    puts "#{i}. [#{t[:exam]}] #{t[:name]}"
+  end
+  print 'Choose a template: '
+  choice = gets.chomp
+  src = templates[choice.to_i][:path]
+  exam = templates[choice.to_i][:exam]
 end
-print 'Choose a template: '
-choice = gets.chomp
-src = templates[choice.to_i][:path]
-exam = templates[choice.to_i][:exam]
 
 # Enter your OS id
-print 'Enter your OS id: OS-'
-osid = 'OS-' + gets.chomp
+if options.key?(:osid)
+  osid = (options[:osid].start_with?("OS-") ? "" : "OS-") + options[:osid]
+  puts "OS-ID: #{osid}"
+else
+  print 'Enter your OS id: OS-'
+  osid = 'OS-' + gets.chomp
+end
 
 # Choose syntax highlight style
 style = 'breezedark'
 styles = %x(pandoc --list-highlight-styles).split("\n")
-puts "Available highlight styles:"
-styles.each_with_index do |s,i|
-  puts "#{i}. #{s}"
+if options.key?(:style) and (!options[:style] or options[:style].downcase == 'd')
+  puts "Style: #{style}"
+elsif options.key?(:style) and options[:style] == options[:style].to_i.to_s and options[:style].to_i.between?(0, styles.length())
+  style = styles[options[:style].to_i]
+  puts "Style: #{style}"
+elsif options.key?(:style) and styles.include?(options[:style])
+  style = options[:style]
+  puts "Style: #{style}"
+else
+  puts "Available highlight styles;"
+  styles.each_with_index do |s,i|
+    puts "#{i}. #{s}"
+  end
+  print "Choose syntax highlight style [#{style}]: "
+  choice = gets.chomp
+  style = styles[choice.to_i] unless choice.empty?
 end
-print "Choose syntax highlight style [#{style}] "
-choice = gets.chomp
-style = styles[choice.to_i] unless choice.empty?
+
+# Optional lab report
+extra_file = false
+if options.key?(:extra_file)
+  if !options[:extra_file] or options[:extra_file].downcase == 'n'
+    nil
+  else
+    extra_file = options[:extra_file]
+    puts "Extra file: #{extra_file}"
+  end
+else
+  print 'Do you want to add an external lab report? [y/N]: '
+  choice = gets.chomp
+  if choice.downcase == 'y'
+    print 'Write the path of your lab PDF: '
+    extra_file = gets.chomp
+  end
+end
+
+pdf = "output/#{exam}-#{osid}-Exam-Report.pdf"
+archive = "output/#{exam}-#{osid}-Exam-Report.7z"
 
 # Generating report
 print 'Generating report...'
-pdf = "output/#{exam}-#{osid}-Exam-Report.pdf"
 %x(pandoc #{src} -o #{pdf} \
   --from markdown+yaml_metadata_block+raw_html \
   --template eisvogel \
@@ -99,23 +159,24 @@ pdf = "output/#{exam}-#{osid}-Exam-Report.pdf"
 )
 puts "done"
 
+# Removing old archive
+print 'Cleaning archive...'
+%x(rm #{archive})
+puts "done"
+
 # Generating archive
 print 'Generating archive...'
-archive = "output/#{exam}-#{osid}-Exam-Report.7z"
 %x(7z a #{archive} \
   #{File.expand_path(pdf)}
 )
 puts "done"
 
-# Optional lab report
-print 'Do you want to add an external lab report? [y/N] '
-choice = gets.chomp
-if choice.downcase == 'y'
-  puts 'Write the path of your lab PDF'
-  lab = gets.chomp
+# Updating archive
+puts "EXTRA: #{extra_file}"
+if extra_file
   print 'Updating archive...'
   %x(7z a #{archive} \
-    #{File.expand_path(lab)}
+    #{File.expand_path(extra_file)}
   )
   puts "done"
 end
