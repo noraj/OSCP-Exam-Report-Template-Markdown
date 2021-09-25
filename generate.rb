@@ -183,7 +183,7 @@ end
 # Calculate MD5
 print 'Calculating MD5...'
 md5 = %x(md5sum \
-  #{File.expand_path(pdf)} \
+  #{archive} \
   | cut -d ' ' -f 1
 )
 puts "done"
