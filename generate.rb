@@ -142,12 +142,20 @@ else
   end
 end
 
-pdf = "output/#{exam}-#{osid}-Exam-Report.pdf"
-archive = "output/#{exam}-#{osid}-Exam-Report.7z"
+
+# We assume that the template and output directory is always relative to the
+# script location and not where you call it, this makes it easier to set up an
+# alias. If this is wrong and you want relative paths from current directory,
+# simply remove `File.dirname(__FILE__)` below and when generating.
+filename = "#{exam}-#{osid}-Exam-Report"
+src_path = File.expand_path(src, File.dirname(__FILE__))
+pdf_path = File.expand_path("output/#{filename}.pdf", File.dirname(__FILE__))
+archive_path = File.expand_path("output/#{filename}.7z", File.dirname(__FILE__))
 
 # Generating report
 print 'Generating report...'
-%x(pandoc #{src} -o #{pdf} \
+%x(cd '#{File.dirname(__FILE__)}' &&
+  pandoc #{src_path} -o #{pdf_path} \
   --from markdown+yaml_metadata_block+raw_html \
   --template eisvogel \
   --table-of-contents \
@@ -161,21 +169,23 @@ puts "done"
 
 # Removing old archive
 print 'Cleaning archive...'
-%x(rm #{archive})
+%x(rm \
+  #{archive_path}
+)
 puts "done"
 
 # Generating archive
 print 'Generating archive...'
-%x(7z a #{archive} \
-  #{File.expand_path(pdf)}
+%x(7z a #{archive_path} \
+  #{pdf_path}
 )
 puts "done"
 
 # Updating archive
 if extra_file
   print 'Updating archive...'
-  %x(7z a #{archive} \
-    #{File.expand_path(extra_file)}
+  %x(7z a #{archive_path} \
+    #{File.expand_path(extra_file, File.dirname(__FILE__))}
   )
   puts "done"
 end
@@ -183,11 +193,11 @@ end
 # Calculate MD5
 print 'Calculating MD5...'
 md5 = %x(md5sum \
-  #{archive} \
+  #{archive_path} \
   | cut -d ' ' -f 1
 )
 puts "done"
 
 puts
-puts "Generated archive #{archive}"
+puts "Generated archive #{filename}.7z"
 puts "with MD5 #{md5}"
