@@ -55,8 +55,9 @@ There is a script that will:
 1. Let you choose the template
 2. Let you choose the syntax highlight style
 3. Generate the PDF
-4. Generate the 7z archive
-5. Output MD5 hash for verification after uploading
+4. Open the PDF for viewing
+5. Generate the 7z archive
+6. Output MD5 hash for verification after uploading
 
 ```
 ruby generate.rb
@@ -70,18 +71,28 @@ To speed up generation, all settings can ge set with arguments to the script.
 ruby generate.rb -h
 Usage: generate.rb [options]
     -t, --template ID                Template ID
-    -i, --os-id ID                   OS-ID
-    -s, --style STYLE                Code highlight style (or 'd' for default)
-    -e, --extra FILE                 Extra file to include in archive (or 'n' for none)
+    -i, --os-id ID                   Offensive Security student ID (OS-ID)
+    -s, --style STYLE                Code highlight style (or 'd' for default which is breezedark)
+    -v, --view Y/N                   View PDF after generating with the OS default PDF viewer
+    -a, --archive Y/N                Create an archive
+    -e, --extra FILE                 Extra file(s) to include in archive (or 'n' for none)
 ```
 
-Or you can hard-code default settings on the first few rows in the scripts by uncomment the JSON necessary rows;
+To run the default mode with no prompts;
+
+```
+ruby generate.rb -t 0 -i 1234 -s d -v y -a y
+```
+
+Or you can hard-code default settings on the first few rows in the scripts by uncomment the necessary rows in the JSON;
 
 ```
 options = {
   template: 0,
-  osid: 'OS-####',
+  osid: 'OS-1234',
   style: 'breezedark',
+  view: true,
+  archive: true,
   extra_file: false
 }
 ```
@@ -127,33 +138,35 @@ Report Templates:
 Penetration Testing:
 
 - **OSCP**
-  - [Official Offensive Security Template v1](output/OSCP-exam-report-template_OS_v1.pdf)
-  - [Official Offensive Security Template v2](output/OSCP-exam-report-template_OS_v2.pdf)
-  - [whoisflynn][whoisflynn] improved [template](output/OSCP-exam-report-template_whoisflynn_v3.2.pdf) v3.2
+  - [Official Offensive Security Template v1](output/OSCP-Official_Offensive_Security_template_v1.pdf)
+  - [Official Offensive Security Template v2](output/OSCP-Official_Offensive_Security_template_v2.pdf)
+  - [whoisflynn][whoisflynn] improved [template](output/OSCP-whoisflynn_improved_template_v3.2.pdf) v3.2
 - **OSWP**
-  - [Official Offensive Security Template v1](output/OSWP-exam-report-template_OS_v1.pdf)
+  - [Official Offensive Security Template v1](output/OSWP-Official_Offensive_Security_template_v1.pdf)
 - **OSEP**
-  - [Official Offensive Security Template v1](output/OSEP-exam-report-template_OS_v1.pdf)
+  - [Official Offensive Security Template v1](output/OSEP-Official_Offensive_Security_template_v1.pdf)
 
 Web Application:
 
 - **OSWE**
-  - [Official Offensive Security Template v1](output/OSWE-exam-report-template_OS_v1.pdf)
-  - [noraj][noraj] improved [template](output/OSWE-exam-report-template_noraj_v1.pdf) v1
+  - [Official Offensive Security Template v1](output/OSWE-Official_Offensive_Security_template_v1.pdf)
+  - [noraj][noraj] improved [template](output/OSWE-noraj_improved_template_v1.pdf) v1
+  - [xl-sec][XL-SEC] improved [template](output/OSWE-XL-SEC_improved_template_v1.pdf) v1
 
 Exploit Development:
 
 - **OSED**
-  - [Official Offensive Security Template v1](output/OSED-exam-report-template_OS_v1.pdf)
-  - [epi][epi] improved [template](output/OSED-exam-report-template_epi_v1.pdf) v1
+  - [Official Offensive Security Template v1](output/OSED-Official_Offensive_Security_template_v1.pdf)
+  - [epi][epi] improved [template](output/OSED-epi_improved_template_v1.pdf) v1
 - **OSEE**
-  - [Official Offensive Security Template v1](output/OSEE-exam-report-template_OS_v1.pdf)
+  - [Official Offensive Security Template v1](output/OSEE-Official_Offensive_Security_template_v1.pdf)
 - **OSCE** (**deprecated**)
-  - [Official Offensive Security Template v1](output/OSCE-exam-report-template_OS_v1.pdf)
+  - [Official Offensive Security Template v1](output/OSCE-Official_Offensive_Security_template_v1.pdf)
 
 [whoisflynn]:https://github.com/whoisflynn
 [noraj]:https://github.com/noraj
 [epi]:https://github.com/epi052
+[xl-sec]:https://github.com/xl-sec
 
 Offensive Security course table:
 
@@ -198,7 +211,8 @@ Report Templates:
   - [whoisflynn improved template](https://github.com/whoisflynn/OSCP-Exam-Report-Template) (UNLICENSED)
 - **OSWE**
   - [Official Offensive Security Template](https://help.offensive-security.com/hc/en-us/articles/360046869951-OSWE-Exam-Guide#suggested-documentation-templates) (UNLICENSED)
-  - [noraj improved template](src/OSWE-exam-report-template_noraj_v1.md) (UNLICENSED)
+  - [noraj improved template](src/OSWE-noraj_improved_template_v1.md) (UNLICENSED)
+  - [XL-SEC improved template](src/OSWE-XL-SEC_improved_template_v1.md) (UNLICENSED)
 - **OSCE**
   - [Official Offensive Security Template](https://help.offensive-security.com/hc/en-us/articles/360046801331-OSCE-Exam-Guide#suggested-documentation-templates) (UNLICENSED)
 - **OSEE**
@@ -207,7 +221,7 @@ Report Templates:
   - [Official Offensive Security Template](https://help.offensive-security.com/hc/en-us/articles/360046904731-OSWP-Exam-Guide#suggested-documentation-templates) (UNLICENSED)
 - **OSED**
   - [Official Offensive Security Template](https://help.offensive-security.com/hc/en-us/articles/360052977212-OSED-Exam-Guide#suggested-documentation-templates) (UNLICENSED)
-  - [epi improved template](src/OSED-exam-report-template_epi_v1.md) (UNLICENSED)
+  - [epi improved template](src/OSED-epi_improved_template_v1.md) (UNLICENSED)
 - **OSEP**
   - [Official Offensive Security Template](https://help.offensive-security.com/hc/en-us/articles/360050293792-OSEP-Exam-Guide#suggested-documentation-templates) (UNLICENSED)
 
