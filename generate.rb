@@ -59,28 +59,30 @@ templates = [
 ]
 
 # Choose template
-puts 'Choose a template:'
+puts '[+] Choose a template:'
 templates.each_with_index do |t,i|
   puts "#{i}. [#{t[:exam]}] #{t[:name]}"
 end
+print '> '
 choice = gets.chomp
 src = templates[choice.to_i][:path]
 exam = templates[choice.to_i][:exam]
 
 # Enter your OS id
-puts 'Enter your OS id'
-print 'OS-'
+puts "\n[+] Enter your OS id"
+print '> OS-'
 osid = 'OS-' + gets.chomp
 
 # Choose syntax highlight style
 style = 'breezedark'
-puts "Choose syntax highlight style [#{style}]"
+puts "\n[+] Choose syntax highlight style [#{style}]"
+print '> '
 choice = gets.chomp
 style = choice unless choice.empty?
 puts style
 
 # Generating report
-puts 'Generating report...'
+puts "\n[+] Generating report..."
 pdf = "output/#{exam}-#{osid}-Exam-Report.pdf"
 %x(pandoc #{src} -o #{pdf} \
   --from markdown+yaml_metadata_block+raw_html \
@@ -93,18 +95,20 @@ pdf = "output/#{exam}-#{osid}-Exam-Report.pdf"
 )
 
 # Generating archive
-puts 'Generating archive...'
+puts "\n[+] Generating archive..."
 %x(7z a output/#{exam}-#{osid}-Exam-Report.7z \
   #{File.expand_path(pdf)}
 )
 
 # Optional lab report
-puts 'Do you want to add an external lab report? [y/N]'
+puts "\n[+] Do you want to add an external lab report? [y/N]"
+print '> '
 choice = gets.chomp
 if choice.downcase == 'y'
-  puts 'Write the path of your lab PDF'
+  puts "\n[+] Write the path of your lab PDF"
+  print '> '
   lab = gets.chomp
-  puts 'Updating archive...'
+  puts "\n[+] Updating archive..."
   %x(7z a output/#{exam}-#{osid}-Exam-Report.7z \
     #{File.expand_path(lab)}
   )
