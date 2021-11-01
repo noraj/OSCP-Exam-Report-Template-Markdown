@@ -93,6 +93,18 @@ pdf = "output/#{exam}-#{osid}-Exam-Report.pdf"
   --top-level-division=chapter \
   --highlight-style #{style}
 )
+puts "\n[+] PDF generated at #{pdf}"
+
+# Preview
+puts "\n[+] Do you want to preview the report? [y/N]"
+print '> '
+choice = gets.chomp
+if choice.downcase == 'y'
+  viewer = fork do
+    exec "xdg-open #{pdf}"
+  end
+  Process.detach(viewer)
+end
 
 # Generating archive
 puts "\n[+] Generating archive..."
