@@ -27,6 +27,11 @@ templates = [
     path: 'src/OSWE-exam-report-template_noraj_v1.md'
   },
   {
+    exam: 'OSWE',
+    name: 'XL-SEC improved template v1',
+    path: 'src/OSWE-exam-report-template_xl-sec_v1.md'
+  },
+  {
     exam: 'OSCE',
     name: 'official Offensive Security template v1',
     path: 'src/OSCE-exam-report-template_OS_v1.md'

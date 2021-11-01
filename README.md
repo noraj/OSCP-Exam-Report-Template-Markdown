@@ -54,8 +54,9 @@ There is a script that will:
 
 1. Let you choose the template
 2. Let you choose the syntax highlight style
-3. Generate the PDF
+3. Generate the PDF (+ preview option)
 4. Generate the 7z archive
+5. Output MD5 hash for verification after uploading
 
 ```
 ruby generate.rb
@@ -94,6 +95,8 @@ titlepage-color          | titlepage-text-color | titlepage-rule-color
 `FF8C00` (DarkOrange)    | `000000` (Black)     | `000000` (Black)
 `FFEF96` (no name)       | `50394C` (no name)   | `50394C` (no name)
 
+Syntax highlight themes can be listed with `pandoc --list-highlight-styles`.
+
 ## Available templates
 
 Report Templates:
@@ -114,6 +117,7 @@ Web Application:
 - **OSWE**
   - [Official Offensive Security Template v1](output/OSWE-exam-report-template_OS_v1.pdf)
   - [noraj][noraj] improved [template](output/OSWE-exam-report-template_noraj_v1.pdf) v1
+  - [xl-sec][XL-SEC] improved [template](output/OSWE-exam-report-template_xl-sec_v1.pdf) v1
 
 Exploit Development:
 
@@ -128,6 +132,7 @@ Exploit Development:
 [whoisflynn]:https://github.com/whoisflynn
 [noraj]:https://github.com/noraj
 [epi]:https://github.com/epi052
+[xl-sec]:https://github.com/xl-sec
 
 Offensive Security course table:
 
@@ -173,6 +178,7 @@ Report Templates:
 - **OSWE**
   - [Official Offensive Security Template](https://help.offensive-security.com/hc/en-us/articles/360046869951-OSWE-Exam-Guide#suggested-documentation-templates) (UNLICENSED)
   - [noraj improved template](src/OSWE-exam-report-template_noraj_v1.md) (UNLICENSED)
+  - [XL-SEC improved template](src/OSWE-exam-report-template_xl-sec_v1.md) (UNLICENSED)
 - **OSCE**
   - [Official Offensive Security Template](https://help.offensive-security.com/hc/en-us/articles/360046801331-OSCE-Exam-Guide#suggested-documentation-templates) (UNLICENSED)
 - **OSEE**
