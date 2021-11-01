@@ -108,7 +108,8 @@ end
 
 # Generating archive
 puts "\n[+] Generating archive..."
-%x(7z a output/#{exam}-#{osid}-Exam-Report.7z \
+archive = "output/#{exam}-#{osid}-Exam-Report.7z"
+%x(7z a #{archive} \
   #{File.expand_path(pdf)}
 )
 
@@ -121,7 +122,15 @@ if choice.downcase == 'y'
   print '> '
   lab = gets.chomp
   puts "\n[+] Updating archive..."
-  %x(7z a output/#{exam}-#{osid}-Exam-Report.7z \
+  %x(7z a #{archive} \
     #{File.expand_path(lab)}
   )
 end
+
+puts "\n[+] Archive generated at #{archive}"
+
+# Calculate MD5
+puts "\n[+] Calculating MD5 of the archive..."
+require 'digest'
+md5 = Digest::MD5.hexdigest File.read(archive)
+puts "\n[+] Archive MD5 (upload integrity check): #{md5}"
