@@ -94,6 +94,7 @@ pdf = "output/#{exam}-#{osid}-Exam-Report.pdf"
   --template eisvogel \
   --table-of-contents \
   --toc-depth 6 \
+  --listings -H wrap \
   --number-sections \
   --top-level-division=chapter \
   --highlight-style #{style}
