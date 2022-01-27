@@ -111,6 +111,7 @@ Penetration Testing:
   - [Official Offensive Security Template v1](output/OSWP-exam-report-template_OS_v1.pdf)
 - **OSEP**
   - [Official Offensive Security Template v1](output/OSEP-exam-report-template_OS_v1.pdf)
+  - [ceso][ceso] improved [template](output/OSEP-exam-report-template_ceso_v1.pdf) v1
 
 Web Application:
 
@@ -133,6 +134,7 @@ Exploit Development:
 [noraj]:https://github.com/noraj
 [epi]:https://github.com/epi052
 [xl-sec]:https://github.com/xl-sec
+[ceso]:https://github.com/ceso
 
 Offensive Security course table:
 
@@ -157,12 +159,14 @@ Docker containers:
 
 - John Hammond - OSCP - Taking Notes & Resources (video) (2019-10-06)
   [![OSCP - Taking Notes & Resources](http://img.youtube.com/vi/MQGozZzHUwQ/0.jpg)](https://www.youtube.com/watch?v=MQGozZzHUwQ)
-- 3rd [Top Offensive Security Open Source Projects](https://awesomeopensource.com/projects/offensive-security) (2021-07-19)
+- John Hammond - OSEP - Offensive Security Experienced Penetration Tester (video) (2021-02-05)
+  [![OSEP - Offensive Security Experienced Penetration Tester](https://i.ytimg.com/vi/iUPyiJbN4l4/maxresdefault.jpg)](https://www.youtube.com/watch?v=iUPyiJbN4l4)
+- 3rd [Top Offensive Security Open Source Projects](https://awesomeopensource.com/projects/offensive-security) (2022-01-27)
 - Recent mentions on social medias: [Social-searcher](https://www.social-searcher.com/social-buzz/?q5=https%3A%2F%2Fgithub.com%2Fnoraj%2FOSCP-Exam-Report-Template-Markdown)
 - Articles:
-  - [Stress-free OSCP report making](https://craigunder.me/stress-free-oscp-report-making/) by Craig Underhill (2020-04-06)
+  - ~~[Stress-free OSCP report making](https://craigunder.me/stress-free-oscp-report-making/)~~ by Craig Underhill (2020-04-06)
   - [Unofficial OSCP Approved Tools](https://falconspy.medium.com/unofficial-oscp-approved-tools-b2b4e889e707) by FalconSpy (2019-06-05)
-  - [Journey from nothing to OSCP](https://cjhackerz.net/posts/journey-from-nothing-to-oscp/) by  CJHackerz (2020-06-30)
+  - [Journey from nothing to OSCP](https://cjhackerz.net/posts/journey-from-nothing-to-oscp/) by CJHackerz (2020-06-30)
 
 ## Stargazers over time
 
@@ -190,6 +194,7 @@ Report Templates:
   - [epi improved template](src/OSED-exam-report-template_epi_v1.md) (UNLICENSED)
 - **OSEP**
   - [Official Offensive Security Template](https://help.offensive-security.com/hc/en-us/articles/360050293792-OSEP-Exam-Guide#suggested-documentation-templates) (UNLICENSED)
+  - [ceso improved template](src/OSEP-exam-report-template_ceso_v1.md) (UNLICENSED)
 
 Pandoc Template:
 

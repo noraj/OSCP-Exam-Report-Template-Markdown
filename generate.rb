@@ -60,6 +60,11 @@ templates = [
     exam: 'OSEP',
     name: 'official Offensive Security template v1',
     path: 'src/OSEP-exam-report-template_OS_v1.md'
+  },
+  {
+    exam: 'OSEP',
+    name: 'ceso improved template v1',
+    path: 'src/OSEP-exam-report-template_ceso_v1.md'
   }
 ]
 
