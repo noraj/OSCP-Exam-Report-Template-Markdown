@@ -11,7 +11,6 @@ titlepage-color: "DC143C"
 titlepage-text-color: "FFFFFF"
 titlepage-rule-color: "360049"
 titlepage-rule-height: 2
-geometry: "left=1cm,right=1cm,top=2cm,bottom=3cm"
 book: true
 classoption: oneside
 code-block-font-size: \scriptsize
