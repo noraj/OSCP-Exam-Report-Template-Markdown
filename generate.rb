@@ -101,7 +101,8 @@ pdf = "output/#{exam}-#{osid}-Exam-Report.pdf"
   --toc-depth 6 \
   --number-sections \
   --top-level-division=chapter \
-  --highlight-style #{style}
+  --highlight-style #{style} \
+  --resource-path=.:src
 )
 puts "\n[+] PDF generated at #{pdf}"
 
