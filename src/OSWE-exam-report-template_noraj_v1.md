@@ -75,13 +75,13 @@ Provide screenshots of Burp and your browser showing a successful login as the a
 
 local.txt: `xxx`
 
-![local.txt](src/placeholder-image-300x225.png)
+![local.txt](img/placeholder-image-300x225.png)
 
 Provide a screenshot `id` and `ip a` command and the contents of proof.txt.
 
 proof.txt: `xxx`
 
-![proof.txt](src/placeholder-image-300x225.png)
+![proof.txt](img/placeholder-image-300x225.png)
 
 ### Debug setup
 
@@ -128,13 +128,13 @@ Provide screenshots of Burp and your browser showing a successful login as the a
 
 local.txt: `xxx`
 
-![local.txt](src/placeholder-image-300x225.png)
+![local.txt](img/placeholder-image-300x225.png)
 
 Provide a screenshot `id` and `ip a` command and the contents of proof.txt.
 
 proof.txt: `xxx`
 
-![proof.txt](src/placeholder-image-300x225.png)
+![proof.txt](img/placeholder-image-300x225.png)
 
 ### Debug setup
 

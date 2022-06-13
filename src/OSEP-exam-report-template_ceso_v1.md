@@ -95,7 +95,7 @@ Provide relevant techniques and methods used to perform enumeration prior to ini
 
 Provide a description of exploitation steps to compromise the machine and obtain shell access, the steps taken should be able to be easily followed and reproducible if necessary. Only the steps that ended up working are required. Include any reference to public tools, if custom code then reference it in the Appendix, for example "Code for AMSI Bypass in Appendix 4.1".
 
-\ ![meterpreter reverse shell and flags](src/placeholder-image-300x225.png){ width=70% }
+\ ![meterpreter reverse shell and flags](img/placeholder-image-300x225.png){ width=70% }
 
 #### Post-Exploitation Enumeration Steps
 
@@ -105,7 +105,7 @@ Provide relevant post-exploitation enumeration steps related to the network or l
 
 Provide a description of exploitation steps to escalate privileges on the machine if applicable, the steps taken should be able to be easily followed and reproducible if necessary. Include any reference to public tools, if custom code then reference it in the Appendix, for example "Code for AMSI Bypass in Appendix 4.1".
 
-\ ![meterpreter reverse shell and flags](src/placeholder-image-300x225.png){ width=70% }
+\ ![meterpreter reverse shell and flags](img/placeholder-image-300x225.png){ width=70% }
 
 ### 192.168.X.X / HOSTNAME - High Priv. User's
 
@@ -131,7 +131,7 @@ Provide relevant techniques and methods used to perform enumeration prior to ini
 
 Provide a description of exploitation steps to compromise the machine and obtain shell access, the steps taken should be able to be easily followed and reproducible if necessary. Only the steps that ended up working are required. Include any reference to public tools, if custom code then reference it in the Appendix, for example "Code for AMSI Bypass in Appendix 4.1".
 
-\ ![meterpreter reverse shell and flags](src/placeholder-image-300x225.png){ width=70% }
+\ ![meterpreter reverse shell and flags](img/placeholder-image-300x225.png){ width=70% }
 
 #### Post-Exploitation Enumeration Steps
 

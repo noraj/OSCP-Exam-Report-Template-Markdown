@@ -68,7 +68,7 @@ Provide the final proof of concept code used to gain access to the server.
 
 Provide a screenshot of the id command and the contents of proof.txt.
 
-![ImgPlaceholder](src/placeholder-image-300x225.png)
+![ImgPlaceholder](img/placeholder-image-300x225.png)
 
 ## Steps
 
@@ -80,7 +80,7 @@ Provide a detailed account of your methodology in creating the exploit. The step
 
 Screenshot requirements are detailed in the control panel.
 
-![ImgPlaceholder](src/placeholder-image-300x225.png)
+![ImgPlaceholder](img/placeholder-image-300x225.png)
 
 ## Steps
 
@@ -96,7 +96,7 @@ Provide the final proof of concept code used to gain access to the server.
 
 Screenshot requirements are detailed in the control panel.
 
-![ImgPlaceholder](src/placeholder-image-300x225.png)
+![ImgPlaceholder](img/placeholder-image-300x225.png)
 
 ## Steps
 

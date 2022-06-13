@@ -112,76 +112,9 @@ successful exploitation;
 **`local.txt`** - `MakeSureToEndLineWithTwoSpaces`  
 **`proof.txt`** - `OrElseItWillEndUpOnOneLine`  
 
-![local.txt](src/placeholder-image-300x225.png)
+![local.txt](img/placeholder-image-300x225.png)
 
-![proof.txt](src/placeholder-image-300x225.png){ width=250px }
-
-### Vuln
-
-```default
-Some code.
-
-Check the FAQ if you have issues with long lines.
-```
-
-### Vuln
-
-```php
-<?php echo 'Hello World'; ?>
-```
-
-### Vuln
-
-```python
-#!/usr/bin/python
-
-print('Hello World')
-```
-
-### Vuln
-
-```java
-class HelloWorld {
-    public static void main(String[] args) {
-        System.out.println("Hello, World!"); 
-    }
-}
-```
-
-### Recommendations
-
-* 
-* 
-* 
-
-\newpage
-
-## Application (192.168.x.x)
-
-The application is a custom web application written in [language]. The
-application [provides the following functionality and users].
-
-During the testing, the student was provided with unauthenticated access to the
-application. [The server was configured with debug functionality]. A number of
-vulnerabilities were found in the application, ranging from [XSS] to [RCE],
-allowing the student to achieve full control of the application and underlying
-server.
-
-Each found vulnerability is described in detail below, a script to automatically
-exploit the server can be found in appendix *Appendix - Full script for
-[application] exploitation*.
-
-### Proof of exploitation
-
-The following sensitive files were extracted from the server, as proof of
-successful exploitation;
-
-**`local.txt`** - `MakeSureToEndLineWithTwoSpaces`  
-**`proof.txt`** - `OrElseItWillEndUpOnOneLine`  
-
-![local.txt](src/placeholder-image-300x225.png)
-
-![proof.txt](src/placeholder-image-300x225.png){ width=250px }
+![proof.txt](img/placeholder-image-300x225.png){ width=250px }
 
 ### Vuln
 
@@ -246,9 +179,76 @@ successful exploitation;
 **`local.txt`** - `MakeSureToEndLineWithTwoSpaces`  
 **`proof.txt`** - `OrElseItWillEndUpOnOneLine`  
 
-![local.txt](src/placeholder-image-300x225.png)
+![local.txt](img/placeholder-image-300x225.png)
 
-![proof.txt](src/placeholder-image-300x225.png){ width=250px }
+![proof.txt](img/placeholder-image-300x225.png){ width=250px }
+
+### Vuln
+
+```default
+Some code.
+
+Check the FAQ if you have issues with long lines.
+```
+
+### Vuln
+
+```php
+<?php echo 'Hello World'; ?>
+```
+
+### Vuln
+
+```python
+#!/usr/bin/python
+
+print('Hello World')
+```
+
+### Vuln
+
+```java
+class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!"); 
+    }
+}
+```
+
+### Recommendations
+
+* 
+* 
+* 
+
+\newpage
+
+## Application (192.168.x.x)
+
+The application is a custom web application written in [language]. The
+application [provides the following functionality and users].
+
+During the testing, the student was provided with unauthenticated access to the
+application. [The server was configured with debug functionality]. A number of
+vulnerabilities were found in the application, ranging from [XSS] to [RCE],
+allowing the student to achieve full control of the application and underlying
+server.
+
+Each found vulnerability is described in detail below, a script to automatically
+exploit the server can be found in appendix *Appendix - Full script for
+[application] exploitation*.
+
+### Proof of exploitation
+
+The following sensitive files were extracted from the server, as proof of
+successful exploitation;
+
+**`local.txt`** - `MakeSureToEndLineWithTwoSpaces`  
+**`proof.txt`** - `OrElseItWillEndUpOnOneLine`  
+
+![local.txt](img/placeholder-image-300x225.png)
+
+![proof.txt](img/placeholder-image-300x225.png){ width=250px }
 
 ### Vuln
 

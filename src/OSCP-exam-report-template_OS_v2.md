@@ -190,7 +190,7 @@ print "\nDone."
 
 Screenshot Here:
 
-![ImgPlaceholder](src/placeholder-image-300x225.png)
+![ImgPlaceholder](img/placeholder-image-300x225.png)
 
 \newpage
 
@@ -217,7 +217,7 @@ SELECT * FROM login WHERE id = 1 or 1=1 AND user LIKE "%root%"
 
 Screenshot Here:
 
-![ImgPlaceholder](src/placeholder-image-300x225.png)
+![ImgPlaceholder](img/placeholder-image-300x225.png)
 
 ## Sample Report - Maintaining Access
 
