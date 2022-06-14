@@ -45,7 +45,7 @@ Example:
 ![ImgPlaceholder](img/placeholder-image-300x225.png)
 ```
 
-The path can be relative from the generating script  or the `src` folder. You can adjust this behaviour by editing the ` --resource-path` option in the `generate.rb` script. For possible options, see [pandoc options](https://pandoc.org/MANUAL.html#general-options). 
+The path can be relative from the generating script or the `src` folder. You can adjust this behavior by editing the `--resource-path` option in the `generate.rb` script. For possible options, see [pandoc options](https://pandoc.org/MANUAL.html#general-options). 
 
 ## Syntax highlight style ignored when no language provided
 
