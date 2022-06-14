@@ -104,31 +104,31 @@ Report Templates:
 Penetration Testing:
 
 - **OSCP**
-  - [Official Offensive Security Template v1](output/OSCP-exam-report-template_OS_v1.pdf)
-  - [Official Offensive Security Template v2](output/OSCP-exam-report-template_OS_v2.pdf)
-  - [whoisflynn][whoisflynn] improved [template](output/OSCP-exam-report-template_whoisflynn_v3.2.pdf) v3.2
+  - [Official Offensive Security Template v1](output/examples/OSCP-exam-report-template_OS_v1.pdf)
+  - [Official Offensive Security Template v2](output/examples/OSCP-exam-report-template_OS_v2.pdf)
+  - [whoisflynn][whoisflynn] improved [template](output/examples/OSCP-exam-report-template_whoisflynn_v3.2.pdf) v3.2
 - **OSWP**
-  - [Official Offensive Security Template v1](output/OSWP-exam-report-template_OS_v1.pdf)
+  - [Official Offensive Security Template v1](output/examples/OSWP-exam-report-template_OS_v1.pdf)
 - **OSEP**
-  - [Official Offensive Security Template v1](output/OSEP-exam-report-template_OS_v1.pdf)
-  - [ceso][ceso] improved [template](output/OSEP-exam-report-template_ceso_v1.pdf) v1
+  - [Official Offensive Security Template v1](output/examples/OSEP-exam-report-template_OS_v1.pdf)
+  - [ceso][ceso] improved [template](output/examples/OSEP-exam-report-template_ceso_v1.pdf) v1
 
 Web Application:
 
 - **OSWE**
-  - [Official Offensive Security Template v1](output/OSWE-exam-report-template_OS_v1.pdf)
-  - [noraj][noraj] improved [template](output/OSWE-exam-report-template_noraj_v1.pdf) v1
-  - [xl-sec][XL-SEC] improved [template](output/OSWE-exam-report-template_xl-sec_v1.pdf) v1
+  - [Official Offensive Security Template v1](output/examples/OSWE-exam-report-template_OS_v1.pdf)
+  - [noraj][noraj] improved [template](output/examples/OSWE-exam-report-template_noraj_v1.pdf) v1
+  - [xl-sec][XL-SEC] improved [template](output/examples/OSWE-exam-report-template_xl-sec_v1.pdf) v1
 
 Exploit Development:
 
 - **OSED**
-  - [Official Offensive Security Template v1](output/OSED-exam-report-template_OS_v1.pdf)
-  - [epi][epi] improved [template](output/OSED-exam-report-template_epi_v1.pdf) v1
+  - [Official Offensive Security Template v1](output/examples/OSED-exam-report-template_OS_v1.pdf)
+  - [epi][epi] improved [template](output/examples/OSED-exam-report-template_epi_v1.pdf) v1
 - **OSEE**
-  - [Official Offensive Security Template v1](output/OSEE-exam-report-template_OS_v1.pdf)
+  - [Official Offensive Security Template v1](output/examples/OSEE-exam-report-template_OS_v1.pdf)
 - **OSCE** (**deprecated**)
-  - [Official Offensive Security Template v1](output/OSCE-exam-report-template_OS_v1.pdf)
+  - [Official Offensive Security Template v1](output/examples/OSCE-exam-report-template_OS_v1.pdf)
 
 [whoisflynn]:https://github.com/whoisflynn
 [noraj]:https://github.com/noraj
