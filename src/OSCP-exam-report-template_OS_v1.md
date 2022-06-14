@@ -181,7 +181,7 @@ except:
 print "\nDone."
 ```
 
-![ImgPlaceholder](src/placeholder-image-300x225.png)
+![ImgPlaceholder](img/placeholder-image-300x225.png)
 
 \newpage
 

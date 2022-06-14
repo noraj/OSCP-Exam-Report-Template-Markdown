@@ -34,7 +34,7 @@ Provide the contents of the "STAGE 1" wireless network key.
 
 Provide at least one screenshot of the successfully cracked "STAGE 1" wireless network key.
 
-![ImgPlaceholder](src/placeholder-image-300x225.png)
+![ImgPlaceholder](img/placeholder-image-300x225.png)
 
 ## Steps
 
@@ -50,7 +50,7 @@ Provide the contents of the "STAGE 2" wireless network key.
 
 Provide at least one screenshot of the successfully cracked "STAGE 2" wireless network key.
 
-![ImgPlaceholder](src/placeholder-image-300x225.png)
+![ImgPlaceholder](img/placeholder-image-300x225.png)
 
 ## Steps
 
@@ -66,7 +66,7 @@ Provide the contents of the "STAGE 3" wireless network key.
 
 Provide at least one screenshot of the successfully cracked "STAGE 3" wireless network key.
 
-![ImgPlaceholder](src/placeholder-image-300x225.png)
+![ImgPlaceholder](img/placeholder-image-300x225.png)
 
 ## Steps
 

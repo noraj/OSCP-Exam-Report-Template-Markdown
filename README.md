@@ -76,6 +76,7 @@ pandoc src/OSCP-exam-report-template_whoisflynn_v3.2.md \
 --number-sections \
 --top-level-division=chapter \
 --highlight-style breezedark
+--resource-path=.:src
 ```
 
 You can change the code syntax highlight theme with [`--highlight-style`](https://pandoc.org/MANUAL.html#option--highlight-style).
