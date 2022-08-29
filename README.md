@@ -75,7 +75,7 @@ pandoc src/OSCP-exam-report-template_whoisflynn_v3.2.md \
 --toc-depth 6 \
 --number-sections \
 --top-level-division=chapter \
---highlight-style breezedark
+--highlight-style breezedark \
 --resource-path=.:src
 ```
 
