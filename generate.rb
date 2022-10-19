@@ -131,9 +131,9 @@ if help != 1 and inflag != 1 and outflag != 1
     osid = 'OS-' + gets.chomp
 
     # The chosen template will be saved in the HOME directory
+    %x( cp -rf #{src} #{ENV['HOME']} 2>&1 || cp -rf /usr/share/osert/#{src} #{ENV['HOME']} )
     puts "\n[+] The #{File.basename(src)} file is saved in your HOME folder. Edit it with your exam notes."
     puts "\nThen, run \"osert -i #{File.basename(src)} -o #{File.basename(src, ".md")}.pdf\" for getting your report."
-    %x(cp -rf #{src} #{ENV['HOME']})
 
 elsif inflag == 1 and help != 1
   puts "\n[+] Preparing your final report..."
