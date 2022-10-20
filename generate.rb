@@ -157,7 +157,8 @@ elsif inflag == 1 and help != 1
       --number-sections \
       --top-level-division=chapter \
       --highlight-style #{style} \
-      --resource-path=.:src
+      --resource-path=.:src \
+      --resource-path=.:/usr/share/osert/src
     )
     puts "\n[+] PDF generated at #{pdf}"
 
