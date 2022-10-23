@@ -1,73 +1,123 @@
 #!/usr/bin/env ruby
 require 'getoptlong'
 
-templates = [
+black = "\e[30m"
+red = "\e[31m"
+green = "\e[32m"
+brown = "\e[33m"
+blue = "\e[34m"
+magenta = "\e[35m"
+cyan = "\e[36m"
+gray = "\e[37m"
+
+bg_black = "\e[40m"
+bg_red = "\e[41m"
+bg_green = "\e[42m"
+bg_brown = "\e[43m"
+bg_blue = "\e[44m"
+bg_magenta = "\e[45m"
+bg_cyan = "\e[46m"
+bg_gray = "\e[47m"
+
+nocolor = "\e[0m"
+
+certifications = [
   {
     exam: 'OSCP',
-    name: 'Whoisflynn Improved Template v3.2',
-    path: 'src/OSCP-exam-report-template_whoisflynn_v3.2.md'
-  },
-  {
-    exam: 'OSCP',
-    name: 'Official Offensive Security Template v1',
-    path: 'src/OSCP-exam-report-template_OS_v1.md'
-  },
-  {
-    exam: 'OSCP',
-    name: 'Official Offensive Security Template v2',
-    path: 'src/OSCP-exam-report-template_OS_v2.md'
+    color: brown,
+    template: [
+      {
+          name: 'Whoisflynn Improved Template v3.2',
+          path: 'src/OSCP-exam-report-template_whoisflynn_v3.2.md'
+      },
+      {
+          name: 'Official Offensive Security Template v1',
+          path: 'src/OSCP-exam-report-template_OS_v1.md'
+      },
+      {
+          name: 'Official Offensive Security Template v2',
+          path: 'src/OSCP-exam-report-template_OS_v2.md'
+      }
+    ]
   },
   {
     exam: 'OSWE',
-    name: 'Official Offensive Security Template v1',
-    path: 'src/OSWE-exam-report-template_OS_v1.md'
-  },
-  {
-    exam: 'OSWE',
-    name: 'Noraj Improved Template v1',
-    path: 'src/OSWE-exam-report-template_noraj_v1.md'
-  },
-  {
-    exam: 'OSWE',
-    name: 'XL-SEC Improved Template v1',
-    path: 'src/OSWE-exam-report-template_xl-sec_v1.md'
+    color: cyan,
+    template: [
+      {
+          name: 'Official Offensive Security Template v1',
+          path: 'src/OSWE-exam-report-template_OS_v1.md'
+      },
+      {
+          name: 'Noraj Improved Template v1',
+          path: 'src/OSWE-exam-report-template_noraj_v1.md'
+      },
+      {
+          name: 'XL-SEC Improved Template v1',
+          path: 'src/OSWE-exam-report-template_xl-sec_v1.md'
+      }
+    ]
   },
   {
     exam: 'OSCE',
-    name: 'Official Offensive Security Template v1',
-    path: 'src/OSCE-exam-report-template_OS_v1.md'
+    color: green,
+    template: [
+      {
+          name: 'Official Offensive Security Template v1',
+          path: 'src/OSCE-exam-report-template_OS_v1.md'
+      }
+    ]
   },
   {
     exam: 'OSEE',
-    name: 'Official Offensive Security Template v1',
-    path: 'src/OSEE-exam-report-template_OS_v1.md'
+    color: red,
+    template: [
+      {
+          name: 'Official Offensive Security Template v1',
+          path: 'src/OSEE-exam-report-template_OS_v1.md'
+      }
+    ]
   },
   {
     exam: 'OSWP',
-    name: 'Official Offensive Security Template v1',
-    path: 'src/OSWP-exam-report-template_OS_v1.md'
+    color: blue,
+    template: [
+      {
+          name: 'Official Offensive Security Template v1',
+          path: 'src/OSWP-exam-report-template_OS_v1.md'
+      }
+    ]
   },
   {
     exam: 'OSED',
-    name: 'Official Offensive Security Template v1',
-    path: 'src/OSED-exam-report-template_OS_v1.md'
-  },
-  {
-    exam: 'OSED',
-    name: 'Epi Improved Template v1',
-    path: 'src/OSED-exam-report-template_epi_v1.md'
+    color: cyan,
+    template: [
+      {
+          name: 'Official Offensive Security Template v1',
+          path: 'src/OSED-exam-report-template_OS_v1.md'
+      },
+      {
+          name: 'Epi Improved Template v1',
+          path: 'src/OSED-exam-report-template_epi_v1.md'
+      }
+    ]
   },
   {
     exam: 'OSEP',
-    name: 'Official Offensive Security Template v1',
-    path: 'src/OSEP-exam-report-template_OS_v1.md'
-  },
-  {
-    exam: 'OSEP',
-    name: 'Ceso Improved Template v1',
-    path: 'src/OSEP-exam-report-template_ceso_v1.md'
+    color: green,
+    template: [
+      {
+          name: 'Official Offensive Security Template v1',
+          path: 'src/OSEP-exam-report-template_OS_v1.md'
+      },
+      {
+          name: 'Ceso Improved Template v1',
+          path: 'src/OSEP-exam-report-template_ceso_v1.md'
+      }
+    ]
   }
 ]
+
 opts = GetoptLong.new(
     [ '--help', '-h', GetoptLong::NO_ARGUMENT ],
     [ '--input', '-i', GetoptLong::REQUIRED_ARGUMENT ],
@@ -115,32 +165,48 @@ Run 'osert -i filename.md -o filename.pdf' when your markdown report is ready.
 end
 
 if help != 1 and inflag != 1 and outflag != 1
-    # Choose template
-    puts "\n[+] Choose a template:"
-    templates.each_with_index do |t,i|
-      puts "#{i}. [#{t[:exam]}] #{t[:name]}"
+    # Choose a certification
+    puts "\n"
+    certifications.each_with_index do |c,i|
+         puts "#{c[:color]}#{i}. #{c[:exam]}#{nocolor}"
     end
-    print '> '
+    print "\n[+] Choose a Certification:"
     choice = gets.chomp
-    src = templates[choice.to_i][:path]
-    exam = templates[choice.to_i][:exam]
+    cert = certifications[choice.to_i]
+
+    # Choose a template
+    puts "\n"
+    
+    cert[:template].each_with_index do |t,i|
+      puts "#{cert[:color]}#{i}. [#{cert[:exam]}] #{t[:name]}#{nocolor}"
+    end
+    print "\n[+] Choose a Template:"
+    choice = gets.chomp
+    src = cert[:template][choice.to_i][:path]
+    exam = cert[:exam]
     
     # Enter your OS id
-    puts "\n[+] Enter your OS id"
-    print '> OS-'
-    osid = 'OS-' + gets.chomp
+    print "\n[+] Enter your OS ID: OS-"
+    osid = gets.chomp
+
+    # Enter your email address
+    print "\n[+] Enter your email address as author:"
+    author = gets.chomp
 
     # The chosen template will be saved in the HOME directory
     %x( cp -rf #{src} #{ENV['HOME']} 2>&1 || cp -rf /usr/share/osert/#{src} #{ENV['HOME']} )
-    puts "\n[+] The #{File.basename(src)} file is saved in your HOME folder. Edit it with your exam notes."
-    puts "\nThen, run \"osert -i #{File.basename(src)} -o #{File.basename(src, ".md")}.pdf\" for getting your report."
+    
+    %x( sed -i "/^author:.*/c\\author: \[\\"#{author}\\", \\"OSID: #{osid}\\"\]" #{ENV['HOME']}/#{File.basename(src)})
+    %x( sed -i "/^date: .*/c\\date: $(date +'%Y-%m-%d')" #{ENV['HOME']}/#{File.basename(src)})
+    
+    puts "\n#{cert[:color]}[+] The #{File.basename(src)} file is saved in your HOME folder. Edit it with your exam notes.#{nocolor}"
+    puts "\n[+] Then, run #{cert[:color]}osert -i #{ENV['HOME']}/#{File.basename(src)} -o #{ENV['HOME']}/#{exam}-OS-#{osid}-Exam-Report.pdf#{nocolor} for getting your report."
 
 elsif inflag == 1 and help != 1
   puts "\n[+] Preparing your final report..."
     # Choose syntax highlight style
     style = 'breezedark'
-    puts "\n[+] Choose syntax highlight style [#{style}]"
-    print '> '
+    print "\n[+] Choose syntax highlight style [#{style}]:"
     choice = gets.chomp
     style = choice unless choice.empty?
     puts style
@@ -164,7 +230,7 @@ elsif inflag == 1 and help != 1
 
     # Preview
     puts "\n[+] Do you want to preview the report? [y/N]"
-    print '> '
+    print '[>] '
     choice = gets.chomp
     if choice.downcase == 'y'
       viewer = fork do
@@ -182,11 +248,10 @@ elsif inflag == 1 and help != 1
 
     # Optional lab report
     puts "\n[+] Do you want to add an external lab report? [y/N]"
-    print '> '
+    print '[>] '
     choice = gets.chomp
     if choice.downcase == 'y'
-      puts "\n[+] Write the path of your lab PDF:"
-      print '> '
+      print "\n[+] Write the path of your lab PDF:"
       lab = gets.chomp
       puts "\n[+] Updating archive..."
       %x(7z a #{archive} \
