@@ -41,7 +41,7 @@ And add `-H deeplists.tex` option to pandoc CLI when generating the PDF.
 
 Example:
 
-```
+```md
 ![ImgPlaceholder](img/placeholder-image-300x225.png)
 ```
 
@@ -55,7 +55,7 @@ Puts `default` as a language for all code blocks which don't have a language set
 
 Eg.
 
-~~~
+~~~md
 ```default
 raw code
 ```

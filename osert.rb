@@ -1,32 +1,18 @@
 #!/usr/bin/env ruby
+# frozen_string_literal: true
+
 require 'optparse'
+require 'fileutils'
+require 'date'
 
 colors = {
-  _black: "\e[30m",
   red: "\e[31m",
-  green: "\e[32m",
-  brown: "\e[33m",
-  blue: "\e[34m",
-  _magenta: "\e[35m",
-  cyan: "\e[36m",
-  _gray: "\e[37m",
-  bg: {
-    _black: "\e[40m",
-    _red: "\e[41m",
-    _green: "\e[42m",
-    _brown: "\e[43m",
-    _blue: "\e[44m",
-    _magenta: "\e[45m",
-    _cyan: "\e[46m",
-    _gray: "\e[47m"
-  },
   nocolor: "\e[0m"
 }
 
 certifications = [
   {
     exam: 'OSCP',
-    color: colors[:brown],
     template: [
       {
         name: 'Whoisflynn Improved Template v3.2',
@@ -44,7 +30,6 @@ certifications = [
   },
   {
     exam: 'OSWE',
-    color: colors[:cyan],
     template: [
       {
         name: 'Official Offensive Security Template v1',
@@ -62,7 +47,6 @@ certifications = [
   },
   {
     exam: 'OSCE',
-    color: colors[:green],
     template: [
       {
         name: 'Official Offensive Security Template v1',
@@ -72,7 +56,6 @@ certifications = [
   },
   {
     exam: 'OSEE',
-    color: colors[:red],
     template: [
       {
         name: 'Official Offensive Security Template v1',
@@ -82,7 +65,6 @@ certifications = [
   },
   {
     exam: 'OSWP',
-    color: colors[:blue],
     template: [
       {
         name: 'Official Offensive Security Template v1',
@@ -92,7 +74,6 @@ certifications = [
   },
   {
     exam: 'OSED',
-    color: colors[:cyan],
     template: [
       {
         name: 'Official Offensive Security Template v1',
@@ -106,7 +87,6 @@ certifications = [
   },
   {
     exam: 'OSEP',
-    color: colors[:green],
     template: [
       {
         name: 'Official Offensive Security Template v1',
@@ -147,6 +127,8 @@ subcommands = {
     opts.banner = 'Usage: generate [options]'
     opts.on('-i', '--input REPORT', 'File path to the markdown report to convert to PDF')
     opts.on('-o', '--output PDF', 'File path to store the PDF report')
+    opts.on('-e', '--exam EXAM', 'The exam short name')
+    opts.on('-s', '--osid OSID', 'Your Offensive Security ID')
   end
 }
 
@@ -154,85 +136,120 @@ global.order!(into: options)
 command = ARGV.shift
 subcommands[command].order!(into: options)
 
-# puts "Command: #{command} "
-# p options
-# puts 'ARGV:'
-# p ARGV
-# exit 0
+def puts_prompt(*args)
+  puts args if args.size == 1
+  print '> '
+end
+
+def sed(file, text_i, text_o)
+  text = File.read(file)
+  File.open(file, 'w+') do |f|
+    f.puts(text.sub(text_i, text_o))
+  end
+end
 
 case command
 when 'init'
   # Choose a certification
-  puts "\n"
+  puts '[+] Choose a Certification:'
   certifications.each_with_index do |c, i|
-    puts "#{c[:color]}#{i}. #{c[:exam]}#{colors[:nocolor]}"
+    puts "#{colors[:red]}#{i}. #{c[:exam]}#{colors[:nocolor]}"
   end
-  print "\n[+] Choose a Certification:"
-  choice = gets.chomp
-  cert = certifications[choice.to_i]
+  puts_prompt
+  cert = certifications[gets.chomp.to_i]
 
   # Choose a template
-  puts "\n"
-
+  puts '[+] Choose a Template:'
   cert[:template].each_with_index do |t, i|
-    puts "#{cert[:color]}#{i}. [#{cert[:exam]}] #{t[:name]}#{colors[:nocolor]}"
+    puts "#{colors[:red]}#{i}. [#{cert[:exam]}] #{t[:name]}#{colors[:nocolor]}"
   end
-  print "\n[+] Choose a Template:"
-  choice = gets.chomp
-  src = cert[:template][choice.to_i][:path]
-  exam = cert[:exam]
+  puts_prompt
+  src = cert[:template][gets.chomp.to_i][:path]
 
   # Enter your OS id
-  print "\n[+] Enter your OS ID: OS-"
-  osid = gets.chomp
+  puts '[+] Enter your OS ID:'
+  print '> OS-'
+  osid = "OS-#{gets.chomp}"
 
   # Enter your email address
-  print "\n[+] Enter your email address as author:"
+  puts_prompt '[+] Enter your email address as author:'
   author = gets.chomp
 
   if options[:output]
     output = options[:output]
   else
-    print "\n[+] Enter the path where you want to copy the report template:"
+    puts_prompt '[+] Enter the path where you want to copy the report template:'
     output = gets.chomp
   end
 
-  # The chosen template will be saved in the HOME directory
-  %x(cp -rf #{src} #{output} 2>&1 || cp -rf /usr/share/osert/#{src} #{output})
+  # The chosen template will be saved in the chosen directory
+  begin
+    FileUtils.cp(src, output)
+  rescue Errno::ENOENT
+    FileUtils.cp("/usr/share/osert/#{src}", output)
+  end
 
-  %x(sed -i "/^author:.*/c\\author: \[\\"#{author}\\", \\"OSID: #{osid}\\"\]" #{output}/#{File.basename(src)})
-  %x(sed -i "/^date: .*/c\\date: $(date +'%Y-%m-%d')" #{output}/#{File.basename(src)})
+  # Replace metadata in the report
+  report = "#{output}/#{File.basename(src)}"
+  sed(report, /^author:.*/, %(author: ["#{author}", "OSID: #{osid}"]))
+  sed(report, /^date:.*/, %(date: "#{Date.today}"))
 
-  puts "\n#{cert[:color]}[+] The #{File.basename(src)} file is saved in #{output} folder. Edit it with your exam notes.#{colors[:nocolor]}"
-  puts "\n[+] Then, run #{cert[:color]}osert generate -i #{output}/#{File.basename(src)} -o #{output}#{colors[:nocolor]} for getting your report."
-when'generate'
-  puts "\n[+] Preparing your final report..."
+  print "[+] The #{colors[:red]}#{File.basename(src)}#{colors[:nocolor]} file is saved in"
+  print " #{colors[:red]}#{output}#{colors[:nocolor]} folder."
+  puts 'Edit it with your exam notes.'
+  print "[+] Then, run #{colors[:red]}osert generate -i #{output}/#{File.basename(src)} -o #{output}#{colors[:nocolor]}"
+  puts ' for getting your report.'
+when 'generate'
+  puts '[+] Preparing your final report...'
   # Choose syntax highlight style
   style = 'breezedark'
-  print "\n[+] Choose syntax highlight style [#{style}]:"
+  puts "[+] Choose syntax highlight style [#{style}]:"
+  styles = `pandoc --list-highlight-styles`.split("\n")
+  styles.each_with_index do |s, i|
+    puts "#{colors[:red]}#{i}. #{s}#{colors[:nocolor]}"
+  end
+  puts_prompt
   choice = gets.chomp
-  style = choice unless choice.empty?
-  puts style
+  style = styles[choice.to_i] unless choice.empty?
 
   if options[:input]
     input = options[:input]
   else
-    print "\n[+] Enter the file path where is your markdown report:"
+    puts_prompt '[+] Enter the file path where is your markdown report:'
     input = gets.chomp
   end
 
   if options[:output]
     output = options[:output]
   else
-    print "\n[+] Enter the path where you want to store the PDF report:"
+    puts_prompt '[+] Enter the path where you want to store the PDF report:'
     output = gets.chomp
   end
 
+  if options[:exam]
+    exam = options[:exam]
+  else
+    puts '[+] Choose a Certification:'
+    certifications.each_with_index do |c, i|
+      puts "#{colors[:red]}#{i}. #{c[:exam]}#{colors[:nocolor]}"
+    end
+    puts_prompt
+    cert = certifications[gets.chomp.to_i]
+    exam = cert[:exam]
+  end
+
+  if options[:osid]
+    osid = options[:osid]
+  else
+    puts '[+] Enter your OS ID:'
+    print '> OS-'
+    osid = "OS-#{gets.chomp}"
+  end
+
   # Generating report
-  puts "\n[+] Generating report..."
+  puts '[+] Generating report...'
   pdf = "#{output}/#{exam}-#{osid}-Exam-Report.pdf"
-  # pdf = output.to_s
-  %x(pandoc #{input} -o #{pdf} \
+  `pandoc #{input} -o #{pdf} \
     --from markdown+yaml_metadata_block+raw_html \
     --template eisvogel \
     --table-of-contents \
@@ -242,14 +259,13 @@ when'generate'
     --highlight-style #{style} \
     --resource-path=.:src \
     --resource-path=.:/usr/share/osert/src
-  )
-  puts "\n[+] PDF generated at #{pdf}"
+  `
+  puts "[+] PDF generated at #{colors[:red]}#{pdf}#{colors[:nocolor]}"
 
   # Preview
-  puts "\n[+] Do you want to preview the report? [y/N]"
-  print '[>] '
+  puts_prompt '[+] Do you want to preview the report? [Y/n]'
   choice = gets.chomp
-  if choice.downcase == 'y'
+  if choice.downcase == 'y' || choice.empty?
     viewer = fork do
       exec "xdg-open #{pdf}"
     end
@@ -257,30 +273,25 @@ when'generate'
   end
 
   # Generating archive
-  puts "\n[+] Generating archive..."
-  archive = "#{File.dirname(pdf)}/#{File.basename(pdf, '.pdf')}.7z"
-  %x(7z a #{archive} \
-    #{File.expand_path(pdf)}
-  )
+  puts '[+] Generating archive...'
+  archive = "#{output}/#{exam}-#{osid}-Exam-Report.7z"
+  `7z a #{archive} #{File.expand_path(pdf)}`
 
   # Optional lab report
-  puts "\n[+] Do you want to add an external lab report? [y/N]"
-  print '[>] '
+  puts_prompt '[+] Do you want to add an external lab report? [Y/n]'
   choice = gets.chomp
-  if choice.downcase == 'y'
-    print "\n[+] Write the path of your lab PDF:"
+  if choice.downcase == 'y' || choice.empty?
+    puts_prompt '[+] Write the path of your lab PDF:'
     lab = gets.chomp
-    puts "\n[+] Updating archive..."
-    %x(7z a #{archive} \
-      #{File.expand_path(lab)}
-    )
+    puts '[+] Updating archive...'
+    `7z a #{archive} #{File.expand_path(lab)}`
   end
 
-  puts "\n[+] Archive generated at #{archive}"
+  puts "[+] Archive generated at #{colors[:red]}#{archive}#{colors[:nocolor]}"
 
   # Calculate MD5
-  puts "\n[+] Calculating MD5 of the archive..."
+  puts '[+] Calculating MD5 of the archive...'
   require 'digest'
   md5 = Digest::MD5.hexdigest File.read(archive)
-  puts "\n[+] Archive MD5 (upload integrity check): #{md5}"
+  puts "[+] Archive MD5 (upload integrity check): #{colors[:red]}#{md5}#{colors[:nocolor]}"
 end
