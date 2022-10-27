@@ -5,7 +5,7 @@
 [![GitHub forks](https://img.shields.io/github/forks/noraj/OSCP-Exam-Report-Template-Markdown?style=flat-square)](https://github.com/noraj/OSCP-Exam-Report-Template-Markdown/network)
 [![GitHub license](https://img.shields.io/github/license/noraj/OSCP-Exam-Report-Template-Markdown?style=flat-square)](https://github.com/noraj/OSCP-Exam-Report-Template-Markdown/blob/master/LICENSE)
 
-I created an **Offensive Security Exam Report Template in Markdown** so LaTeX, Microsoft Office Word, LibreOffice Writer are no longer needed during your Offensive Security OSCP, OSWE, OSCE, OSEE, OSWP, OSEP, OSED exam!
+I created an **Offensive Security Exam Report Template in Markdown** so LaTeX, Microsoft Office Word, LibreOffice Writer are no longer needed during your Offensive Security OSCP, OSWE, OSEE, OSWP, OSEP, OSED exam!
 
 Now you can be efficient and faster during your exam report redaction!
 
@@ -58,9 +58,19 @@ There is a script that will:
 4. Generate the 7z archive
 5. Output MD5 hash for verification after uploading
 
+Choose and copy a template that you will use to write your report:
+
 ```
-ruby generate.rb
+ruby osert.rb init
 ```
+
+Generate your PDF report and 7z archive
+
+```
+ruby osert.rb generate
+```
+
+Note: I you run the generation several times, you may want to check the options (`ruby osert.rb generate -h`) to save time on the interactive prompt.
 
 ### Manual
 
