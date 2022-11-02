@@ -7,8 +7,8 @@ keywords: [Markdown, Example]
 subtitle: "OSWA Exam Report"
 lang: "en"
 titlepage: true
-titlepage-color: "00FF7F"
-titlepage-text-color: "006400"
+titlepage-color: "FFD700"
+titlepage-text-color: "000000"
 titlepage-rule-color: "000000"
 titlepage-rule-height: 2
 book: true
