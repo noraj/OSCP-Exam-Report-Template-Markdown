@@ -156,7 +156,7 @@ Exam acronym | Exam name                                         | Lab acronym |
 **OSCP**     | Offensive Security Certified Professional         | PWK         | Penetration Testing with Kali Linux       | PEN-200
 **OSWP**     | Offensive Security Wireless Professional          | OSWA        | Offensive Security Wireless Attacks       | PEN-210
 **OSEP**     | Offensive Security Experienced Penetration Tester | ETBD        | Evasion Techniques and Breaching Defenses | PEN-300
-**OSWA**     | Offensive Security Web Assessor                   | WAWK        | Web Attacks with Kali Linux               | WEB-200
+**OSWA**     | Offensive Security Web Assessor                   | WAKL        | Web Attacks with Kali Linux               | WEB-200
 **OSWE**     | Offensive Security Web Expert                     | AWAE        | Advanced Web Attacks and Exploitation     | WEB-300
 **OSED**     | Offensive Security Exploit Developer              | WUMED       | Windows User Mode Exploit Development     | EXP-301
 **OSEE**     | Offensive Security Exploitation Expert            | AWE         | Advanced Windows Exploitation             | EXP-401
@@ -209,6 +209,8 @@ Report Templates:
 - **OSEP**
   - [Official Offensive Security Template](https://help.offensive-security.com/hc/en-us/articles/360050293792-OSEP-Exam-Guide#suggested-documentation-templates) (UNLICENSED)
   - [ceso improved template](src/OSEP-exam-report-template_ceso_v1.md) (UNLICENSED)
+- **OSWA**
+  - [Official Offensive Security Template](https://help.offensive-security.com/hc/en-us/articles/4410105650964-OSWA-Exam-Guide#suggested-documentation-templates) (UNLICENSED)
 
 Pandoc Template:
 
