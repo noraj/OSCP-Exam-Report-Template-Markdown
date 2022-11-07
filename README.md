@@ -5,7 +5,7 @@
 [![GitHub forks](https://img.shields.io/github/forks/noraj/OSCP-Exam-Report-Template-Markdown?style=flat-square)](https://github.com/noraj/OSCP-Exam-Report-Template-Markdown/network)
 [![GitHub license](https://img.shields.io/github/license/noraj/OSCP-Exam-Report-Template-Markdown?style=flat-square)](https://github.com/noraj/OSCP-Exam-Report-Template-Markdown/blob/master/LICENSE)
 
-I created an **Offensive Security Exam Report Template in Markdown** so LaTeX, Microsoft Office Word, LibreOffice Writer are no longer needed during your Offensive Security OSCP, OSWE, OSEE, OSWP, OSEP, OSED, OSWA exam!
+I created an **Offensive Security Exam Report Template in Markdown** so LaTeX, Microsoft Office Word, LibreOffice Writer are no longer needed during your Offensive Security OSCP, OSWE, OSEE, OSWP, OSEP, OSED, OSWA, OSDA exam!
 
 Now you can be efficient and faster during your exam report redaction!
 
@@ -60,13 +60,13 @@ There is a script that will:
 
 Choose and copy a template that you will use to write your report:
 
-```
+```bash
 ruby osert.rb init
 ```
 
 Generate your PDF report and 7z archive
 
-```
+```bash
 ruby osert.rb generate
 ```
 
@@ -76,7 +76,7 @@ Note: I you run the generation several times, you may want to check the options 
 
 Generate the report PDF from the markdown template:
 
-```
+```bash
 pandoc src/OSCP-exam-report-template_whoisflynn_v3.2.md \
 -o output/OSCP-OS-XXXXX-Exam-Report.pdf \
 --from markdown+yaml_metadata_block+raw_html \
@@ -112,7 +112,7 @@ Syntax highlight themes can be listed with `pandoc --list-highlight-styles`.
 
 Report Templates:
 
-Penetration Testing:
+Network Penetration Testing:
 
 - **OSCP**
   - [Official Offensive Security Template v1](output/examples/OSCP-exam-report-template_OS_v1.pdf)
@@ -143,6 +143,11 @@ Exploit Development:
 - **OSCE** (**deprecated**)
   - [Official Offensive Security Template v1](output/examples/OSCE-exam-report-template_OS_v1.pdf)
 
+Security Operations:
+
+- **OSDA**
+  - [Official Offensive Security Template v1](output/examples/OSDA-exam-report-template_OS_v1.pdf)
+
 [whoisflynn]:https://github.com/whoisflynn
 [noraj]:https://github.com/noraj
 [epi]:https://github.com/epi052
@@ -151,16 +156,17 @@ Exploit Development:
 
 Offensive Security course table:
 
-Exam acronym | Exam name                                         | Lab acronym | Lab name                                  | Course designation
--------------|---------------------------------------------------|-------------|-------------------------------------------|-------------------
-**OSCP**     | Offensive Security Certified Professional         | PWK         | Penetration Testing with Kali Linux       | PEN-200
-**OSWP**     | Offensive Security Wireless Professional          | OSWA        | Offensive Security Wireless Attacks       | PEN-210
-**OSEP**     | Offensive Security Experienced Penetration Tester | ETBD        | Evasion Techniques and Breaching Defenses | PEN-300
-**OSWA**     | Offensive Security Web Assessor                   | WAKL        | Web Attacks with Kali Linux               | WEB-200
-**OSWE**     | Offensive Security Web Expert                     | AWAE        | Advanced Web Attacks and Exploitation     | WEB-300
-**OSED**     | Offensive Security Exploit Developer              | WUMED       | Windows User Mode Exploit Development     | EXP-301
-**OSEE**     | Offensive Security Exploitation Expert            | AWE         | Advanced Windows Exploitation             | EXP-401
-**OSCE**     | Offensive Security Certified Expert               | CTP         | Cracking the Perimeter                    | N/A
+Exam acronym | Exam name                                         | Lab acronym | Lab name                                   | Course designation
+-------------|---------------------------------------------------|-------------|--------------------------------------------|-------------------
+**OSCP**     | Offensive Security Certified Professional         | PWK         | Penetration Testing with Kali Linux        | PEN-200
+**OSWP**     | Offensive Security Wireless Professional          | OSWA        | Offensive Security Wireless Attacks        | PEN-210
+**OSEP**     | Offensive Security Experienced Penetration Tester | ETBD        | Evasion Techniques and Breaching Defenses  | PEN-300
+**OSWA**     | Offensive Security Web Assessor                   | WAKL        | Web Attacks with Kali Linux                | WEB-200
+**OSWE**     | Offensive Security Web Expert                     | AWAE        | Advanced Web Attacks and Exploitation      | WEB-300
+**OSED**     | Offensive Security Exploit Developer              | WUMED       | Windows User Mode Exploit Development      | EXP-301
+**OSEE**     | Offensive Security Exploitation Expert            | AWE         | Advanced Windows Exploitation              | EXP-401
+**OSCE**     | Offensive Security Certified Expert               | CTP         | Cracking the Perimeter                     | N/A
+**OSDA**     | Offensive Security Defense Analyst                | SODA        | Security Operations and Defensive Analysis | SOC-200
 
 ## Community projects
 
@@ -211,6 +217,8 @@ Report Templates:
   - [ceso improved template](src/OSEP-exam-report-template_ceso_v1.md) (UNLICENSED)
 - **OSWA**
   - [Official Offensive Security Template](https://help.offensive-security.com/hc/en-us/articles/4410105650964-OSWA-Exam-Guide#suggested-documentation-templates) (UNLICENSED)
+- **OSDA**
+  - [Official Offensive Security Template](https://help.offensive-security.com/hc/en-us/articles/4410105675412-OSDA-Exam-Guide#h_01GGD1AKE9DRDAJZ91PXZ5X0PN) (UNLICENSED)
 
 Pandoc Template:
 
