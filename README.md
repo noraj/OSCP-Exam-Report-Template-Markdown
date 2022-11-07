@@ -5,7 +5,7 @@
 [![GitHub forks](https://img.shields.io/github/forks/noraj/OSCP-Exam-Report-Template-Markdown?style=flat-square)](https://github.com/noraj/OSCP-Exam-Report-Template-Markdown/network)
 [![GitHub license](https://img.shields.io/github/license/noraj/OSCP-Exam-Report-Template-Markdown?style=flat-square)](https://github.com/noraj/OSCP-Exam-Report-Template-Markdown/blob/master/LICENSE)
 
-I created an **Offensive Security Exam Report Template in Markdown** so LaTeX, Microsoft Office Word, LibreOffice Writer are no longer needed during your Offensive Security OSCP, OSWE, OSEE, OSWP, OSEP, OSED, OSWA, OSDA exam!
+I created an **Offensive Security Exam Report Template in Markdown** so LaTeX, Microsoft Office Word, LibreOffice Writer are no longer needed during your Offensive Security OSCP, OSWE, OSEE, OSWP, OSEP, OSED, OSWA, OSDA, OSMR exam!
 
 Now you can be efficient and faster during your exam report redaction!
 
@@ -142,6 +142,8 @@ Exploit Development:
   - [Official Offensive Security Template v1](output/examples/OSEE-exam-report-template_OS_v1.pdf)
 - **OSCE** (**deprecated**)
   - [Official Offensive Security Template v1](output/examples/OSCE-exam-report-template_OS_v1.pdf)
+- **OSMR**
+   - [Official Offensive Security Template v1](output/examples/OSMR-exam-report-template_OS_v1.pdf)
 
 Security Operations:
 
@@ -164,6 +166,7 @@ Exam acronym | Exam name                                         | Lab acronym |
 **OSWA**     | Offensive Security Web Assessor                   | WAKL        | Web Attacks with Kali Linux                | WEB-200
 **OSWE**     | Offensive Security Web Expert                     | AWAE        | Advanced Web Attacks and Exploitation      | WEB-300
 **OSED**     | Offensive Security Exploit Developer              | WUMED       | Windows User Mode Exploit Development      | EXP-301
+**OSMR**     | Offensive Security macOS Researcher               | MCB         | macOS Control Bypasses                     | EXP-312
 **OSEE**     | Offensive Security Exploitation Expert            | AWE         | Advanced Windows Exploitation              | EXP-401
 **OSCE**     | Offensive Security Certified Expert               | CTP         | Cracking the Perimeter                     | N/A
 **OSDA**     | Offensive Security Defense Analyst                | SODA        | Security Operations and Defensive Analysis | SOC-200
@@ -219,6 +222,8 @@ Report Templates:
   - [Official Offensive Security Template](https://help.offensive-security.com/hc/en-us/articles/4410105650964-OSWA-Exam-Guide#suggested-documentation-templates) (UNLICENSED)
 - **OSDA**
   - [Official Offensive Security Template](https://help.offensive-security.com/hc/en-us/articles/4410105675412-OSDA-Exam-Guide#h_01GGD1AKE9DRDAJZ91PXZ5X0PN) (UNLICENSED)
+- **OSMR**
+  - [Official Offensive Security Template](https://help.offensive-security.com/hc/en-us/articles/4411107766804-OSMR-Exam-Guide#OSMRExamGuide-SuggestedDocumentationTemplates) (UNLICENSED)
 
 Pandoc Template:
 

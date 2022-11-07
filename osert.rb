@@ -115,6 +115,15 @@ certifications = [
         path: 'src/OSDA-exam-report-template_OS_v1.md'
       }
     ]
+  },
+  {
+    exam: 'OSMR',
+    template: [
+      {
+        name: 'Official Offensive Security Template v1',
+        path: 'src/OSMR-exam-report-template_OS_v1.md'
+      }
+    ]
   }
 ]
 
