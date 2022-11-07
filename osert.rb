@@ -106,6 +106,15 @@ certifications = [
         path: 'src/OSEP-exam-report-template_ceso_v1.md'
       }
     ]
+  },
+  {
+    exam: 'OSDA',
+    template: [
+      {
+        name: 'Official Offensive Security Template v1',
+        path: 'src/OSDA-exam-report-template_OS_v1.md'
+      }
+    ]
   }
 ]
 
