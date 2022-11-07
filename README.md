@@ -5,7 +5,7 @@
 [![GitHub forks](https://img.shields.io/github/forks/noraj/OSCP-Exam-Report-Template-Markdown?style=flat-square)](https://github.com/noraj/OSCP-Exam-Report-Template-Markdown/network)
 [![GitHub license](https://img.shields.io/github/license/noraj/OSCP-Exam-Report-Template-Markdown?style=flat-square)](https://github.com/noraj/OSCP-Exam-Report-Template-Markdown/blob/master/LICENSE)
 
-I created an **Offensive Security Exam Report Template in Markdown** so LaTeX, Microsoft Office Word, LibreOffice Writer are no longer needed during your Offensive Security OSCP, OSWE, OSEE, OSWP, OSEP, OSED exam!
+I created an **Offensive Security Exam Report Template in Markdown** so LaTeX, Microsoft Office Word, LibreOffice Writer are no longer needed during your Offensive Security OSCP, OSWE, OSEE, OSWP, OSEP, OSED, OSWA exam!
 
 Now you can be efficient and faster during your exam report redaction!
 
@@ -126,6 +126,8 @@ Penetration Testing:
 
 Web Application:
 
+- **OSWA**
+  - [Official Offensive Security Template v1](output/examples/OSWA-exam-report-template_OS_v1.pdf)
 - **OSWE**
   - [Official Offensive Security Template v1](output/examples/OSWE-exam-report-template_OS_v1.pdf)
   - [noraj][noraj] improved [template](output/examples/OSWE-exam-report-template_noraj_v1.pdf) v1
@@ -154,6 +156,7 @@ Exam acronym | Exam name                                         | Lab acronym |
 **OSCP**     | Offensive Security Certified Professional         | PWK         | Penetration Testing with Kali Linux       | PEN-200
 **OSWP**     | Offensive Security Wireless Professional          | OSWA        | Offensive Security Wireless Attacks       | PEN-210
 **OSEP**     | Offensive Security Experienced Penetration Tester | ETBD        | Evasion Techniques and Breaching Defenses | PEN-300
+**OSWA**     | Offensive Security Web Assessor                   | WAWK        | Web Attacks with Kali Linux               | WEB-200
 **OSWE**     | Offensive Security Web Expert                     | AWAE        | Advanced Web Attacks and Exploitation     | WEB-300
 **OSED**     | Offensive Security Exploit Developer              | WUMED       | Windows User Mode Exploit Development     | EXP-301
 **OSEE**     | Offensive Security Exploitation Expert            | AWE         | Advanced Windows Exploitation             | EXP-401
