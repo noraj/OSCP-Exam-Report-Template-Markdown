@@ -70,7 +70,7 @@ Generate your PDF report and 7z archive
 ruby osert.rb generate
 ```
 
-Note: I you run the generation several times, you may want to check the options (`ruby osert.rb generate -h`) to save time on the interactive prompt.
+Note: If you run the generation several times, you may want to check the options (`ruby osert.rb generate -h`) to save time on the interactive prompt.
 
 ### Manual
 
@@ -187,9 +187,9 @@ Docker containers:
 - 3rd [Top Offensive Security Open Source Projects](https://awesomeopensource.com/projects/offensive-security) (2022-01-27)
 - Recent mentions on social medias: [Social-searcher](https://www.social-searcher.com/social-buzz/?q5=https%3A%2F%2Fgithub.com%2Fnoraj%2FOSCP-Exam-Report-Template-Markdown)
 - Articles:
-  - ~~[Stress-free OSCP report making](https://craigunder.me/stress-free-oscp-report-making/)~~ by Craig Underhill (2020-04-06)
   - [Unofficial OSCP Approved Tools](https://falconspy.medium.com/unofficial-oscp-approved-tools-b2b4e889e707) by FalconSpy (2019-06-05)
   - [Journey from nothing to OSCP](https://cjhackerz.net/posts/journey-from-nothing-to-oscp/) by CJHackerz (2020-06-30)
+  - Stress-free OSCP report making by Craig Underhill (2020-04-06) ([Raw Archive](https://web.archive.org/web/20210729100632/https://craigunder.me/stress-free-oscp-report-making/`))
 
 ## Stargazers over time
 
