@@ -70,7 +70,7 @@ Generate your PDF report and 7z archive
 ruby osert.rb generate
 ```
 
-Note: I you run the generation several times, you may want to check the options (`ruby osert.rb generate -h`) to save time on the interactive prompt.
+Note: If you run the generation several times, you may want to check the options (`ruby osert.rb generate -h`) to save time on the interactive prompt.
 
 ### Manual
 
