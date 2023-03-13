@@ -189,6 +189,7 @@ Docker containers:
 - Articles:
   - [Unofficial OSCP Approved Tools](https://falconspy.medium.com/unofficial-oscp-approved-tools-b2b4e889e707) by FalconSpy (2019-06-05)
   - [Journey from nothing to OSCP](https://cjhackerz.net/posts/journey-from-nothing-to-oscp/) by CJHackerz (2020-06-30)
+  - Stress-free OSCP report making by Craig Underhill (2020-04-06) ([Raw Archive](https://web.archive.org/web/20210729100632/https://craigunder.me/stress-free-oscp-report-making/`))
 
 ## Stargazers over time
 
