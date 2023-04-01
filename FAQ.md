@@ -109,4 +109,4 @@ This is a [known and open issue with pandoc](https://github.com/jgm/pandoc/issue
 }
 ```
 
-The add `-H path/to/disable_float.tex` to your `pandoc` command when rendering the report. This will force `pandoc` to render the images in the order that they appear in the original Markdown file while also preserving their captions. [Source](http://stackoverflow.com/a/33801326/1407737). 
+Then add `-H path/to/disable_float.tex` to your `pandoc` command when rendering the report. This will force `pandoc` to render the images in the order that they appear in the original Markdown file while also preserving their captions. [Source](http://stackoverflow.com/a/33801326/1407737). 
