@@ -93,3 +93,20 @@ Then testing all syntax highlight styles for all languages:
 ```zsh
 $ for s in $(pandoc --list-highlight-styles); do pandoc --template eisvogel --highlight-style $s -o highlight-$s.pdf highlight-languages.md; done;
 ```
+
+## Why are my images formatted in the wrong locations?
+
+This is a [known and open issue with pandoc](https://github.com/jgm/pandoc/issues/845). A simple hack is to create a file called `disable_float.tex` with the following content:
+
+```latex
+\usepackage{float}
+\let\origfigure\figure
+\let\endorigfigure\endfigure
+\renewenvironment{figure}[1][2] {
+    \expandafter\origfigure\expandafter[H]
+} {
+    \endorigfigure
+}
+```
+
+Then add `-H path/to/disable_float.tex` to your `pandoc` command when rendering the report. This will force `pandoc` to render the images in the order that they appear in the original Markdown file while also preserving their captions. [Source](http://stackoverflow.com/a/33801326/1407737). 
