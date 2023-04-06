@@ -118,6 +118,7 @@ Network Penetration Testing:
   - [Official Offensive Security Template v1](output/examples/OSCP-exam-report-template_OS_v1.pdf)
   - [Official Offensive Security Template v2](output/examples/OSCP-exam-report-template_OS_v2.pdf)
   - [whoisflynn][whoisflynn] improved [template](output/examples/OSCP-exam-report-template_whoisflynn_v3.2.pdf) v3.2
+  - [SecT0uch][SecT0uch] 2023 [template](output/examples/OSCP-2023-exam-report-template.pdf) 
 - **OSWP**
   - [Official Offensive Security Template v1](output/examples/OSWP-exam-report-template_OS_v1.pdf)
 - **OSEP**
@@ -155,6 +156,7 @@ Security Operations:
 [epi]:https://github.com/epi052
 [xl-sec]:https://github.com/xl-sec
 [ceso]:https://github.com/ceso
+[SecT0uch]:https://github.com/SecT0uch
 
 Offensive Security course table:
 
@@ -202,6 +204,7 @@ Report Templates:
 - **OSCP**
   - [Official Offensive Security Template](https://help.offensive-security.com/hc/en-us/articles/360040165632#suggested-documentation-templates) (UNLICENSED)
   - [whoisflynn improved template](https://github.com/whoisflynn/OSCP-Exam-Report-Template) (UNLICENSED)
+  - [SecT0uch][SecT0uch] 2023 template (UNLICENSED)
 - **OSWE**
   - [Official Offensive Security Template](https://help.offensive-security.com/hc/en-us/articles/360046869951-OSWE-Exam-Guide#suggested-documentation-templates) (UNLICENSED)
   - [noraj improved template](src/OSWE-exam-report-template_noraj_v1.md) (UNLICENSED)
