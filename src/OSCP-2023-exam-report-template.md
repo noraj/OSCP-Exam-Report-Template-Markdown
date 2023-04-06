@@ -138,13 +138,11 @@ Server IP Address | Ports Open
 
 **Proof of Concept Code:**
 
-**Local.txt Proof Screenshot**
+**Proof Screenshot**
 
-**Local.txt Contents**
+**local.txt content**
 
 ### Privilege Escalation - MySQL Injection
-
-**Vulnerability Exploited:**
 
 **Vulnerability Explanation:**
 
@@ -154,13 +152,13 @@ Server IP Address | Ports Open
 
 **Steps to reproduce the attack:**
 
-**Exploit Code:**
+**Proof of Concept Code:**
 
 ### Post-Exploitation
 
-**Proof Screenshot Here:**
+**Proof Screenshot:**
 
-**Proof.txt Contents:**
+**proof.txt contents:**
 
 ## Target #2 - 192.168.x.x
 
@@ -189,13 +187,11 @@ Server IP Address | Ports Open
 
 **Proof of Concept Code:**
 
-**Local.txt Proof Screenshot**
+**Proof Screenshot**
 
-**Local.txt Contents**
+**local.txt content**
 
 ### Privilege Escalation - 
-
-**Vulnerability Exploited:**
 
 **Vulnerability Explanation:**
 
@@ -205,13 +201,13 @@ Server IP Address | Ports Open
 
 **Steps to reproduce the attack:**
 
-**Exploit Code:**
+**Proof of Concept Code:**
 
 ### Post-Exploitation
 
-**Proof Screenshot Here:**
+**Proof Screenshot:**
 
-**Proof.txt Contents:**
+**proof.txt contents:**
 
 ## Target #3 - 192.168.x.x
 
@@ -240,13 +236,11 @@ Server IP Address | Ports Open
 
 **Proof of Concept Code:**
 
-**Local.txt Proof Screenshot**
+**Proof Screenshot**
 
-**Local.txt Contents**
+**local.txt content**
 
 ### Privilege Escalation - 
-
-**Vulnerability Exploited:**
 
 **Vulnerability Explanation:**
 
@@ -256,13 +250,13 @@ Server IP Address | Ports Open
 
 **Steps to reproduce the attack:**
 
-**Exploit Code:**
+**Proof of Concept Code:**
 
 ### Post-Exploitation
 
-**Proof Screenshot Here:**
+**Proof Screenshot:**
 
-**Proof.txt Contents:**
+**proof.txt contents:**
 
 # Active Directory Set
 
@@ -293,13 +287,11 @@ Server IP Address | Ports Open
 
 **Proof of Concept Code:**
 
-**Local.txt Proof Screenshot**
+**Proof Screenshot**
 
-**Local.txt Contents**
+**local.txt content**
 
 ### Privilege Escalation - 
-
-**Vulnerability Exploited:**
 
 **Vulnerability Explanation:**
 
@@ -309,13 +301,15 @@ Server IP Address | Ports Open
 
 **Steps to reproduce the attack:**
 
-**Exploit Code:**
+**Proof of Concept Code:**
+
+
 
 ### Post-Exploitation
 
-**Proof Screenshot Here:**
+**Proof Screenshot:**
 
-**Proof.txt Contents:**
+**proof.txt contents:**
 
 ## Hostname2: 192.168.x.x
 
@@ -331,13 +325,11 @@ Server IP Address | Ports Open
 
 **Proof of Concept Code:**
 
-**Local.txt Proof Screenshot**
+**Proof Screenshot**
 
-**Local.txt Contents**
+**local.txt content**
 
 ### Privilege Escalation - 
-
-**Vulnerability Exploited:**
 
 **Vulnerability Explanation:**
 
@@ -347,13 +339,13 @@ Server IP Address | Ports Open
 
 **Steps to reproduce the attack:**
 
-**Exploit Code:**
+**Proof of Concept Code:**
 
 ### Post-Exploitation
 
-**Proof Screenshot Here:**
+**Proof Screenshot:**
 
-**Proof.txt Contents:**
+**proof.txt contents:**
 
 ## Hostname3: 192.168.x.x
 
@@ -369,13 +361,11 @@ Server IP Address | Ports Open
 
 **Proof of Concept Code:**
 
-**Local.txt Proof Screenshot**
+**Proof Screenshot**
 
-**Local.txt Contents**
+**local.txt content**
 
 ### Privilege Escalation - 
-
-**Vulnerability Exploited:**
 
 **Vulnerability Explanation:**
 
@@ -385,21 +375,20 @@ Server IP Address | Ports Open
 
 **Steps to reproduce the attack:**
 
-**Exploit Code:**
+**Proof of Concept Code:**
 Please see Appendix 1 for the complete Windows Buffer Overflow code.
 
 ### Post-Exploitation
 
-**Proof Screenshot Here:**
+**Proof Screenshot:**
 
-**Proof.txt Contents:**
-
+**proof.txt contents:**
 
 # Additional Items
 
 ## Appendix - Proof and Local Contents:
 
-IP (Hostname) | Local.txt Contents | Proof.txt Contents
+IP (Hostname) | local.txt contents | proof.txt contents
 --------------|--------------------|-------------------
 192.168.x.x   | hash_here          | hash_here
 192.168.x.x   | hash_here          | hash_here
