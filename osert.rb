@@ -15,6 +15,10 @@ certifications = [
     exam: 'OSCP',
     template: [
       {
+        name: 'SecT0uch Template 2023',
+        path: 'src/OSCP-2023-exam-report-template.md'
+      },
+      {
         name: 'Whoisflynn Improved Template v3.2',
         path: 'src/OSCP-exam-report-template_whoisflynn_v3.2.md'
       },
