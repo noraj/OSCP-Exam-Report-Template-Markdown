@@ -61,7 +61,6 @@ These systems as well as a brief description on how access was obtained are list
 - Standalone 2 - HOSTNAME - Name of initial exploit
 - Standalone 3 - HOSTNAME - Name of initial exploit
 
-
 ## Sample Report - Recommendations
 
 John recommends patching the vulnerabilities identified during the testing to ensure that an attacker cannot exploit these systems in the future.
@@ -118,32 +117,30 @@ Offensive Security should not have to remove any user accounts or services from 
 
 ### Service Enumeration
 
+**Port Scan Results**
+
 Server IP Address | Ports Open
 ------------------|----------------------------------------
 192.168.1.1       | **TCP**: 21,22,25,80,443
 
-*Upon manual enumeration of the available FTP service, John noticed it was running an outdated version 2.3.4 that is prone to the remote buffer overflow vulnerability.*
+**FTP Enumeration**
 
-In addition, the operating system was different from the known public exploit.
-A rewritten exploit was needed in order for successful code execution to occur.
-Once the exploit was rewritten, a targeted attack was performed on the system which gave John full administrative access over the system.
+_Upon manual enumeration of the available FTP service, John noticed it was running an outdated version 2.3.4 that is prone to the remote buffer overflow vulnerability._
 
 ### Initial Access - Buffer Overflow
 
-**Vulnerability Explanation:**
-Ability Server 2.34 is subject to a buffer overflow vulnerability in STOR field.
+**Vulnerability Explanation:** Ability Server 2.34 is subject to a buffer overflow vulnerability in STOR field.
 Attackers can use this vulnerability to cause arbitrary remote code execution and take completely control over the system.
 
-**Vulnerability Fix:**
-The publishers of the Ability Server have issued a patch to fix this known issue
+**Vulnerability Fix:** The publishers of the Ability Server have issued a patch to fix this known issue.
 It can be found here: http://www.code-crafters.com/abilityserver/
 
 **Severity:** Critical
 
-**Steps to reproduce the attack:**
+**Steps to reproduce the attack:** The operating system was different from the known public exploit.
+A rewritten exploit was needed in order for successful code execution to occur. Once the exploit was rewritten, a targeted attack was performed on the system which gave John full administrative access over the system.
 
-**Proof of Concept Code Here:**
-Modifications to the existing exploit was needed and is highlighted in red.
+**Proof of Concept Code Here:** Modifications to the existing exploit was needed and is highlighted in red.
 
 ```python
 ###################################
@@ -217,12 +214,13 @@ print "\nDone."
 
 ### Privilege Escalation - MySQL Injection
 
-**Vulnerability Explanation:** A custom web application identified was prone to SQL Injection attacks.
+**Vulnerability Explanation:** After establishing a foothold on target, John noticed there were several applications running locally, one of them, a custom web application on port 80 was prone to SQL Injection attacks.
+Using Chisel for port forwarding, John was able to access the web application.
 When performing the penetration test, John noticed error-based MySQL Injection on the taxid query string parameter.
-While enumerating table data, John was able to successfully extract login and password credentials that were unencrypted that also matched username and password accounts for the root user account on the operating system.
-This allowed for a successful breach of the Linux-based operating system as well as all data contained on the system.
+While enumerating table data, John was able to successfully extract the database root account login and password credentials that were unencrypted that also matched username and password accounts for the administrative user account on the system and John was able to log in remotely using RDP.
+This allowed for a successful breach of the operating system as well as all data contained on the system.
 
-**Vulnerability Fix:** Since this is a custom web application, a specific update will not properly solve this issue
+**Vulnerability Fix:** Since this is a custom web application, a specific update will not properly solve this issue.
 The application will need to be programmed to properly sanitize user-input data, ensure that the user is running off of a limited user account, and that any sensitive data stored within the SQL database is properly encrypted.
 Custom error messages are highly recommended, as it becomes more challenging for the attacker to exploit a given weakness if errors are not being presented back to them.
 
@@ -238,7 +236,7 @@ SELECT * FROM login WHERE id = 1 or 1=1 AND user LIKE "%root%"
 
 ### Post-Exploitation
 
-**Proof Screenshot:**
+**System Proof Screenshot:**
 
 ![ImgPlaceholder](img/placeholder-image-300x225.png)
 
@@ -256,7 +254,7 @@ Server IP Address | Ports Open
 
 *Additional info about where the initial shell was acquired from*
 
-### Initial Access - 
+### Initial Access - XXX
 
 **Vulnerability Explanation:**
 
@@ -272,7 +270,7 @@ Server IP Address | Ports Open
 
 **local.txt content:**
 
-### Privilege Escalation - 
+### Privilege Escalation - XXX
 
 **Vulnerability Explanation:**
 
@@ -305,7 +303,7 @@ Server IP Address | Ports Open
 
 *Additional info about where the initial shell was acquired from*
 
-### Initial Access - 
+### Initial Access - XXX
 
 **Vulnerability Explanation:**
 
@@ -321,7 +319,7 @@ Server IP Address | Ports Open
 
 **local.txt content:**
 
-### Privilege Escalation - 
+### Privilege Escalation - XXX
 
 **Vulnerability Explanation:**
 
@@ -339,12 +337,11 @@ Server IP Address | Ports Open
 
 **proof.txt content:**
 
-
 # Active Directory Set
 
-## Service Enumeration
+**Port Scan Results**
 
-Server IP Address | Ports Open
+IP Address | Ports Open
 ------------------|----------------------------------------
 192.168.x.x       | **TCP**: 1433,3389\
 **UDP**: 1434,161
@@ -353,11 +350,9 @@ Server IP Address | Ports Open
 192.168.x.x       | **TCP**: 1433,3389\
 **UDP**: 1434,161
 
-**Nmap Scan Results:**
-
 ## Hostname1: 192.168.x.x
 
-### Initial Access - 
+### Initial Access - XXX
 
 **Vulnerability Explanation:**
 
@@ -373,7 +368,7 @@ Server IP Address | Ports Open
 
 **local.txt content:**
 
-### Privilege Escalation - 
+### Privilege Escalation - XXX
 
 **Vulnerability Explanation:**
 
@@ -384,8 +379,6 @@ Server IP Address | Ports Open
 **Steps to reproduce the attack:**
 
 **Proof of Concept Code:**
-
-
 
 ### Post-Exploitation
 
@@ -395,7 +388,7 @@ Server IP Address | Ports Open
 
 ## Hostname2: 192.168.x.x
 
-### Initial Access - 
+### Initial Access - XXX
 
 **Vulnerability Explanation:**
 
@@ -411,7 +404,7 @@ Server IP Address | Ports Open
 
 **local.txt content:**
 
-### Privilege Escalation - 
+### Privilege Escalation - XXX
 
 **Vulnerability Explanation:**
 
@@ -431,7 +424,7 @@ Server IP Address | Ports Open
 
 ## Hostname3: 192.168.x.x
 
-### Initial Access - 
+### Initial Access - XXX
 
 **Vulnerability Explanation:**
 
@@ -447,7 +440,7 @@ Server IP Address | Ports Open
 
 **local.txt content:**
 
-### Privilege Escalation - 
+### Privilege Escalation - XXX
 
 **Vulnerability Explanation:**
 
@@ -465,8 +458,6 @@ Please see Appendix 1 for the complete Windows Buffer Overflow code.
 **Proof Screenshot:**
 
 **proof.txt content:**
-
-
 
 # Additional Items Not Mentioned in the Report
 
