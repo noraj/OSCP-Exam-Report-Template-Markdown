@@ -1,7 +1,7 @@
 ---
 title: "Offensive Security Certified Professional Exam Report"
 author: ["student@youremailaddress.com", "OSID: XXXX"]
-date: "2021-03-25"
+date: "2023-04-08"
 subject: "Markdown"
 keywords: [Markdown, Example]
 subtitle: "OSCP Exam Report"
@@ -15,13 +15,12 @@ book: true
 classoption: oneside
 code-block-font-size: \scriptsize
 ---
-# Offensive Security Lab and Exam Penetration Test Report
+# Offensive Security OSCP Exam Report
 
 ## Introduction
 
-The Offensive Security Lab and Exam penetration test report contains all efforts that were conducted in order to pass the Offensive Security course.
-This report should contain all lab data in the report template format as well as all items that were used to pass the overall exam.
-This report will be graded from a standpoint of correctness and fullness to all aspects of the lab and exam.
+The Offensive Security Exam penetration test report contains all efforts that were conducted in order to pass the Offensive Security course.
+This report should contain all items that were used to pass the overall exam and it will be graded from a standpoint of correctness and fullness to all aspects of the exam.
 The purpose of this report is to ensure that the student has a full understanding of penetration testing methodologies as well as the technical knowledge to pass the qualifications for the Offensive Security Certified Professional.
 
 ## Objective
@@ -54,11 +53,14 @@ During the testing, John had administrative level access to multiple systems.
 All systems were successfully exploited and access granted.
 These systems as well as a brief description on how access was obtained are listed below:
 
-- Lab Trophy 1 - Got in through X
-- Lab Trophy 2 - Got in through X
-- Lab Trophy 3 - Got in through X
-- Exam Trophy 1 - Got in through X
-- Exam Trophy 2 - Got in through X
+- Active Directory Set:
+  - HOSTNAME - Name of initial exploit
+  - HOSTNAME - Name of initial exploit
+  - HOSTNAME - Name of initial exploit
+- Standalone 1 - HOSTNAME - Name of initial exploit
+- Standalone 2 - HOSTNAME - Name of initial exploit
+- Standalone 3 - HOSTNAME - Name of initial exploit
+
 
 ## Sample Report - Recommendations
 
@@ -76,10 +78,6 @@ The information gathering portion of a penetration test focuses on identifying t
 During this penetration test, John was tasked with exploiting the lab and exam network.
 The specific IP addresses were:
 
-**Lab Network**
-
-192.168.1.1, 192.168.1.2, 192.168.1.3
-
 **Exam Network**
 
 172.16.203.133, 172.16.203.134, 172.16.203.135, 172.16.203.136
@@ -91,35 +89,58 @@ This is valuable for an attacker as it provides detailed information on potentia
 Understanding what applications are running on the system gives an attacker needed information before performing the actual penetration test.
 In some cases, some ports may not be listed.
 
-Server IP Address | Ports Open
-------------------|----------------------------------------
-192.168.1.1       | **TCP**: 21,22,25,80,443
-192.168.1.2       | **TCP**: 22,55,90,8080,80
-192.168.1.3       | **TCP**: 1433,3389\
-**UDP**: 1434,161
-
 ## Sample Report - Penetration
 
 The penetration testing portions of the assessment focus heavily on gaining access to a variety of systems.
-During this penetration test, John was able to successfully gain access to 10 out of the 50 systems.
+During this penetration test, John was able to successfully gain access to **X** out of the **X** systems.
 
-**Vulnerability Exploited:** Ability Server 2.34 FTP STOR Buffer Overflow
+## Sample Report - Maintaining Access
 
-**System Vulnerable:** 172.16.203.134
+Maintaining access to a system is important to us as attackers, ensuring that we can get back into a system after it has been exploited is invaluable.
+The maintaining access phase of the penetration test focuses on ensuring that once the focused attack has occurred (i.e. a buffer overflow), we have administrative access over the system again.
+Many exploits may only be exploitable once and we may never be able to get back into a system after we have already performed the exploit.
+
+John added administrator and root level accounts on all systems compromised.
+In addition to the administrative/root access, a Metasploit meterpreter service was installed on the machine to ensure that additional access could be established.
+
+## Sample Report - House Cleaning
+
+The house cleaning portions of the assessment ensures that remnants of the penetration test are removed.
+Often fragments of tools or user accounts are left on an organizations computer which can cause security issues down the road.
+Ensuring that we are meticulous and no remnants of our penetration test are left over is important.
+
+After the trophies on the exam network were completed, John removed all user accounts and passwords as well as the meterpreter services installed on the system.
+Offensive Security should not have to remove any user accounts or services from the system.
+
+# Independent Challenges
+
+## Target #1 - 192.168.x.x
+
+### Service Enumeration
+
+Server IP Address | Ports Open
+------------------|----------------------------------------
+192.168.1.1       | **TCP**: 21,22,25,80,443
+
+*Upon manual enumeration of the available FTP service, John noticed it was running an outdated version 2.3.4 that is prone to the remote buffer overflow vulnerability.*
+
+In addition, the operating system was different from the known public exploit.
+A rewritten exploit was needed in order for successful code execution to occur.
+Once the exploit was rewritten, a targeted attack was performed on the system which gave John full administrative access over the system.
+
+### Initial Access - Buffer Overflow
 
 **Vulnerability Explanation:**
 Ability Server 2.34 is subject to a buffer overflow vulnerability in STOR field.
 Attackers can use this vulnerability to cause arbitrary remote code execution and take completely control over the system.
-When performing the penetration test, John noticed an outdated version of Ability Server running from the service enumeration phase.
-In addition, the operating system was different from the known public exploit.
-A rewritten exploit was needed in order for successful code execution to occur.
-Once the exploit was rewritten, a targeted attack was performed on the system which gave John full administrative access over the system.
 
 **Vulnerability Fix:**
 The publishers of the Ability Server have issued a patch to fix this known issue
 It can be found here: http://www.code-crafters.com/abilityserver/
 
 **Severity:** Critical
+
+**Steps to reproduce the attack:**
 
 **Proof of Concept Code Here:**
 Modifications to the existing exploit was needed and is highlighted in red.
@@ -188,15 +209,13 @@ except:
 print "\nDone."
 ```
 
-Screenshot Here:
+**Proof Screenshot:**
 
 ![ImgPlaceholder](img/placeholder-image-300x225.png)
 
 \newpage
 
-**Vulnerability Exploited:** MySQL Injection
-
-**System Vulnerable:** 172.16.203.135
+### Privilege Escalation - MySQL Injection
 
 **Vulnerability Explanation:** A custom web application identified was prone to SQL Injection attacks.
 When performing the penetration test, John noticed error-based MySQL Injection on the taxid query string parameter.
@@ -209,33 +228,245 @@ Custom error messages are highly recommended, as it becomes more challenging for
 
 **Severity:** Critical
 
+**Steps to reproduce the attack:**
+
 **Proof of Concept Code Here:**
 
 ```sql
 SELECT * FROM login WHERE id = 1 or 1=1 AND user LIKE "%root%"
 ```
 
-Screenshot Here:
+### Post-Exploitation
+
+**Proof Screenshot:**
 
 ![ImgPlaceholder](img/placeholder-image-300x225.png)
 
-## Sample Report - Maintaining Access
+## Target #2 - 192.168.x.x
 
-Maintaining access to a system is important to us as attackers, ensuring that we can get back into a system after it has been exploited is invaluable.
-The maintaining access phase of the penetration test focuses on ensuring that once the focused attack has occurred (i.e. a buffer overflow), we have administrative access over the system again.
-Many exploits may only be exploitable once and we may never be able to get back into a system after we have already performed the exploit.
+### Service Enumeration
 
-John added administrator and root level accounts on all systems compromised.
-In addition to the administrative/root access, a Metasploit meterpreter service was installed on the machine to ensure that additional access could be established.
+Server IP Address | Ports Open
+------------------|----------------------------------------
+192.168.1.2       | **TCP**: 22,55,90,8080,80
 
-## Sample Report - House Cleaning
+**Nmap Scan Results:**
 
-The house cleaning portions of the assessment ensures that remnants of the penetration test are removed.
-Often fragments of tools or user accounts are left on an organizations computer which can cause security issues down the road.
-Ensuring that we are meticulous and no remnants of our penetration test are left over is important.
+*Initial Shell Vulnerability Exploited*
 
-After the trophies on the exam network were completed, John removed all user accounts and passwords as well as the meterpreter services installed on the system.
-Offensive Security should not have to remove any user accounts or services from the system.
+*Additional info about where the initial shell was acquired from*
+
+### Initial Access - 
+
+**Vulnerability Explanation:**
+
+**Vulnerability Fix:**
+
+**Severity:**
+
+**Steps to reproduce the attack:**
+
+**Proof of Concept Code:**
+
+**Proof Screenshot:**
+
+**local.txt content:**
+
+### Privilege Escalation - 
+
+**Vulnerability Explanation:**
+
+**Vulnerability Fix:**
+
+**Severity:**
+
+**Steps to reproduce the attack:**
+
+**Proof of Concept Code:**
+
+### Post-Exploitation
+
+**Proof Screenshot:**
+
+**proof.txt content:**
+
+## Target #3 - 192.168.x.x
+
+### Service Enumeration
+
+Server IP Address | Ports Open
+------------------|----------------------------------------
+192.168.1.3       | **TCP**: 1433,3389\
+**UDP**: 1434,161
+
+**Nmap Scan Results:**
+
+*Initial Shell Vulnerability Exploited*
+
+*Additional info about where the initial shell was acquired from*
+
+### Initial Access - 
+
+**Vulnerability Explanation:**
+
+**Vulnerability Fix:**
+
+**Severity:**
+
+**Steps to reproduce the attack:**
+
+**Proof of Concept Code:**
+
+**Proof Screenshot:**
+
+**local.txt content:**
+
+### Privilege Escalation - 
+
+**Vulnerability Explanation:**
+
+**Vulnerability Fix:**
+
+**Severity:**
+
+**Steps to reproduce the attack:**
+
+**Proof of Concept Code:**
+
+### Post-Exploitation
+
+**Proof Screenshot:**
+
+**proof.txt content:**
+
+
+# Active Directory Set
+
+## Service Enumeration
+
+Server IP Address | Ports Open
+------------------|----------------------------------------
+192.168.x.x       | **TCP**: 1433,3389\
+**UDP**: 1434,161
+192.168.x.x       | **TCP**: 1433,3389\
+**UDP**: 1434,161
+192.168.x.x       | **TCP**: 1433,3389\
+**UDP**: 1434,161
+
+**Nmap Scan Results:**
+
+## Hostname1: 192.168.x.x
+
+### Initial Access - 
+
+**Vulnerability Explanation:**
+
+**Vulnerability Fix:**
+
+**Severity:**
+
+**Steps to reproduce the attack:**
+
+**Proof of Concept Code:**
+
+**Proof Screenshot:**
+
+**local.txt content:**
+
+### Privilege Escalation - 
+
+**Vulnerability Explanation:**
+
+**Vulnerability Fix:**
+
+**Severity:**
+
+**Steps to reproduce the attack:**
+
+**Proof of Concept Code:**
+
+
+
+### Post-Exploitation
+
+**Proof Screenshot:**
+
+**proof.txt content:**
+
+## Hostname2: 192.168.x.x
+
+### Initial Access - 
+
+**Vulnerability Explanation:**
+
+**Vulnerability Fix:**
+
+**Severity:**
+
+**Steps to reproduce the attack:**
+
+**Proof of Concept Code:**
+
+**Proof Screenshot:**
+
+**local.txt content:**
+
+### Privilege Escalation - 
+
+**Vulnerability Explanation:**
+
+**Vulnerability Fix:**
+
+**Severity:**
+
+**Steps to reproduce the attack:**
+
+**Proof of Concept Code:**
+
+### Post-Exploitation
+
+**Proof Screenshot:**
+
+**proof.txt content:**
+
+## Hostname3: 192.168.x.x
+
+### Initial Access - 
+
+**Vulnerability Explanation:**
+
+**Vulnerability Fix:**
+
+**Severity:**
+
+**Steps to reproduce the attack:**
+
+**Proof of Concept Code:**
+
+**Proof Screenshot:**
+
+**local.txt content:**
+
+### Privilege Escalation - 
+
+**Vulnerability Explanation:**
+
+**Vulnerability Fix:**
+
+**Severity:**
+
+**Steps to reproduce the attack:**
+
+**Proof of Concept Code:**
+Please see Appendix 1 for the complete Windows Buffer Overflow code.
+
+### Post-Exploitation
+
+**Proof Screenshot:**
+
+**proof.txt content:**
+
+
 
 # Additional Items Not Mentioned in the Report
 
