@@ -109,4 +109,17 @@ This is a [known and open issue with pandoc](https://github.com/jgm/pandoc/issue
 }
 ```
 
-Then add `-H path/to/disable_float.tex` to your `pandoc` command when rendering the report. This will force `pandoc` to render the images in the order that they appear in the original Markdown file while also preserving their captions. [Source](http://stackoverflow.com/a/33801326/1407737). 
+Then add `-H path/to/disable_float.tex` to your `pandoc` command when rendering the report. This will force `pandoc` to render the images in the order that they appear in the original Markdown file while also preserving their captions. [Source](http://stackoverflow.com/a/33801326/1407737).
+
+## How to highlight changes made to exploit code?
+
+When Offensive Security says you have to highlight the changes you made to the exploit, they mean you have to show / explain what you changed in the code but your are free to choose how to do that.
+
+Unfortunately, unlike [AsciiDoc](https://docs.asciidoctor.org/asciidoc/latest/verbatim/highlight-lines/), Markdown is more limited and doesn't allow to highlight a line in a code block.
+
+Alternatively what you can do is:
+
+- Take a screenshot and add a red rectangle and arrows, then include the image in Markdown
+- Make a diff between the original exploit and the one you modified, then create a code block with `diff` as a language for syntax highlight
+- Write parapgraphs and illustrate with short code blocks including the lines you changed
+- Using a more complex solution with Lua filters to introduce a markup for line highlight, eg. https://github.com/jgm/pandoc/issues/7743
