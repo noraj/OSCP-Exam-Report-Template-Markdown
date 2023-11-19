@@ -4,6 +4,7 @@
 require 'optparse'
 require 'fileutils'
 require 'date'
+require 'shellwords'
 
 colors = {
   red: "\e[31m",
@@ -246,16 +247,20 @@ begin
 
     if options[:input]
       input = options[:input]
+      input = input.shellescape
     else
       puts_prompt '[+] Enter the file path where is your markdown report:'
       input = gets.chomp
+      input = input.shellescape
     end
 
     if options[:output]
       output = options[:output]
+      output = output.shellescape
     else
       puts_prompt '[+] Enter the path where you want to store the PDF report:'
       output = gets.chomp
+      output = output.shellescape
     end
 
     if options[:exam]
@@ -324,6 +329,8 @@ begin
     # Calculate MD5
     puts '[+] Calculating MD5 of the archive...'
     require 'digest'
+    archive = archive.gsub('\\', '')
+    
     md5 = Digest::MD5.hexdigest File.read(archive)
     puts "[+] Archive MD5 (upload integrity check): #{colors[:red]}#{md5}#{colors[:nocolor]}"
   end
