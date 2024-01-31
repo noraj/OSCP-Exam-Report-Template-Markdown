@@ -127,7 +127,9 @@ certifications = [
   }
 ]
 
-options = {}
+options = {
+  resource_path: '.:src'
+}
 
 subtext = <<~HELPMSG
   Markdown Templates for Offensive Security OSCP, OSWE, OSEE, OSWP, OSEP, OSED Exam Report.
@@ -156,6 +158,7 @@ subcommands = {
     opts.on('-o', '--output PDF', 'File path to store the PDF report')
     opts.on('-e', '--exam EXAM', 'The exam short name')
     opts.on('-s', '--osid OSID', 'Your Offensive Security ID')
+    opts.on('-r', '--resource_path PATH', 'Complementary resource path to include (before the others)')
   end
 }
 
@@ -278,6 +281,7 @@ begin
       osid = "OS-#{gets.chomp}"
     end
 
+
     # Generating report
     puts '[+] Generating report...'
     pdf = "#{output}/#{exam}-#{osid}-Exam-Report.pdf"
@@ -289,6 +293,7 @@ begin
       --number-sections \
       --top-level-division=chapter \
       --highlight-style #{style} \
+      --resource-path=#{options[:resource_path]} \
       --resource-path=.:src \
       --resource-path=.:/usr/share/osert/src
     `
