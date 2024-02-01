@@ -4,6 +4,7 @@
 require 'optparse'
 require 'fileutils'
 require 'date'
+require 'shellwords'
 
 colors = {
   red: "\e[31m",
@@ -281,7 +282,7 @@ begin
     # Generating report
     puts '[+] Generating report...'
     pdf = "#{output}/#{exam}-#{osid}-Exam-Report.pdf"
-    `pandoc #{input} -o #{pdf} \
+    `pandoc #{input.shellescape} -o #{pdf.shellescape} \
       --from markdown+yaml_metadata_block+raw_html \
       --template eisvogel \
       --table-of-contents \
@@ -299,7 +300,7 @@ begin
     choice = gets.chomp
     if choice.downcase == 'y' || choice.empty?
       viewer = fork do
-        exec "xdg-open #{pdf}"
+        exec "xdg-open #{pdf.shellescape}"
       end
       Process.detach(viewer)
     end
@@ -307,7 +308,7 @@ begin
     # Generating archive
     puts '[+] Generating archive...'
     archive = "#{output}/#{exam}-#{osid}-Exam-Report.7z"
-    `7z a #{archive} #{File.expand_path(pdf)}`
+    `7z a #{archive.shellescape} #{File.expand_path(pdf.shellescape)}`
 
     # Optional lab report
     puts_prompt '[+] Do you want to add an external lab report? [Y/n]'
@@ -316,7 +317,7 @@ begin
       puts_prompt '[+] Write the path of your lab PDF:'
       lab = gets.chomp
       puts '[+] Updating archive...'
-      `7z a #{archive} #{File.expand_path(lab)}`
+      `7z a #{archive.shellescape} #{File.expand_path(lab.shellescape)}`
     end
 
     puts "[+] Archive generated at #{colors[:red]}#{archive}#{colors[:nocolor]}"
