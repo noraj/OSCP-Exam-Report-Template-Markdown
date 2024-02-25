@@ -161,7 +161,7 @@ Offensive Security course table:
 Exam acronym | Exam name                                         | Lab acronym | Lab name                                   | Course designation
 -------------|---------------------------------------------------|-------------|--------------------------------------------|-------------------
 **OSCP**     | Offensive Security Certified Professional         | PWK         | Penetration Testing with Kali Linux        | PEN-200
-**OSWP**     | Offensive Security Wireless Professional          | OSWA        | Offensive Security Wireless Attacks        | PEN-210
+**OSWP**     | Offensive Security Wireless Professional          | WA          | Wireless Attacks                           | PEN-210
 **OSEP**     | Offensive Security Experienced Penetration Tester | ETBD        | Evasion Techniques and Breaching Defenses  | PEN-300
 **OSWA**     | Offensive Security Web Assessor                   | WAKL        | Web Attacks with Kali Linux                | WEB-200
 **OSWE**     | Offensive Security Web Expert                     | AWAE        | Advanced Web Attacks and Exploitation      | WEB-300
