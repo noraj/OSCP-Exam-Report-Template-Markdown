@@ -70,7 +70,13 @@ Generate your PDF report and 7z archive
 ruby osert.rb generate
 ```
 
-Note: If you run the generation several times, you may want to check the options (`ruby osert.rb generate -h`) to save time on the interactive prompt.
+> [!TIP]
+> If you run the generation several times, you may want to check the options (`ruby osert.rb generate -h`) to save time on the interactive prompt.
+
+> [!NOTE]
+> `osert` is available as an official package on BlackArch Linux: `pacman -S osert`.
+>
+> [![BlackArch package](https://repology.org/badge/version-for-repo/blackarch/osert.svg)](https://repology.org/project/osert/versions)
 
 ### Manual
 
