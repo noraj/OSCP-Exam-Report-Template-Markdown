@@ -40,7 +40,7 @@ Examples:
 
 Examples for common distros:
 
-- ArchLinux: `pacman -S texlive-most pandoc p7zip`
+- ArchLinux: `pacman -S p7zip haskell-pandoc texlive-basic texlive-fontsextra texlive-fontsrecommended texlive-latexextra`
 - openSUSE: `zypper in texlive-scheme-medium pandoc p7zip-full`
 - Ubuntu: `apt install texlive-latex-recommended texlive-fonts-extra texlive-latex-extra pandoc p7zip-full`
 
