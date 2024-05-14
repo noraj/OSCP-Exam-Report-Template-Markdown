@@ -284,7 +284,7 @@ begin
 
     # Generating report
     puts '[+] Generating report...'
-    pdf = "#{output}/#{exam}-#{osid}-Exam-Report.pdf"
+    pdf = "#{output}/#{exam}-OS-#{osid}-Exam-Report.pdf"
     `pandoc #{input.shellescape} -o #{pdf.shellescape} \
       --from markdown+yaml_metadata_block+raw_html \
       --template eisvogel \
@@ -310,7 +310,7 @@ begin
 
     # Generating archive
     puts '[+] Generating archive...'
-    archive = "#{output}/#{exam}-#{osid}-Exam-Report.7z"
+    archive = "#{output}/#{exam}-OS-#{osid}-Exam-Report.7z"
     `7z a #{archive.shellescape} #{File.expand_path(pdf.shellescape)}`
 
     # Optional lab report
