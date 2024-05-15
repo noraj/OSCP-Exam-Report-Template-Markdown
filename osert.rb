@@ -275,7 +275,7 @@ begin
     end
 
     if options[:osid]
-      osid = options[:osid]
+      osid = "OS-" + options[:osid]
     else
       puts '[+] Enter your OS ID:'
       print '> OS-'
