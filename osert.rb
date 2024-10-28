@@ -125,6 +125,15 @@ certifications = [
         path: 'src/OSMR-exam-report-template_OS_v1.md'
       }
     ]
+  },
+  {
+    exam: 'OSTH',
+    template: [
+      {
+        name: 'Official Offensive Security Template v1',
+        path: 'src/OSTH-exam-report-template_OS_v1.md'
+      }
+    ]
   }
 ]
 
@@ -133,7 +142,7 @@ options = {
 }
 
 subtext = <<~HELPMSG
-  Markdown Templates for Offensive Security OSCP, OSWE, OSEE, OSWP, OSEP, OSED Exam Report.
+  Markdown Templates for Offensive Security OSCP, OSWE, OSEE, OSWP, OSEP, OSED, OSTH Exam Report.
 
   Sub-commands:
     init     :  Copy a template that you will use to write your report
