@@ -142,7 +142,7 @@ options = {
 }
 
 subtext = <<~HELPMSG
-  Markdown Templates for Offensive Security OSCP, OSWE, OSEE, OSWP, OSEP, OSED, OSTH Exam Report.
+  Markdown Templates for Offensive Security OSCP, OSWE, OSEE, OSWP, OSEP, OSED Exam Report.
 
   Sub-commands:
     init     :  Copy a template that you will use to write your report
