@@ -20,14 +20,14 @@ code-block-font-size: \scriptsize
 ## Introduction
 
 The OffSec Threat Hunter exam report contains all efforts that were conducted in order to pass the OffSec certification examination.
-This report should contain all items that were used to pass the exam and it will be graded from a standpoint of correctness and fullness to all aspects of the exam. 
+This report should contain all items that were used to pass the exam and it will be graded from a standpoint of correctness and fullness to all aspects of the exam.
 The purpose of this report is to ensure that the student has a full understanding of threat hunting methodologies as well as the technical knowledge to pass the qualifications for the OffSec Threat Hunter.
 
 ## Objective
 
-The objective of this assessment is to perform a threat hunting sprint in the Megacorp One environment. 
-The student is tasked with following a methodical approach to identify all compromised systems and detect if sensitive data was exfiltrated or encrypted. 
-An example page has already been created for you at the latter portions of this document that should demonstrate the amount of information and detail that is expected in the exam report. 
+The objective of this assessment is to perform a threat hunting sprint in the Megacorp One environment.
+The student is tasked with following a methodical approach to identify all compromised systems and detect if sensitive data was exfiltrated or encrypted.
+An example page has already been created for you at the latter portions of this document that should demonstrate the amount of information and detail that is expected in the exam report.
 Use the sample report as a guideline to get you through the reporting.
 
 ## Requirements
@@ -62,15 +62,15 @@ The threat actor accessed and exfiltrated the secret recipe for our chocolate mu
 
 ## High-Level Attack Path
 
-The threat hunt revealed the following high-level path the threat actor took to compromise the Megacorp One environment: 
+The threat hunt revealed the following high-level path the threat actor took to compromise the Megacorp One environment:
 
-1. PC1 was used as the initial entry vector by the threat actor by trying numerous passwords against several user accounts. The threat actor finally succeeded and got access to this machine with administrative privileges. 
+1. PC1 was used as the initial entry vector by the threat actor by trying numerous passwords against several user accounts. The threat actor finally succeeded and got access to this machine with administrative privileges.
 2. PC2 was configured to use the same password for the local administrator account and the threat actor used it to get access to it. On the machine, the attacker obtained credentials from logged on users by using Mimikatz.
-3. PC3 was accessed using one of the obtained sets of credentials from PC2. The threat actor accessed and exfiltrated the secret chocolate muffin recipe from this machine. 
+3. PC3 was accessed using one of the obtained sets of credentials from PC2. The threat actor accessed and exfiltrated the secret chocolate muffin recipe from this machine.
 
 ## Recommendations
 
-The threat hunt revealed the following high-level path the threat actor took to compromise the Megacorp One environment: 
+The threat hunt revealed the following high-level path the threat actor took to compromise the Megacorp One environment:
 
 1. **Escalate Incident to Incident Response Team:**
     - Escalate the incident to the incident response team to conduct a thorough investigation of the identified compromises. The focus should be on assessing the full scope of the incident and understanding its impact on the organization's systems and data.
@@ -88,7 +88,7 @@ The threat hunt revealed the following high-level path the threat actor took to 
 
 For the scheduled threat hunting sprint, we utilized the following tools, scripts, commands, and resources:
 
-- Splunk 
+- Splunk
 - WAG Threat Intelligence Report
 - PowerShell on DEV (Deobfuscation)
 
@@ -106,8 +106,8 @@ The threat intelligence report covering TTPs of the threat actor We Are Garfield
 
 ```default
 index="*" ("EEAAFA68236BD1629E36E81C5A8EC2CE8804C9798B5C84FEE55F6128CCBA8FB0" OR
-"4ED877F6F154EB6EBB02EE44E4D836C28193D9254A4A3D6AF6236D8F5BAB88D2" OR 
-"11EBBAA2EDA3CCD4B7F1BB2C09AC7DCA0CD1F4B71B7E0CFCEDE36861E23DA034" OR 
+"4ED877F6F154EB6EBB02EE44E4D836C28193D9254A4A3D6AF6236D8F5BAB88D2" OR
+"11EBBAA2EDA3CCD4B7F1BB2C09AC7DCA0CD1F4B71B7E0CFCEDE36861E23DA034" OR
 "8507FFC7EA1953F66D8441180C281D456889F93CF3F6CBB01F368886F9D8C097"
 ```
 
@@ -115,7 +115,7 @@ This search query resulted in only a single event with the timestamp 01/11/2024 
 
 ![ImgPlaceholder](img/placeholder-image-300x225.png)
 
-The matching SHA-256 hash is referred to as “Mimikatz” in the threat intelligence report. We then reviewed the event in more detail. 
+The matching SHA-256 hash is referred to as “Mimikatz” in the threat intelligence report. We then reviewed the event in more detail.
 
 ![ImgPlaceholder](img/placeholder-image-300x225.png)
 
@@ -125,13 +125,13 @@ The event provides us several important information that can be leveraged in our
 - Filename: Zwetsch.exe
 - Directory: `C:\hackingtools\`
 
-Based on the matching SHA-256 hash of the threat intelligence report and the characteristic commandline argument “sekurlsa::logonpasswords”, we can be certain that this is Mimikatz. 
+Based on the matching SHA-256 hash of the threat intelligence report and the characteristic commandline argument “sekurlsa::logonpasswords”, we can be certain that this is Mimikatz.
 
-[...]
+[…]
 
 # Findings
 
- Timestamp            | Observation | Affected Assets
+Timestamp             | Observation | Affected Assets
 ----------------------|-------------|-----------------
 01/09/2024 3:25:00 PM | Beginning of Password Spraying with Password Password1! | Host: PC1
 01/09/2024 3:58:00 PM | End of Password Spraying. | Host: PC1
@@ -139,9 +139,9 @@ Based on the matching SHA-256 hash of the threat intelligence report and the cha
 01/09/2024 3:59:00 PM | Download of meterpreter.exe from `<IP>` via Browser | Host: PC1 User: Administrator
 01/09/2024 3:59:49 PM | Process Creation of meterpreter.exe | Host: PC1 User: Administrator (local)
 01/09/2024 4:05:11 PM | Process Creation of PsExec | Host: PC1 User: Administrator (local) Target Machine: PC2 Target User: Administrator (local) Password: Password1!"
-[...] | [...] | [...]
+[…] | […] | […]
 01/11/2024 1:11:11 AM | Process Creation of Zwetsch.exe | Host: PC2 User: Administrator (local)
-[...] | [...]| [...]
+[…] | […]| […]
 
 # Conclusion
 
@@ -163,7 +163,7 @@ File Name       | SHA256
 ----------------|------------------------------------------------------------------
 Zwetsch.exe     | 4ED877F6F154EB6EBB02EE44E4D836C28193D9254A4A3D6AF6236D8F5BAB88D2
 meterpreter.exe | DF99BBABE7BD0E7A1D96CF370B78FDCF250AF380065A3D51F57EDE6A571E2C15
-[...]             | [...]
+[…]             | […]
 
 **Network Communications**
 
@@ -173,5 +173,5 @@ C&C            | 192.168.1.1:9999 (meterpreter.exe)
 Exfiltration   | 192.168.1.1:80 (WebDAV Share “looty”)
 File Download  | 192.168.1.1:80 (meterpreter.exe)
 File Download  | 192.168.1.1:80 (Zwetsch.exe)
-[...]            | [...]
+[…]            | […]
 
