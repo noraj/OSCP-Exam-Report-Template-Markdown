@@ -37,11 +37,11 @@ The student will be required to fill out this threat hunting report fully and to
 - Executive Summary
 - Methodology
 - Hunt Narrative
-  - A detailed walkthrough of the entire threat hunting sprint.
-  - The walkthrough should contain an explanation of all steps, assumptions, and decisions supported by screenshots and Splunk queries if applicable.
-  - The walkthrough should be thorough enough that the complete threat hunting sprint can be replicated step-by-step by a technically competent reader.
+    - A detailed walkthrough of the entire threat hunting sprint.
+    - The walkthrough should contain an explanation of all steps, assumptions, and decisions supported by screenshots and Splunk queries if applicable.
+    - The walkthrough should be thorough enough that the complete threat hunting sprint can be replicated step-by-step by a technically competent reader.
 - Findings
-  - A timeline of all key activities related to the attacker’s actions
+    - A timeline of all key activities related to the attacker’s actions
 - Conclusion
 - IoC Lists in the Appendix
 
@@ -72,17 +72,17 @@ The threat hunt revealed the following high-level path the threat actor took to 
 
 The threat hunt revealed the following high-level path the threat actor took to compromise the Megacorp One environment: 
 
-- Escalate Incident to Incident Response Team:
-  - Escalate the incident to the incident response team to conduct a thorough investigation of the identified compromises. The focus should be on assessing the full scope of the incident and understanding its impact on the organization's systems and data.
-  - Collaborate closely with the incident response team to share findings, provide context, and support their efforts in containing and remediating the security incidents.
-- Continued Support and Analysis:
-  - Remain actively involved in supporting other defensive teams, particularly during the incident detection and identification phase of the incident management process.
-  - Conduct further analysis of the malware samples to extract additional IoCs and behavioral patterns, providing valuable insights for ongoing threat detection and mitigation efforts.
-- Continuous Improvement and Training:
-  - Implement policies to ensure that users do not reuse passwords across different accounts.
-  - Develop and deploy detection rules to identify and prevent successful password attacks.
-  - Add access control mechanisms to prevent unprivileged user accounts from accessing sensitive files.
-  - Implement security awareness training for all users, emphasizing strong password usage and best practices.
+1. **Escalate Incident to Incident Response Team:**
+    - Escalate the incident to the incident response team to conduct a thorough investigation of the identified compromises. The focus should be on assessing the full scope of the incident and understanding its impact on the organization's systems and data.
+    - Collaborate closely with the incident response team to share findings, provide context, and support their efforts in containing and remediating the security incidents.
+2. **Continued Support and Analysis:**
+    - Remain actively involved in supporting other defensive teams, particularly during the incident detection and identification phase of the incident management process.
+    - Conduct further analysis of the malware samples to extract additional IoCs and behavioral patterns, providing valuable insights for ongoing threat detection and mitigation efforts.
+3. **Continuous Improvement and Training:**
+    - Implement policies to ensure that users do not reuse passwords across different accounts.
+    - Develop and deploy detection rules to identify and prevent successful password attacks.
+    - Add access control mechanisms to prevent unprivileged user accounts from accessing sensitive files.
+    - Implement security awareness training for all users, emphasizing strong password usage and best practices.
 
 # Methodology
 
@@ -104,7 +104,7 @@ We suspect that PC3 and PC2 are not the only systems compromised by the WAG thre
 
 The threat intelligence report covering TTPs of the threat actor We Are Garfield provided a list of IoCs including SHA-256 hashes. We used the following query in Splunk to hunt for these hashes:
 
-```
+```default
 index="*" ("EEAAFA68236BD1629E36E81C5A8EC2CE8804C9798B5C84FEE55F6128CCBA8FB0" OR
 "4ED877F6F154EB6EBB02EE44E4D836C28193D9254A4A3D6AF6236D8F5BAB88D2" OR 
 "11EBBAA2EDA3CCD4B7F1BB2C09AC7DCA0CD1F4B71B7E0CFCEDE36861E23DA034" OR 
@@ -127,7 +127,7 @@ The event provides us several important information that can be leveraged in our
 
 Based on the matching SHA-256 hash of the threat intelligence report and the characteristic commandline argument “sekurlsa::logonpasswords”, we can be certain that this is Mimikatz. 
 
-...
+[...]
 
 # Findings
 
@@ -139,10 +139,9 @@ Based on the matching SHA-256 hash of the threat intelligence report and the cha
 01/09/2024 3:59:00 PM | Download of meterpreter.exe from `<IP>` via Browser | Host: PC1 User: Administrator
 01/09/2024 3:59:49 PM | Process Creation of meterpreter.exe | Host: PC1 User: Administrator (local)
 01/09/2024 4:05:11 PM | Process Creation of PsExec | Host: PC1 User: Administrator (local) Target Machine: PC2 Target User: Administrator (local) Password: Password1!"
-... | ... | ...
+[...] | [...] | [...]
 01/11/2024 1:11:11 AM | Process Creation of Zwetsch.exe | Host: PC2 User: Administrator (local)
-... | ... | ...
-
+[...] | [...]| [...]
 
 # Conclusion
 
@@ -164,7 +163,7 @@ File Name       | SHA256
 ----------------|------------------------------------------------------------------
 Zwetsch.exe     | 4ED877F6F154EB6EBB02EE44E4D836C28193D9254A4A3D6AF6236D8F5BAB88D2
 meterpreter.exe | DF99BBABE7BD0E7A1D96CF370B78FDCF250AF380065A3D51F57EDE6A571E2C15
-...             | ...
+[...]             | [...]
 
 **Network Communications**
 
@@ -174,5 +173,5 @@ C&C            | 192.168.1.1:9999 (meterpreter.exe)
 Exfiltration   | 192.168.1.1:80 (WebDAV Share “looty”)
 File Download  | 192.168.1.1:80 (meterpreter.exe)
 File Download  | 192.168.1.1:80 (Zwetsch.exe)
-...            | ...
+[...]            | [...]
 
