@@ -207,3 +207,43 @@ Display of the rendered diff code block:
  
  noraj
 ```
+
+## Error generating PDF with backslash
+
+Related to [this issue](https://github.com/noraj/OSCP-Exam-Report-Template-Markdown/issues/58).
+
+Due to using Pandoc and a LaTeX template for formating the report, raw backslash (`\`) are interpreted as a control sequence for LaTeX commands.
+
+So if your markdown report contains some plain backslash, you'll get an error like below:
+
+```md
+NT AUTHORITY\SYSTEM
+```
+
+```
+➜ pandoc test.md -o test.pdf --from markdown+yaml_metadata_block+raw_html --template eisvogel
+Error producing PDF.
+! Undefined control sequence.
+l.314 I am NT AUTHORITY\SYSTEM
+```
+
+There are two solutions:
+
+1. Put it in markdown code
+2. Escape it
+
+### Solution n°1: Markdown code
+
+~~~md
+`AUTHORITY\SYSTEM`
+
+```
+AUTHORITY\SYSTEM
+```
+~~~
+
+### Solution n°2: Escaping
+
+```md
+NT AUTHORITY\\SYSTEM
+```
