@@ -5,7 +5,7 @@
 [![GitHub forks](https://img.shields.io/github/forks/noraj/OSCP-Exam-Report-Template-Markdown?style=flat-square)](https://github.com/noraj/OSCP-Exam-Report-Template-Markdown/network)
 [![GitHub license](https://img.shields.io/github/license/noraj/OSCP-Exam-Report-Template-Markdown?style=flat-square)](https://github.com/noraj/OSCP-Exam-Report-Template-Markdown/blob/master/LICENSE)
 
-I created an **Offensive Security Exam Report Template in Markdown** so LaTeX, Microsoft Office Word, LibreOffice Writer are no longer needed during your Offensive Security OSCP, OSWE, OSEE, OSWP, OSEP, OSED, OSWA, OSDA, OSMR, OSTH exam!
+I created an **Offensive Security Exam Report Template in Markdown** so LaTeX, Microsoft Office Word, LibreOffice Writer are no longer needed during your Offensive Security OSCP, OSWE, OSEE, OSWP, OSEP, OSED, OSWA, OSDA, OSMR, OSTH, OSIR exam!
 
 Now you can be efficient and faster during your exam report redaction!
 
@@ -161,6 +161,11 @@ Threat Hunting:
 - **OSTH**
   - [Official Offensive Security Template v1](output/examples/OSTH-exam-report-template_OS_v1.pdf)
 
+Incident Response:
+
+- **OSIR**
+  - [Official Offensive Security Template v1](output/examples/OSIR-exam-report-template_OS_v1.pdf)
+
 [whoisflynn]:https://github.com/whoisflynn
 [noraj]:https://github.com/noraj
 [epi]:https://github.com/epi052
@@ -182,6 +187,7 @@ Exam acronym | Exam name                                         | Lab acronym |
 **OSCE**     | Offensive Security Certified Expert               | CTP         | Cracking the Perimeter                     | N/A
 **OSDA**     | Offensive Security Defense Analyst                | SODA        | Security Operations and Defensive Analysis | SOC-200
 **OSTH**     | Offensive Security Threat Hunting                 | TH          | Threat Hunting                             | TH-200
+**OSIR**     | Offensive Security Incident Response              | IR          | Incident Response                          | IR-200
 
 ## Community projects
 
@@ -238,6 +244,8 @@ Report Templates:
   - [Official Offensive Security Template](https://help.offensive-security.com/hc/en-us/articles/4411107766804-OSMR-Exam-Guide#OSMRExamGuide-SuggestedDocumentationTemplates) (UNLICENSED)
 - **OSTH**
   - [Official Offensive Security Template](https://help.offsec.com/hc/en-us/articles/29141776768148-OSTH-Exam-Guide-Newly-Updated#h_01J971XAJKYDA6GX24S4XVSBAK) (UNLICENSED)
+- **OSIR**
+  - [Official Offensive Security Template](https://help.offsec.com/hc/en-us/articles/30960007786900-OSIR-Exam-Guide#h_01JBF3KK3D67Y4SA2PQ5QHTHY1) (UNLICENSED)
 
 Pandoc Template:
 

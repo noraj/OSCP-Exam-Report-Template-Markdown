@@ -134,6 +134,15 @@ certifications = [
         path: 'src/OSTH-exam-report-template_OS_v1.md'
       }
     ]
+  },
+  {
+    exam: 'OSIR',
+    template: [
+      {
+        name: 'Official Offensive Security Template v1',
+        path: 'src/OSIR-exam-report-template_OS_v1.md'
+      }
+    ]
   }
 ]
 
