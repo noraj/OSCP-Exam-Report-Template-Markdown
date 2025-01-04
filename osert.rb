@@ -329,7 +329,7 @@ begin
     # Generating archive
     puts '[+] Generating archive...'
     archive = "#{output}/#{exam}-#{osid}-Exam-Report.7z"
-    `7z a #{archive.shellescape} #{File.expand_path(pdf.shellescape)}`
+    `7z a "#{archive.shellescape}" "#{File.expand_path(pdf.shellescape)}"`
 
     # Optional lab report
     puts_prompt '[+] Do you want to add an external lab report? [Y/n]'
