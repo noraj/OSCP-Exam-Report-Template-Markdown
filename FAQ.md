@@ -85,6 +85,8 @@ Issue tracking:
 - this project: [#21](https://github.com/noraj/OSCP-Exam-Report-Template-Markdown/issues/21)
 - upstream: [#122](https://github.com/Wandmalfarbe/pandoc-latex-template/issues/122)
 
+A workaround is to prepare the markdown file with with a script (ex: [awk script](https://github.com/noraj/OSCP-Exam-Report-Template-Markdown/discussions/66)) to hard wrap lines on code blocks yourself. It's like adding newlines manually but automatically.
+
 ## What is the list of supported languages for code blocs syntax highlight?
 
 Pandoc supports [those languages](https://github.com/jgm/pandoc-highlight/blob/master/Text/Pandoc/Highlighting.hs#L93),
