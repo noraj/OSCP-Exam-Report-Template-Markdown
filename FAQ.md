@@ -69,7 +69,7 @@ raw code
 ```
 ~~~
 
-## How do I know what markdown formatting is supported (there are so many different version)?
+## How do I know what Markdown formatting is supported (there are so many different version)?
 
 In `osert.rb`, `markdown` [is used](https://github.com/noraj/OSCP-Exam-Report-Template-Markdown/blob/50aeada2b6171c3a4fe96d91a10f632d752063f2/generate.rb#L82-L93) as `--to` formatter for `pandoc` which means it will use [Pandoc markdown](https://pandoc.org/MANUAL.html#pandocs-markdown) (similar to GFM [[1](https://docs.gitlab.com/ee/user/markdown.html)] [[2](https://github.github.com/gfm/)].) Else other syntaxes (commonmark, GFM, MultiMarkdown, PHP Markdown Extra) are supported too, see [pandoc options](https://pandoc.org/MANUAL.html#option--to). If you want to use another syntax you can generate your report using the [manual command](https://github.com/noraj/OSCP-Exam-Report-Template-Markdown#manual).
 
@@ -85,7 +85,14 @@ Issue tracking:
 - this project: [#21](https://github.com/noraj/OSCP-Exam-Report-Template-Markdown/issues/21)
 - upstream: [#122](https://github.com/Wandmalfarbe/pandoc-latex-template/issues/122)
 
-A workaround is to prepare the markdown file with with a script (ex: [awk script](https://github.com/noraj/OSCP-Exam-Report-Template-Markdown/discussions/66)) to hard wrap lines on code blocks yourself. It's like adding newlines manually but automatically.
+A workaround is to prepare the markdown file with a script (ex: [awk script](https://github.com/noraj/OSCP-Exam-Report-Template-Markdown/discussions/66)) to hard wrap lines on code blocks yourself. It's like adding newlines manually but automatically.
+
+Another workaround, is to add these two lines in the YAML front-matter of your Markdown file:
+
+```yaml
+header-includes:
+  - \fvset{breaksymbol={}, breakanywheresymbolpre={}, breakanywhere, breaknonspaceingroup}
+```
 
 ## What is the list of supported languages for code blocs syntax highlight?
 
@@ -166,7 +173,7 @@ noraj
 
 Command: `diff -u note.a note.b`
 
-Output of the command formated into a Markdown fenced code block with `diff` language class:
+Output of the command formatted into a Markdown fenced code block with `diff` language class:
 
 ~~~text
 ```diff
@@ -214,7 +221,7 @@ Display of the rendered diff code block:
 
 Related to [this issue](https://github.com/noraj/OSCP-Exam-Report-Template-Markdown/issues/58).
 
-Due to using Pandoc and a LaTeX template for formating the report, raw backslash (`\`) are interpreted as a control sequence for LaTeX commands.
+Due to using Pandoc and a LaTeX template for formatting the report, raw backslash (`\`) are interpreted as a control sequence for LaTeX commands.
 
 So if your markdown report contains some plain backslash, you'll get an error like below:
 
@@ -231,7 +238,7 @@ l.314 I am NT AUTHORITY\SYSTEM
 
 There are two solutions:
 
-1. Put it in markdown code
+1. Put it in Markdown code
 2. Escape it
 
 ### Solution n°1: Markdown code
