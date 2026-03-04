@@ -206,7 +206,7 @@ Docker containers:
 - Recent mentions on social medias: [Social-searcher](https://www.social-searcher.com/social-buzz/?q5=https%3A%2F%2Fgithub.com%2Fnoraj%2FOSCP-Exam-Report-Template-Markdown)
 - Articles:
   - [Unofficial OSCP Approved Tools](https://falconspy.medium.com/unofficial-oscp-approved-tools-b2b4e889e707) by FalconSpy (2019-06-05)
-  - [Journey from nothing to OSCP](https://cjhackerz.net/posts/journey-from-nothing-to-oscp/) by CJHackerz (2020-06-30)
+  - [OSCP Certification Journey](https://cougarbytes.net/articles/oscp-certification-journey) by cougarbytes (2020-06-30)
   - Stress-free OSCP report making by Craig Underhill (2020-04-06) ([Raw Archive](https://web.archive.org/web/20210729100632/https://craigunder.me/stress-free-oscp-report-making/), use `about:reader?url=` for better look in Firefox)
 
 ## Stargazers over time
