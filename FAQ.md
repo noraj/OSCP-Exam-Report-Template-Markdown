@@ -261,56 +261,10 @@ NT AUTHORITY\\SYSTEM
 
 See https://github.com/Wandmalfarbe/pandoc-latex-template/issues/96#issuecomment-3016690275.
 
-## How do I use the bundled Lua filters?
+## How do I include a Markdown file in the report?
 
-Lua filters are optional. Pass each filter with the repeatable `--lua-filter` option when running `osert generate`. No Lua filters are loaded when this option is omitted.
+Use a Pandoc Lua filter with the repeatable `--lua-filter` option. See the [osert-community-filters](https://github.com/noraj/osert-community-filters) repository for the filter and usage instructions.
 
-### Include Markdown files with `include-markdown.lua`
+## How do I include source files in the report?
 
-This filter replaces a standalone link to a local Markdown file with that file's contents. It supports nested includes, rebases relative resources, namespaces element IDs, updates internal anchor links, and rejects circular includes.
-
-Use a standalone link for files ending in `.md`:
-
-```markdown
-[Introduction](chapters/introduction.md)
-[Target 1](chapters/target-1.md)
-```
-
-Add the `.include` class to include a file without a `.md` extension:
-
-```markdown
-[Appendix](chapters/appendix.txt){.include}
-```
-
-Enable this filter on the command line:
-
-```bash
-ruby osert.rb generate --lua-filter include-markdown.lua
-```
-
-### Include source files with `include-code.lua`
-
-This filter replaces a fenced code block containing an `include` attribute with the contents of that file. The code-block class selects the syntax-highlighting language.
-
-~~~markdown
-```{.python include="exploits/assignment-x.py"}
-```
-~~~
-
-Do not wrap this block in another fenced code block. The included path is resolved relative to the Markdown report first, then relative to the directory where `osert.rb` is run. Report generation fails if the file cannot be read.
-
-Enable this filter on the command line:
-
-```bash
-ruby osert.rb generate --lua-filter include-code.lua
-```
-
-### Use both inclusion filters
-
-Pass `include-markdown.lua` before `include-code.lua`. This lets source-code includes inside included Markdown chapters be processed:
-
-```bash
-ruby osert.rb generate \
-  --lua-filter include-markdown.lua \
-  --lua-filter include-code.lua
-```
+Use a Pandoc Lua filter with the repeatable `--lua-filter` option. See the [osert-community-filters](https://github.com/noraj/osert-community-filters) repository for the filter and usage instructions.

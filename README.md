@@ -50,49 +50,7 @@ Write your report in **markdown**.
 
 ### Optional Lua filters
 
-Pass bundled or external Pandoc Lua filters with the repeatable `--lua-filter` option. No Lua filters are loaded when this option is omitted.
-
-#### Include Markdown files
-
-`include-markdown.lua` replaces standalone links to local Markdown files with their contents. It supports nested includes, relative resources, namespaced element IDs, internal anchor links, and circular-include detection.
-
-Put each include link on its own line:
-
-```markdown
-[Introduction](chapters/introduction.md)
-[Target 1](chapters/target-1.md)
-```
-
-Use `{.include}` to include a file without a `.md` extension.
-
-```bash
-ruby osert.rb generate --lua-filter include-markdown.lua
-```
-
-#### Include source files
-
-`include-code.lua` replaces a fenced code block containing an `include` attribute with the contents of that file. The code-block class selects the syntax-highlighting language.
-
-~~~markdown
-```{.python include="exploits/assignment-x.py"}
-```
-~~~
-
-```bash
-ruby osert.rb generate --lua-filter include-code.lua
-```
-
-#### Use both inclusion filters
-
-Pass `include-markdown.lua` first so source-code includes inside included Markdown chapters are processed:
-
-```bash
-ruby osert.rb generate \
-  --lua-filter include-markdown.lua \
-  --lua-filter include-code.lua
-```
-
-See [the FAQ](FAQ.md#how-do-i-use-the-bundled-lua-filters) for detailed behavior and syntax.
+Pass bundled or external Pandoc Lua filters with the repeatable `--lua-filter` option. No Lua filters are loaded when this option is omitted. Community-maintained filters are available in the [osert-community-filters](https://github.com/noraj/osert-community-filters) repository.
 
 ### Automatic
 
@@ -133,8 +91,6 @@ pandoc src/OSCP-exam-report-template_whoisflynn_v3.2.md \
 -o output/OSCP-OS-XXXXX-Exam-Report.pdf \
 --from markdown+yaml_metadata_block+raw_html \
 --template eisvogel \
---lua-filter include-markdown.lua \
---lua-filter include-code.lua \
 --table-of-contents \
 --toc-depth 6 \
 --number-sections \
@@ -143,7 +99,7 @@ pandoc src/OSCP-exam-report-template_whoisflynn_v3.2.md \
 --resource-path=.:src
 ```
 
-This manual example enables both optional inclusion filters. Remove either `--lua-filter` line when that filter is not needed.
+To use optional Pandoc Lua filters, add one or more `--lua-filter PATH` options. See the [osert-community-filters](https://github.com/noraj/osert-community-filters) repository for available filters and usage instructions.
 
 You can change the code syntax highlight theme with [`--highlight-style`](https://pandoc.org/MANUAL.html#option--highlight-style).
 

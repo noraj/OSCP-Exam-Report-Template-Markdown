@@ -265,6 +265,7 @@ begin
     puts ' for getting your report.'
   when 'generate'
     puts '[+] Preparing your final report...'
+    # Choose syntax highlight style
     style = options[:style]
     unless style
       default_style = 'breezedark'
@@ -356,7 +357,7 @@ begin
 
     if preview
       viewer = fork do
-        exec 'xdg-open', pdf
+        exec "xdg-open #{pdf.shellescape}"
       end
       Process.detach(viewer)
     end
@@ -366,6 +367,7 @@ begin
     archive = "#{output}/#{exam}-#{osid}-Exam-Report.7z"
     `7z a #{archive.shellescape} #{File.expand_path(pdf.shellescape)}`
 
+    # Optional lab report
     unless options[:'skip-external-lab-report']
       lab = options[:'external-lab-report']
       if !options.key?(:'external-lab-report')
