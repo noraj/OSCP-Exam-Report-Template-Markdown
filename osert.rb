@@ -147,7 +147,8 @@ certifications = [
 ]
 
 options = {
-  'resource-path': '.'
+  'resource-path': '.',
+  lua_filters: []
 }
 
 subtext = <<~HELPMSG
@@ -178,6 +179,15 @@ subcommands = {
     opts.on('-e', '--exam EXAM', 'The exam short name')
     opts.on('-s', '--osid OSID', 'Your Offensive Security ID')
     opts.on('-r', '--resource-path PATH', 'Complementary resources (e.g. images) path to include [Default: ./src]')
+    opts.on('--lua-filter FILE', 'Pandoc Lua filter path (repeatable)') do |filter|
+      options[:lua_filters] << filter
+    end
+    opts.on('--style STYLE', 'Pandoc syntax-highlighting style (prompted when omitted)')
+    opts.on('--[no-]preview', 'Open the generated PDF after creation (prompted when omitted)')
+    opts.on('--external-lab-report [REPORT]', 'Add a lab PDF to the archive; prompt for its path when omitted')
+    opts.on('--no-external-lab-report', 'Do not add a lab PDF or prompt for one') do
+      options[:'skip-external-lab-report'] = true
+    end
   end
 }
 
@@ -256,15 +266,26 @@ begin
   when 'generate'
     puts '[+] Preparing your final report...'
     # Choose syntax highlight style
-    style = 'breezedark'
-    puts "[+] Choose syntax highlight style [#{style}]:"
-    styles = `pandoc --list-highlight-styles`.split("\n")
-    styles.each_with_index do |s, i|
-      puts "#{colors[:red]}#{i}. #{s}#{colors[:nocolor]}"
+    style = options[:style]
+    unless style
+      default_style = 'breezedark'
+      styles = `pandoc --list-highlight-styles`.split("\n")
+      puts "[+] Choose syntax highlight style [#{default_style}]:"
+      styles.each_with_index do |available_style, i|
+        puts "#{colors[:red]}#{i}. #{available_style}#{colors[:nocolor]}"
+      end
+      puts_prompt
+      choice = gets.chomp
+      style = if choice.empty?
+                default_style
+              elsif choice.match?(/\A\d+\z/) && styles[choice.to_i]
+                styles[choice.to_i]
+              elsif styles.include?(choice)
+                choice
+              else
+                abort("Unknown syntax-highlighting style: #{choice}")
+              end
     end
-    puts_prompt
-    choice = gets.chomp
-    style = styles[choice.to_i] unless choice.empty?
 
     if options[:input]
       input = options[:input]
@@ -303,23 +324,38 @@ begin
     # Generating report
     puts '[+] Generating report...'
     pdf = "#{output}/#{exam}-#{osid}-Exam-Report.pdf"
+    lua_filter_options = options[:lua_filters].map do |filter|
+      "--lua-filter #{File.expand_path(filter).shellescape}"
+    end.join(" \\\n      ")
+    highlight_option = if `pandoc --help`.include?('--syntax-highlighting')
+                         '--syntax-highlighting'
+                       else
+                         '--highlight-style'
+                       end
     `pandoc #{input.shellescape} -o #{pdf.shellescape} \
       --from markdown+yaml_metadata_block+raw_html \
       --template eisvogel \
+      #{lua_filter_options} \
       --table-of-contents \
       --toc-depth 6 \
       --number-sections \
       --top-level-division=chapter \
-      --highlight-style #{style} \
+      #{highlight_option} #{style.shellescape} \
       --resource-path=.:/usr/share/osert/src:src \
       --resource-path=#{options[:'resource-path'].shellescape}
     `
+    pandoc_status = $?
+    abort('PDF generation failed') unless pandoc_status.success?
     puts "[+] PDF generated at #{colors[:red]}#{pdf}#{colors[:nocolor]}"
 
-    # Preview
-    puts_prompt '[+] Do you want to preview the report? [Y/n]'
-    choice = gets.chomp
-    if choice.downcase == 'y' || choice.empty?
+    preview = options[:preview]
+    if preview.nil?
+      puts_prompt '[+] Do you want to preview the report? [Y/n]'
+      choice = gets.chomp
+      preview = choice.downcase == 'y' || choice.empty?
+    end
+
+    if preview
       viewer = fork do
         exec "xdg-open #{pdf.shellescape}"
       end
@@ -332,13 +368,24 @@ begin
     `7z a #{archive.shellescape} #{File.expand_path(pdf.shellescape)}`
 
     # Optional lab report
-    puts_prompt '[+] Do you want to add an external lab report? [Y/n]'
-    choice = gets.chomp
-    if choice.downcase == 'y' || choice.empty?
-      puts_prompt '[+] Write the path of your lab PDF:'
-      lab = gets.chomp
-      puts '[+] Updating archive...'
-      `7z a #{archive.shellescape} #{File.expand_path(lab.shellescape)}`
+    unless options[:'skip-external-lab-report']
+      lab = options[:'external-lab-report']
+      if !options.key?(:'external-lab-report')
+        puts_prompt '[+] Do you want to add an external lab report? [Y/n]'
+        choice = gets.chomp
+        if choice.downcase == 'y' || choice.empty?
+          puts_prompt '[+] Write the path of your lab PDF:'
+          lab = gets.chomp
+        end
+      elsif lab.nil?
+        puts_prompt '[+] Write the path of your lab PDF:'
+        lab = gets.chomp
+      end
+
+      if lab && !lab.empty?
+        puts '[+] Updating archive...'
+        `7z a #{archive.shellescape} #{File.expand_path(lab).shellescape}`
+      end
     end
 
     puts "[+] Archive generated at #{colors[:red]}#{archive}#{colors[:nocolor]}"

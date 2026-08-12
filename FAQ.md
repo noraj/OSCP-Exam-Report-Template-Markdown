@@ -260,3 +260,11 @@ NT AUTHORITY\\SYSTEM
 ## How to change font to support more Unicode characters
 
 See https://github.com/Wandmalfarbe/pandoc-latex-template/issues/96#issuecomment-3016690275.
+
+## How do I include a Markdown file in the report?
+
+Use a Pandoc Lua filter with the repeatable `--lua-filter` option. See the [osert-community-filters](https://github.com/noraj/osert-community-filters) repository for the filter and usage instructions.
+
+## How do I include source files in the report?
+
+Use a Pandoc Lua filter with the repeatable `--lua-filter` option. See the [osert-community-filters](https://github.com/noraj/osert-community-filters) repository for the filter and usage instructions.

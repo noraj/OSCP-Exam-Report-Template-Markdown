@@ -48,6 +48,10 @@ Examples for common distros:
 
 Write your report in **markdown**.
 
+### Optional Lua filters
+
+Pass bundled or external Pandoc Lua filters with the repeatable `--lua-filter` option. No Lua filters are loaded when this option is omitted. Community-maintained filters are available in the [osert-community-filters](https://github.com/noraj/osert-community-filters) repository.
+
 ### Automatic
 
 There is a script that will:
@@ -94,6 +98,8 @@ pandoc src/OSCP-exam-report-template_whoisflynn_v3.2.md \
 --highlight-style breezedark \
 --resource-path=.:src
 ```
+
+To use optional Pandoc Lua filters, add one or more `--lua-filter PATH` options. See the [osert-community-filters](https://github.com/noraj/osert-community-filters) repository for available filters and usage instructions.
 
 You can change the code syntax highlight theme with [`--highlight-style`](https://pandoc.org/MANUAL.html#option--highlight-style).
 
