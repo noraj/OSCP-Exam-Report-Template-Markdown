@@ -249,7 +249,7 @@ begin
     sed(report, /^date:.*/, %(date: "#{Date.today}"))
 
     print "[+] The #{colors[:red]}#{File.basename(src)}#{colors[:nocolor]} file is saved in"
-    print " #{colors[:red]}#{output}#{colors[:nocolor]} folder."
+    print " #{colors[:red]}#{output}#{colors[:nocolor]} folder. "
     puts 'Edit it with your exam notes.'
     print "[+] Then, run #{colors[:red]}osert generate -i #{output}/#{File.basename(src)} -o #{output}#{colors[:nocolor]}"
     puts ' for getting your report.'
